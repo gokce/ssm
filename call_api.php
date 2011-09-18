@@ -1,4 +1,5 @@
 <?php
+/*
 $allowed_ips = array('127.0.0.1','::1');
 if(!in_array($_SERVER['REMOTE_ADDR'],$allowed_ips)){
     header("Location: http://www.seismi.org/api");
@@ -9,6 +10,11 @@ if(!in_array($_SERVER['REMOTE_ADDR'],$allowed_ips)){
 
   callAPI($r,$p);
 }
+*/
+
+$r = (isset($_GET['r'])) ? $_GET['r'] : '';
+$p = (isset($_GET['p'])) ? $_GET['p'] : '';
+callAPI($r,$p);
 
 function callAPI($resources='',$parameters='') {
 	// Call API
