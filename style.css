@@ -1,8 +1,8 @@
 html, body {margin:0; padding:0; width:100%; height:100%;}
 body{font-family:Arial, Helvetica, "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:12px; color:#fff; background-color:#050505; font-style:normal; overflow:hidden;
-background: -webkit-radial-gradient(50% 50%, circle cover, #0d1e40, #050505); /* Safari 5.1+, Chrome 10+ */ 
-background: -moz-radial-gradient(50% 50%, circle cover, #0d1e40, #050505); /* Firefox 3.6+ */
-background: -ms-radial-gradient(50% 50%, circle cover, #0d1e40, #050505); /* IE 10 */ 
+background: -webkit-radial-gradient(50% 50%, circle cover, #0a1833, #050505); /* Safari 5.1+, Chrome 10+ */ 
+background: -moz-radial-gradient(50% 50%, circle cover, #0a1833, #050505); /* Firefox 3.6+ */
+background: -ms-radial-gradient(50% 50%, circle cover, #0a1833, #050505); /* IE 10 */ 
 }
 canvas{float:left; width:100%; height:100%;}
 
@@ -72,11 +72,11 @@ font-weight: normal; font-style: normal;
 .isel {width:26px; opacity:1;}
 
 /* === SIDEBAR 2 === */
-.sidebar {position:absolute; right:0; top:0; overflow:scroll; z-index:2100000; height:100%; background:#181818; opacity:0.9; border-left:1px solid #222; border-right:1px solid #000;}
+.sidebar {position:absolute; right:0; top:0; overflow:scroll; z-index:2100000; height:100%; background:#181818; opacity:0.95; border-left:1px solid #222; border-right:1px solid #000;}
 .sidebar em {font-style:normal;}
 ul {list-style-type:none; margin:0; padding:5px 0 50px 10px;}
-ul li {color:#555; padding:12px 120px 12px 25px; background:url('images/sidebar-bg.png') no-repeat -1px bottom;}
-.sidebar ul li:hover, .sidebar ul li.selected {background:url('images/sidebar-sel-bg.png') no-repeat left center; color:#ccc; cursor:pointer;}
+ul li {color:#777; padding:12px 120px 12px 25px; background:url('images/sidebar-bg.png') no-repeat -1px bottom;}
+.sidebar ul li:hover, .sidebar ul li.selected {background:url('images/sidebar-sel-bg.png') no-repeat left center; color:#ddd; cursor:pointer;}
 #timebar {text-transform:uppercase;}
 #timebar ul li em.count {float:right; margin-right:-100px; text-align:right; color:#444;} 
 #eqrawdata ul li {padding:5px 25px; background:none; }
@@ -93,12 +93,10 @@ ul.ulmagnitude {padding-bottom:10px;}
 #timebar ul li:first-child {color:#f0e079;}
 #timebar ul li:first-child:hover {background:url('images/sidebar-bg.png') no-repeat left bottom; cursor:default;}
 .sidebar .year {color:#999;}
-/*.sidebar .info {opacity:0.5;}*/
 .sidebar em.time {color:#f0e079;}
 .sidebar em.high {color:#f66;}
 .sidebar em.var {visibility:hidden;}
 .sidebar em.type {visibility:hidden;}
-/*.sidebar .newest {color:#e573ac;}*/
 .siderbar .highlight {color:#e573ac;text-decoration: underline;}
 
 #bringsidebar {position:absolute; right:0; top:50%; margin-top:-170px; background:url('images/icon-filter.png') no-repeat left center; width:20px; height:300px; z-index:2000000;}
@@ -111,7 +109,7 @@ img{border:none;}
 .disable{opacity:0.2;}
 .disable:hover{cursor:default;}
 
-#logo	{left:4px; top:0;}
+#logo	{left:4px; top:0;font-family:'extravaganzza';}
 #help {width:100%; height:100%; background:#000; opacity:0.7; z-index:3150000;}
 #help1 {position:absolute; bottom:75px; left:175px;  width:404px; height:53px; z-index:3200000; background:url('images/help-1.png') no-repeat bottom left;}
 #help2 {position:absolute; bottom:75px; right:450px; width:272px; height:60px; z-index:3200000; background:url('images/help-2.png') no-repeat bottom right;}

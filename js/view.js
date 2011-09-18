@@ -66,12 +66,12 @@ $(document).ready(function() {
 						posx=20;
 						posy+=30;
 					}
-					var text = new paper.PointText(new paper.Point(posx+5, posy+5));
+					var text = new paper.PointText(new paper.Point(posx+5, posy+6));
 					text.characterStyle = {
-						fontSize: 12,
+						fontSize: 14,
 						fillColor: 'white',
-						// font: 'extravaganzza', //somehow not working
-						font: 'sans-serif',
+						font: 'extravaganzza', //somehow not working
+						//font: 'sans-serif',
 					};
 					text.content=v.day;
 					posx+=100;
