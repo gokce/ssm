@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>SEISMI - visualizing earthquakes</title>
 	<link type="text/css" href="style.css" rel="stylesheet" />
-	<link rel="shortcut icon" href="favicon.ico"> 
+	<link rel="shortcut icon" href="images/favicon.png"> 
 	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
 	<script type="text/javascript" src="js/paper.js"></script>
 	<script type="text/javascript" src="js/ui.js"></script>
