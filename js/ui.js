@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	// show briefly in the beginning
 	$('#help1').delay(100).fadeIn(500, function() {
-		$('#help1').delay(3000).fadeOut(1500);
+		$('#help1').delay(1000).fadeOut(1000);
 	});
 	$('#help2').delay(200).fadeIn(500, function() {
 		$('#help2').delay(3000).fadeOut(1500);
