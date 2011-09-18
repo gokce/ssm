@@ -70,7 +70,7 @@ $(document).ready(function() {
 					text.characterStyle = {
 						fontSize: 14,
 						fillColor: 'white',
-						font: 'extravaganzza', //somehow not working
+						font: 'extravaganzzaBold', //somehow not working
 						//font: 'sans-serif',
 					};
 					text.content=v.day;

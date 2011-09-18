@@ -109,7 +109,7 @@ img{border:none;}
 .disable{opacity:0.2;}
 .disable:hover{cursor:default;}
 
-#logo	{left:4px; top:0;font-family:'extravaganzza';}
+#logo	{left:4px; top:0;font-family:'extravaganzzaBold';}
 #help {width:100%; height:100%; background:#000; opacity:0.7; z-index:3150000;}
 #help1 {position:absolute; bottom:75px; left:175px;  width:404px; height:53px; z-index:3200000; background:url('images/help-1.png') no-repeat bottom left;}
 #help2 {position:absolute; bottom:75px; right:450px; width:272px; height:60px; z-index:3200000; background:url('images/help-2.png') no-repeat bottom right;}
