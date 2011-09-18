@@ -4,6 +4,7 @@
 	<title>Seismi - Earthquake visualization</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<link href="styles.css" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="shortcut icon" href="images/favicon.png"> 
 	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
 </head>
 <body>
