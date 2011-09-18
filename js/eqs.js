@@ -3,7 +3,8 @@ $(document).ready(function() {
 	$.seismi = {
 		min_magnitude : 4,
 		data : new Object(),
-		modified : ''
+		modified : '',
+		timefilter : ''
 	};
 	
 	// var seismi = new Object();
@@ -12,11 +13,23 @@ $(document).ready(function() {
 	// seismi.modified = '';
 	callAPI();
 	
+	/*
 	function callAPI(resources,parameters) {
 		resources = (typeof resources == 'undefined') ? '' : resources;
 		parameters = (typeof parameters == 'undefined') ? '' : parameters;
 		// Call API
 		$.getJSON('http://www.seismi.org/api/eqs/'+resources+'?'+parameters, function(data) {
+			$.seismi.data = data;
+			refreshData($.seismi.data);
+		});
+	}
+	*/
+	
+	function callAPI(resources,parameters) {
+	  resources = (typeof resources == 'undefined') ? '' : resources;
+		parameters = (typeof parameters == 'undefined') ? '' : parameters;
+		// Call API
+		$.getJSON('call_api.php?r=eqs/'+resources+'&p='+parameters, function(data) {
 			$.seismi.data = data;
 			refreshData($.seismi.data);
 		});
@@ -56,7 +69,8 @@ $(document).ready(function() {
 				$(this).find('.count').html(count);
 			});
 			*/
-			$.getJSON('http://www.seismi.org/api/totals/magnitude/'+$.seismi.timefilter, function(data) {
+			
+			$.getJSON('call_api.php?r=totals/magnitude/'+$.seismi.timefilter, function(data) {
 				var counts = new Object();
 				var i=9;
 				while (i--) {
@@ -80,7 +94,7 @@ $(document).ready(function() {
 			});
 		}
 		if ($.seismi.modified != 'time') {
-			$.getJSON('http://www.seismi.org/api/totals?min_magnitude='+$.seismi.min_magnitude, function(data) {
+			$.getJSON('call_api.php?r=totals&p=min_magnitude='+$.seismi.min_magnitude, function(data) {
 				//console.log(data);
 				var holder_filters_magnitude = $('#timebar').find('.ultime').find('li').next();
 				holder_filters_magnitude.each(function(i){
