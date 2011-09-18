@@ -11,18 +11,18 @@ $(document).ready(function() {
 
 	// show briefly in the beginning
 	$('#help1').delay(100).fadeIn(500, function() {
-		$('#help1').delay(3000).fadeOut(1500);
+		$('#help1').delay(1000).fadeOut(1500);
 	});
 	$('#help2').delay(200).fadeIn(500, function() {
-		$('#help2').delay(3000).fadeOut(1500);
+		$('#help2').delay(1000).fadeOut(1500);
 	});
 	$('#help3').delay(300).fadeIn(500, function() {
-		$('#help3').delay(3000).fadeOut(1500);
+		$('#help3').delay(1000).fadeOut(1500);
 	});
 	$('#help4').delay(400).fadeIn(500, function() {
-		$('#help4').delay(3000).fadeOut(1500);
+		$('#help4').delay(1000).fadeOut(1500);
 	});
-	$('#help').delay(3900).fadeOut(1500);
+	$('#help').delay(1900).fadeOut(1500);
 
 	// toggle rawdata
 	$('#butr').click(function() {
