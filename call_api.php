@@ -20,6 +20,8 @@ if( is_xhr() ){
   $r = (isset($_GET['r'])) ? $_GET['r'] : '';
   $p = (isset($_GET['p'])) ? $_GET['p'] : '';
   callAPI($r,$p);
+} else {
+  header( 'Location: http://www.seismi.org/api');
 }
 
 function callAPI($resources='',$parameters='') {
