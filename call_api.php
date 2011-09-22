@@ -18,7 +18,7 @@ callAPI($r,$p);
 
 function callAPI($resources='',$parameters='') {
 	// Call API
-  $jsonurl = 'http://www.seismi.org/api/'.$resources.'?'.$parameters;
+  $jsonurl = 'http://www.seismi.org/api/eqs/'.$resources.'?'.$parameters;
   $json = file_get_contents($jsonurl,0,null,null);
   
   echo $json;
