@@ -12,9 +12,15 @@ if(!in_array($_SERVER['REMOTE_ADDR'],$allowed_ips)){
 }
 */
 
-$r = (isset($_GET['r'])) ? $_GET['r'] : '';
-$p = (isset($_GET['p'])) ? $_GET['p'] : '';
-callAPI($r,$p);
+function is_xhr() {
+    return @ $_SERVER[ 'HTTP_X_REQUESTED_WITH' ] === 'XMLHttpRequest';
+  }
+
+if( is_xhr() ){
+  $r = (isset($_GET['r'])) ? $_GET['r'] : '';
+  $p = (isset($_GET['p'])) ? $_GET['p'] : '';
+  callAPI($r,$p);
+}
 
 function callAPI($resources='',$parameters='') {
 	// Call API
