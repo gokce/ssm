@@ -3,9 +3,3 @@ AddHandler php5-script .php
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^seismi.org$ [NC]
 RewriteRule ^(.*)$ http://www.seismi.org/$1 [R=301,L]
-
-<files call_api.php>
- order deny,allow
- deny from all
- allow from 127.0.0.1
-</files>
