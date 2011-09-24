@@ -28,6 +28,11 @@ $(document).ready(function() {
 	var holderTectonic = $('#tectonic');
 	var holderVolcanoes = $('#volcanoes');
 	var holderTimebar = $('#timebar');
+	var holderIndicator = {}
+	holderIndicator['4'] = $('#mag2').find('.i4');
+	holderIndicator['5'] = $('#mag2').find('.i5');
+	holderIndicator['6'] = $('#mag2').find('.i6');
+	holderIndicator['7'] = $('#mag2').find('.i7');
 	
 	$.visualizations = {
       refresh: function() {
@@ -183,7 +188,9 @@ $(document).ready(function() {
 		$(holderTime).html(data.time);
 		$(holderDate).html(data.day);
 		$(holderRegion).html(truncate(data.region,35));
-		$(holderLatlon).html(lat+'&deg;&nbsp;&nbsp;'+lon+'&deg;');
+		$(holderLatlon).html(data.lat+'&deg;&nbsp;&nbsp;'+data.lon+'&deg;');
+    $.each(holderIndicator, function(k, v) { v.removeClass('isel'); });
+		$(holderIndicator[Math.floor(data.magnitude)]).addClass('isel');
   }
   // String Truncate
 	var truncate = function (str, limit) {
