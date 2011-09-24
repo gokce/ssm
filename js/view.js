@@ -114,11 +114,13 @@ $(document).ready(function() {
 	}
 	
 	show_dpt = function(data) {
-	  posx=20;
+	  posx=100;
     posy=100;
 	  $.each(data, function(k, v) {
-	    v['destination'] = new Point(canvas.width-posx,posy);
-	    v['destination_size'] = 20;
+	    newx = canvas.width-posx;
+	    newy = posy+(Math.floor(v.depth)/1.4);
+	    v['destination'] = new Point(newx,newy);
+	    v['destination_size'] = v.magnitude*5;
 	    v['move'] = true;
 	    posx+=60;
     });
