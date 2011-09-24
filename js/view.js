@@ -12,10 +12,11 @@ $(document).ready(function() {
       tolerance: 5
   };
   
-  cur_view = 'show_lst';
+  var current_view = 'show_lst';
+  var canvas;
   
   $(window).resize(function() {
-    show(cur_view);
+    show(current_view);
   });
 	
 	$('#navi-nst').click(function(){show('show_nst');});
@@ -25,8 +26,9 @@ $(document).ready(function() {
 	$('#navi-lst').click(function(){show('show_lst');});
 	
 	show = function(view_name) {
-	  cur_view = view_name;
-	  window[cur_view]($.seismi.data.earthquakes);
+	  canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
+	  current_view = view_name;
+	  window[current_view]($.seismi.data.earthquakes);
 	}
 	
 	// Placeholders for Infobar
@@ -48,15 +50,17 @@ $(document).ready(function() {
 	$.visualizations = {
       refresh: function() {
         $.each($.seismi.data.earthquakes, function(k, v) {
+          initx = Math.random()*view._viewSize._width;
+          inity = Math.random()*-100;
           // Circle
-          var eq_circle = new Path.Circle(new Point(100, 100), 10);
+          var eq_circle = new Path.Circle(new Point(initx, inity), 10);
           colors = ['#A3CC29','#FFE24D','#CC671F','#B30000']
     			eq_circle.fillColor = colors[Math.floor(v.magnitude)-4];
     			eq_circle.opacity = 0.7;
     			eq_circle.name = 'fill';
     			
     			// Selection Stroke
-    			var eq_stroke = new Path.Circle(new Point(100, 100), 10);
+    			var eq_stroke = new Path.Circle(new Point(initx, inity), 10);
     			eq_stroke.strokeWidth = 3;
     			eq_stroke.originalColor = colors[Math.floor(v.magnitude)-4]; 
     			eq_stroke.strokeColor = null;
@@ -85,7 +89,7 @@ $(document).ready(function() {
     		  $.data_loaded = true;
         });
         view.draw();
-        show(cur_view);
+        show(current_view);
       }
   }
   show_nst = function(data) {
@@ -116,9 +120,6 @@ $(document).ready(function() {
 	show_lst = function(data) {
 		posx=20;
 		posy=20;
-		// Canvas current width and height
-		canvas_height=view._viewSize._height
-		canvas_width=view._viewSize._width
 		// Store previous day
 		prev_day = ''
 		// For each earthquake in data
@@ -130,7 +131,7 @@ $(document).ready(function() {
 			if (prev_day!=''){
 				if (prev_day!=v.day) {
 					// Move one line down if text would go out of bounds
-					if (canvas_width-posx < 75) {
+					if (canvas.width-posx < 75) {
 						posx=20;
 						posy+=30;
 					}
@@ -148,7 +149,7 @@ $(document).ready(function() {
 				}
 			}
 			// Move one line down if circle is out of bounds
-			if (canvas_width-posx < 10) {
+			if (canvas.width-posx < 10) {
 				posx=20;
 				posy+=30;
 			}
