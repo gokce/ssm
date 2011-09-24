@@ -3,14 +3,14 @@ $(document).ready(function() {
 	$.data_loaded = false;
 	
 	paper.setup('viewcanvas');
+	var tool = new Tool();
 	
-	projects = {
-		'nst':new paper.Project(),
-		'map':new paper.Project(),
-		'tml':new paper.Project(),
-		'dpt':new paper.Project(),
-		'lst':new paper.Project()
-	}
+  var hitOptions = {
+      segments: true,
+      stroke: true,
+      fill: true,
+      tolerance: 5
+  };
 	
 	$('#navi-nst').click(function(){show_nst();});
 	$('#navi-map').click(function(){show_map();});
@@ -18,13 +18,52 @@ $(document).ready(function() {
 	$('#navi-dpt').click(function(){show_dpt();});
 	$('#navi-lst').click(function(){show_lst();});
 	
+	// Placeholders for Infobar
+	var holderMagnitude = $('#magnitude');
+	var holderDepth = $('#depth');
+	var holderTime = $('#time');
+	var holderDate = $('#date');
+	var holderRegion = $('#region');
+	var holderLatlon = $('#latlon');
+	var holderTectonic = $('#tectonic');
+	var holderVolcanoes = $('#volcanoes');
+	var holderTimebar = $('#timebar');
+	
 	$.visualizations = {
       refresh: function() {
         $.each($.seismi.data.earthquakes, function(k, v) {
+          // Circle
           var eq_circle = new Path.Circle(new Point(100, 100), 10);
           colors = ['#A3CC29','#FFE24D','#CC671F','#B30000']
     			eq_circle.fillColor = colors[Math.floor(v.magnitude)-4];
-    		  v["eq_visual"] = eq_circle;
+    			eq_circle.opacity = 0.7;
+    			eq_circle.name = 'fill';
+    			
+    			// Selection Stroke
+    			var eq_stroke = new Path.Circle(new Point(100, 100), 10);
+    			eq_stroke.strokeWidth = 3;
+    			eq_stroke.originalColor = colors[Math.floor(v.magnitude)-4]; 
+    			eq_stroke.strokeColor = null;
+    			eq_stroke.name = 'stroke';
+    			
+    			var eq_visual = new Group();
+    			eq_visual.addChild(eq_stroke);
+    			eq_visual.addChild(eq_circle);
+    			
+    			// Select
+    			eq_visual['select'] = function() {
+    			  eq_stroke.strokeColor = eq_stroke.originalColor;
+    			}
+    			// Unselect
+    			eq_visual['unselect'] = function() {
+    			  eq_stroke.strokeColor = null;
+    			}
+    			// Return Eq data
+    			eq_visual['data'] = function() {
+    			  return v;
+    			}
+    			
+    			v['eq_visual'] = eq_visual;
     		  v['move'] = false;
     		  v['destination'] = -1;
     		  $.data_loaded = true;
@@ -54,12 +93,10 @@ $(document).ready(function() {
 		// Canvas current width and height
 		canvas_height=view._viewSize._height
 		canvas_width=view._viewSize._width
-		console.log(canvas_height, canvas_width);
 		// Store previous day
 		prev_day = ''
 		// For each earthquake in data
 		$.each($.seismi.data.earthquakes, function(k, v) {
-			//console.log(v);
 			// Access to Eq Data:
 			// v.day, v.depth, v.eqid, v.lat, v.lon, v.magnitude, v.region, v.src, v.time, v.timedate
 			
@@ -93,14 +130,6 @@ $(document).ready(function() {
 			v['move'] = true;
 			posx+=25;
 			prev_day=v.day;
-			/*
-			// Draw Circle
-			var eq_circle = new paper.Path.Circle(new paper.Point(posx, posy), circle_size);
-			colors = ['#A3CC29','#FFE24D','#CC671F','#B30000']
-			eq_circle.fillColor = colors[Math.floor(v.magnitude)-4];
-			posx+=25;
-			prev_day=v.day;
-			*/
 		});
 	}
 		
@@ -134,4 +163,39 @@ $(document).ready(function() {
       });
     }
   }
+  tool.onMouseDown = function(event) {
+    var hitResult = project.hitTest(event.point, hitOptions);
+    // Clear selected
+    $.each(project.activeLayer.children, function(k, v) {
+      v.unselect();
+    });
+    // Show selected
+    if (hitResult && hitResult.item) {
+        hitResult.item.parent.select();
+        // Put selected data into Infobar
+        refreshInfobar(hitResult.item.parent.data());
+    }
+  }
+  refreshInfobar = function(data) {
+    //data.day, data.depth, data.eqid, data.lat, data.lon, data.magnitude, data.region, data.src, data.time, data.timedate
+    $(holderMagnitude).html(data.magnitude);
+		$(holderDepth).html(Math.round(data.depth));
+		$(holderTime).html(data.time);
+		$(holderDate).html(data.day);
+		$(holderRegion).html(truncate(data.region,35));
+		$(holderLatlon).html(lat+'&deg;&nbsp;&nbsp;'+lon+'&deg;');
+  }
+  // String Truncate
+	var truncate = function (str, limit) {
+		var bits, i;
+		bits = str.split('');
+		if (bits.length > limit) {
+			for (i = bits.length - 1; i > -1; --i) {
+				if (i > limit) { bits.length = i; }
+				else if (' ' === bits[i]) { bits.length = i; break; }
+			}
+			bits.push('...');
+		}
+		return bits.join('');
+	};
 });

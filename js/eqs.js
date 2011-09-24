@@ -7,23 +7,7 @@ $(document).ready(function() {
 		timefilter : ''
 	};
 	
-	// var seismi = new Object();
-	// seismi.min_magnitude = 4;
-	// seismi.data = new Object();
-	// seismi.modified = '';
 	callAPI();
-	
-	/*
-	function callAPI(resources,parameters) {
-		resources = (typeof resources == 'undefined') ? '' : resources;
-		parameters = (typeof parameters == 'undefined') ? '' : parameters;
-		// Call API
-		$.getJSON('http://www.seismi.org/api/eqs/'+resources+'?'+parameters, function(data) {
-			$.seismi.data = data;
-			refreshData($.seismi.data);
-		});
-	}
-	*/
 	
 	function callAPI(resources,parameters) {
 	  resources = (typeof resources == 'undefined') ? '' : resources;
@@ -153,7 +137,6 @@ $(document).ready(function() {
 		return b;
 	}
 	
-	
 	function countValues(a) {
 		var b = {}, i = a.length, j;
 		while( i-- ) {
@@ -163,31 +146,4 @@ $(document).ready(function() {
 		return b;
 	}
 	
-	/*
-	//Earthquake Class
-	function Earthquake(eqid,timedate,lat,lon,magnitude,depth,region){
-			//Reformatting values
-			this.eqid = eqid;
-			var timedateSplit = timedate.split(' ');
-			var dateSplit = timedateSplit[0].split('-');
-			var printDate = dateSplit[2]+"."+dateSplit[1]+"."+dateSplit[0].slice(2,4);
-			this.timee = timedateSplit[1].slice(0,5);
-			this.datee = printDate;
-			this.lat = lat;
-			this.lon = lon;
-			this.latlon = lat+"&deg;&nbsp;&nbsp;"+lon+"&deg;";
-			this.magnitude = magnitude;
-			this.depth = (+depth);
-			// TODO: string trimming script for region
-			this.region = region;
-			this.marker = new CM.Marker();
-			this.init();
-		}
-	Earthquake.prototype.init = function() {
-		}
-	Earthquake.prototype.eqselect = function() {
-		// code for click method goes here
-		//console.log("select");
-	}
-	*/
 });
