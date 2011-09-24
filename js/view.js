@@ -52,15 +52,16 @@ $(document).ready(function() {
         $.each($.seismi.data.earthquakes, function(k, v) {
           initx = Math.random()*view._viewSize._width;
           inity = Math.random()*-100;
+          initsize = 10;
           // Circle
-          var eq_circle = new Path.Circle(new Point(initx, inity), 10);
+          var eq_circle = new Path.Circle(new Point(initx, inity), initsize);
           colors = ['#A3CC29','#FFE24D','#CC671F','#B30000']
     			eq_circle.fillColor = colors[Math.floor(v.magnitude)-4];
     			eq_circle.opacity = 0.7;
     			eq_circle.name = 'fill';
     			
     			// Selection Stroke
-    			var eq_stroke = new Path.Circle(new Point(initx, inity), 10);
+    			var eq_stroke = new Path.Circle(new Point(initx, inity), initsize);
     			eq_stroke.strokeWidth = 3;
     			eq_stroke.originalColor = colors[Math.floor(v.magnitude)-4]; 
     			eq_stroke.strokeColor = null;
@@ -86,6 +87,8 @@ $(document).ready(function() {
     			v['eq_visual'] = eq_visual;
     		  v['move'] = false;
     		  v['destination'] = -1;
+    		  v['size'] = initsize;
+    		  v['destination_size'] = initsize;
     		  $.data_loaded = true;
         });
         view.draw();
@@ -99,6 +102,7 @@ $(document).ready(function() {
     $.each(data, function(k, v) {
       var point = randomPoint();
       v['destination'] = point;
+      v['destination_size'] = 10;
       v['move'] = true;
     });
   }
@@ -110,10 +114,13 @@ $(document).ready(function() {
 	}
 	
 	show_dpt = function(data) {
+	  posx=20;
+    posy=100;
 	  $.each(data, function(k, v) {
-	    
-	    v['destination'] = 0;
+	    v['destination'] = new Point(canvas.width-posx,posy);
+	    v['destination_size'] = 20;
 	    v['move'] = true;
+	    posx+=60;
     });
 	}
 	
@@ -154,6 +161,7 @@ $(document).ready(function() {
 				posy+=30;
 			}
 			v['destination'] = new Point(posx, posy);
+			v['destination_size'] = 10;
 			v['move'] = true;
 			posx+=25;
 			prev_day=v.day;
@@ -180,13 +188,18 @@ $(document).ready(function() {
 	  if ($.data_loaded) {
       $.each($.seismi.data.earthquakes, function(k, v) {
         if (v['move']) {
-          var vector = v['destination'] - v['eq_visual'].position;
-          var vd = vectorDiff(v['destination'], v['eq_visual'].position, 4);
-          v['eq_visual'].position = vd.new_pos;
+          var obj = v['eq_visual'];
+          var vector = v['destination'] - obj.position;
+          var vd = vectorDiff(v['destination'], obj.position, 4);
+          obj.position = vd.new_pos;
           if (vd.dist < 1) {
             v['move'] = false;
-            }
           }
+          if (v['destination_size'] != v['size']) {
+            obj.scale(v['destination_size']/v['size']);
+            v['size'] = v['destination_size'];
+          }
+        }
       });
     }
   }
