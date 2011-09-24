@@ -11,12 +11,23 @@ $(document).ready(function() {
       fill: true,
       tolerance: 5
   };
+  
+  cur_view = 'show_lst';
+  
+  $(window).resize(function() {
+    show(cur_view);
+  });
 	
-	$('#navi-nst').click(function(){show_nst();});
-	$('#navi-map').click(function(){show_map();});
-	$('#navi-tml').click(function(){show_tml();});
-	$('#navi-dpt').click(function(){show_dpt();});
-	$('#navi-lst').click(function(){show_lst();});
+	$('#navi-nst').click(function(){show('show_nst');});
+	$('#navi-map').click(function(){show('show_map');});
+	$('#navi-tml').click(function(){show('show_tml');});
+	$('#navi-dpt').click(function(){show('show_dpt');});
+	$('#navi-lst').click(function(){show('show_lst');});
+	
+	show = function(view_name) {
+	  cur_view = view_name;
+	  window[cur_view]($.seismi.data.earthquakes);
+	}
 	
 	// Placeholders for Infobar
 	var holderMagnitude = $('#magnitude');
@@ -74,25 +85,35 @@ $(document).ready(function() {
     		  $.data_loaded = true;
         });
         view.draw();
+        show(cur_view);
       }
   }
-  function show_nst() {
+  show_nst = function(data) {
+    
   }
-  function show_map() {
-    $.each($.seismi.data.earthquakes, function(k, v) {
+  show_map = function(data) {
+    $.each(data, function(k, v) {
       var point = randomPoint();
       v['destination'] = point;
       v['move'] = true;
     });
   }
 	
-	function show_tml() {
-	  $.each($.seismi.data.earthquakes, function(k, v) {
+	show_tml = function(data) {
+	  $.each(data, function(k, v) {
 	    v['eq_visual'].position = randomPoint();
     });
 	}
 	
-	show_lst = function() {
+	show_dpt = function(data) {
+	  $.each(data, function(k, v) {
+	    
+	    v['destination'] = 0;
+	    v['move'] = true;
+    });
+	}
+	
+	show_lst = function(data) {
 		posx=20;
 		posy=20;
 		// Canvas current width and height
@@ -101,7 +122,7 @@ $(document).ready(function() {
 		// Store previous day
 		prev_day = ''
 		// For each earthquake in data
-		$.each($.seismi.data.earthquakes, function(k, v) {
+		$.each(data, function(k, v) {
 			// Access to Eq Data:
 			// v.day, v.depth, v.eqid, v.lat, v.lon, v.magnitude, v.region, v.src, v.time, v.timedate
 			
