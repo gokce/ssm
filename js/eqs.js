@@ -109,7 +109,7 @@ $(document).ready(function() {
 		$.seismi.modified = '';
 		
 		// Refresh visualization
-		
+		$.visualizations.refresh();
 		
 	}
 	
