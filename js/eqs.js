@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	var start_time = +new Date();
 	
 	$.seismi = {
 		min_magnitude : 4,
@@ -92,10 +93,20 @@ $(document).ready(function() {
 		}
 		$.seismi.modified = '';
 		
-		// Refresh visualization
-		$.visualizations.refresh();
-		
+		// Everything is loaded. Refresh visualization
+		elapsed = (+new Date()-start_time);
+		if (elapsed >= 3000) {
+		  $.init_vis.refresh();
+		} else {
+		  var t = setTimeout("$.init_vis.refresh()", 3000-elapsed);
+		}
 	}
+	$.init_vis = {
+	  refresh: function() {
+	    $.visualizations.refresh();
+  	  $('#intro').fadeOut(200);
+    }
+  }
 	
 	// Filters
 	setFilterButtons('.ulmagnitude');

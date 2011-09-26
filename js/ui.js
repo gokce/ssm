@@ -2,13 +2,16 @@ $(document).ready(function() {
 	// hide in the beginnning
 	$('#eqrawdata').animate({width:'hide'}, 0);
 	$('#timebar').animate({width:'hide'}, 0);
+	
+	/*
 	$('#help1').fadeOut(0);
 	$('#help2').fadeOut(0);
 	$('#help3').fadeOut(0);
 	$('#help4').fadeOut(0);
 	$('#help5').fadeOut(0);
 	$('#help6').fadeOut(0);
-
+	*/
+	/*
 	// show briefly in the beginning
 	$('#help1').delay(100).fadeIn(500, function() {
 		$('#help1').delay(1000).fadeOut(1500);
@@ -23,7 +26,8 @@ $(document).ready(function() {
 		$('#help4').delay(1000).fadeOut(1500);
 	});
 	$('#help').delay(1900).fadeOut(1500);
-
+	*/
+	
 	// toggle rawdata
 	$('#butr').click(function() {
 		$('#timebar').animate({width:'hide'}, 200, function() {

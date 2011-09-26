@@ -111,13 +111,14 @@ img{border:none;}
 .disable:hover{cursor:default;}
 
 #logo	{left:4px; top:0;font-family:'extravaganzzaBold';}
-#help {width:100%; height:100%; background:#000; opacity:0.7; z-index:3150000;}
-#help1 {position:absolute; bottom:75px; left:175px;  width:404px; height:53px; z-index:3200000; background:url('images/help-1.png') no-repeat bottom left;}
-#help2 {position:absolute; bottom:75px; right:450px; width:272px; height:60px; z-index:3200000; background:url('images/help-2.png') no-repeat bottom right;}
-#help3 {position:absolute; bottom:70px; right:4px; width:552px; height:103px; z-index:3200000; background:url('images/help-3.png') no-repeat bottom right;}
-#help4 {position:absolute; bottom:50%; right:40px; width:134px; height:32px; z-index:3200000; background:url('images/help-4.png') no-repeat top right;}
-#help5 {position:absolute; bottom:45%; right:250px; width:138px; height:22px; z-index:3200000; background:url('images/help-5.png') no-repeat top right;}
-#help6 {position:absolute; bottom:0; right:0; width:1800px; height:684px; z-index:3200000; background:url('images/help-6.png') no-repeat top right;}
+#intro {width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:3150000; background:url('images/beginning_double.png') no-repeat center center;}
+#help {width:100%; height:100%; background:#000; opacity:0.7; z-index:3140000; display:none;}
+#help1 {position:absolute; bottom:75px; left:175px;  width:404px; height:53px; z-index:3200000; background:url('images/help-1.png') no-repeat bottom left; display:none;}
+#help2 {position:absolute; bottom:75px; right:450px; width:272px; height:60px; z-index:3200000; background:url('images/help-2.png') no-repeat bottom right; display:none;}
+#help3 {position:absolute; bottom:70px; right:4px; width:552px; height:103px; z-index:3200000; background:url('images/help-3.png') no-repeat bottom right; display:none;}
+#help4 {position:absolute; bottom:50%; right:40px; width:134px; height:32px; z-index:3200000; background:url('images/help-4.png') no-repeat top right; display:none;}
+#help5 {position:absolute; bottom:45%; right:250px; width:138px; height:22px; z-index:3200000; background:url('images/help-5.png') no-repeat top right; display:none;}
+#help6 {position:absolute; bottom:0; right:0; width:1800px; height:684px; z-index:3200000; background:url('images/help-6.png') no-repeat top right; display:none;}
 
 em#eqtotal {position:absolute; font-size:18px; right:10px; top:49px; width:80px; color:#999;}
 #tooltip {position:absolute; text-align:right; z-index:2300000; border:1px solid #000; background:#020202; padding:8px 12px; color:#fff; display:none; }

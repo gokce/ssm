@@ -67,5 +67,6 @@
 		</ul>
 	</div>
 	<div id="help"></div><div id="help6"></div><div id="help1"></div><div id="help2"></div><div id="help3"></div><div id="help4"></div><div id="help5"></div>
+	<div id="intro"></div>
 </body>
 </html>
