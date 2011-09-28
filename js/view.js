@@ -58,16 +58,16 @@ $(document).ready(function() {
 				var eq_circle = new Path.Circle(new Point(initx, inity), initsize);
 				//colors = ['#A3CC29','#FFE24D','#CC671F','#B30000'] //with eq-colors
 				colors = ['#0044cc','#0044cc','#0044cc','#0044cc'] // only blue
-				opacities = ['0.3','0.5','0.7','0.9']
 				eq_circle.fillColor = colors[Math.floor(v.magnitude)-4];
-				eq_circle.opacity = opacities[Math.floor(v.magnitude)-4];
+				eq_circle.opacity = ((v.magnitude / 15) + 0.3);
 				eq_circle.name = 'fill';
 
 				// Selection Stroke
 				var eq_stroke = new Path.Circle(new Point(initx, inity), initsize);
 				eq_stroke.strokeWidth = 3;
-				//eq_stroke.originalColor = colors[Math.floor(v.magnitude)-4]; 
-				eq_stroke.strokeColor = #ffffff;
+				//eq_stroke.originalColor = colors[Math.floor(v.magnitude)-4];
+				eq_stroke.originalColor = '#ffffff';
+				eq_stroke.strokeColor = null;
 				eq_stroke.name = 'stroke';
 
 				var eq_visual = new Group();
