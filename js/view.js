@@ -12,23 +12,23 @@ $(document).ready(function() {
 		tolerance: 5
 	};
 	
-	var current_view = 'show_lst';
+	var current_view = 'lst';
 	var canvas;
 	
 	$(window).resize(function() {
 		show(current_view);
 	});
 	
-	$('#navi-nst').click(function(){show('show_nst');});
-	$('#navi-map').click(function(){show('show_map');});
-	$('#navi-tml').click(function(){show('show_tml');});
-	$('#navi-dpt').click(function(){show('show_dpt');});
-	$('#navi-lst').click(function(){show('show_lst');});
+	$('#navi-nst').click(function(){show('nst');});
+	$('#navi-map').click(function(){show('map');});
+	$('#navi-tml').click(function(){show('tml');});
+	$('#navi-dpt').click(function(){show('dpt');});
+	$('#navi-lst').click(function(){show('lst');});
 	
 	show = function(view_name) {
 		canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
 		current_view = view_name;
-		window[current_view]($.seismi.data.earthquakes);
+		window['show_'+current_view]($.seismi.data.earthquakes);
 	}
 	
 	// Placeholders for Infobar
@@ -49,6 +49,8 @@ $(document).ready(function() {
 	
 	$.visualizations = {
 		refresh: function() {
+		  canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
+		  project.activeLayer.removeChildren()
 			$.each($.seismi.data.earthquakes, function(k, v) {
 				initx = Math.random()*view._viewSize._width;
 				inity = Math.random()*-100;
@@ -86,7 +88,9 @@ $(document).ready(function() {
 				eq_visual['data'] = function() {
 					return v;
 				}
-
+				
+				v['dpt'] = setup_dpt(v);
+				
 				v['eq_visual'] = eq_visual;
 				v['move'] = false;
 				v['destination'] = -1;
@@ -98,6 +102,21 @@ $(document).ready(function() {
 			show(current_view);
 		}
 	}
+	setup_dpt = function(data) {
+	  posx=100;
+		posy=75;
+		newx = canvas.width-posx;
+		newy = posy+(Math.floor(data.depth)/1.2);
+	  // add white depthlines
+		var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
+		depthline.strokeColor = null;
+		//depthline.strokeColor = 'white';
+		depthline.strokeWidth = 3;
+		var dpt_group = new Group();
+		dpt_group.addChild(depthline);
+		return dpt_group;
+	}
+	
 	show_nst = function(data) {
 
 	}
@@ -125,14 +144,9 @@ $(document).ready(function() {
 			v['destination'] = new Point(newx,newy);
 			v['destination_size'] = ((v.magnitude*20)-70);
 			v['move'] = true;
-			
-			// add white depthlines
-			var depthline = new Path.Line(new Point(newx,posy), v['destination']);
-			depthline.strokeColor = 'white';
-			depthline.strokeWidth = 3;
-			
 			// move next eq 50 pixels left
 			posx+=50;
+		  v[current_view].strokeColor = 'white';
 		});
 	}
 	
@@ -205,11 +219,16 @@ $(document).ready(function() {
 					obj.position = vd.new_pos;
 					if (vd.dist < 1) {
 						v['move'] = false;
+						v['cleanup'] = true;
 					}
 					if (v['destination_size'] != v['size']) {
 						obj.scale(v['destination_size']/v['size']);
 						v['size'] = v['destination_size'];
 					}
+				}
+				if (v['cleanup']) {
+				  //console.log("cleanup");
+				  v['cleanup'] = false;
 				}
 			});
 		}
