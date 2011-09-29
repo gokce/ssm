@@ -118,12 +118,12 @@ $(document).ready(function() {
 	
 	show_dpt = function(data) {
 		posx=100;
-		posy=50;
+		posy=75;
 		$.each(data, function(k, v) {
 			newx = canvas.width-posx;
-			newy = posy+(Math.floor(v.depth)/1.3);
+			newy = posy+(Math.floor(v.depth)/1.2);
 			v['destination'] = new Point(newx,newy);
-			v['destination_size'] = ((v.magnitude*10)-20);
+			v['destination_size'] = ((v.magnitude*20)-70);
 			v['move'] = true;
 			
 			// add white depthlines
