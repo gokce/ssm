@@ -118,14 +118,21 @@ $(document).ready(function() {
 	
 	show_dpt = function(data) {
 		posx=100;
-		posy=100;
+		posy=50;
 		$.each(data, function(k, v) {
 			newx = canvas.width-posx;
-			newy = posy+(Math.floor(v.depth)/1.4);
+			newy = posy+(Math.floor(v.depth)/1.3);
 			v['destination'] = new Point(newx,newy);
-			v['destination_size'] = v.magnitude*5;
+			v['destination_size'] = ((v.magnitude*10)-20);
 			v['move'] = true;
-			posx+=60;
+			
+			// add white depthlines
+			var depthline = new Path.Line(new Point(newx,posy), v['destination']);
+			depthline.strokeColor = 'white';
+			depthline.strokeWidth = 3;
+			
+			// move next eq 50 pixels left
+			posx+=50;
 		});
 	}
 	
