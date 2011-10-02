@@ -14,7 +14,7 @@ $(document).ready(function() {
 	
 	var views = ['nst','map','tml','dpt','lst'];
 	
-	var current_view = 'dpt';
+	var current_view = 'lst';
 	var canvas;
 	
 	$(window).resize(function() {
@@ -98,8 +98,11 @@ $(document).ready(function() {
 					return v;
 				}
 				
-				v['dpt'] = setup_dpt(v);
-				v['dpt_redraw'] = false;
+				v['dpt'] = setup_extra(v);
+				v['lst'] = setup_extra(v);
+				
+				//v['dpt'] = setup_dpt(v);
+				//v['lst'] = setup_lst(v);
 				
 				v['eq_visual'] = eq_visual;
 				v['move'] = false;
@@ -112,30 +115,36 @@ $(document).ready(function() {
 			show(current_view);
 		}
 	}
+	setup_extra = function(data) {
+	    var extra_group = new Group();
+    	extra_group['enable'] = function() {}
+    	extra_group['disable'] = function() {extra_group.removeChildren();}
+    	extra_group['select'] = function() {}
+    	extra_group['unselect'] = function() {}
+    	extra_group['data'] = function() {}
+    	return extra_group;
+	}
+	/*
 	setup_dpt = function(data) {
     	var dpt_group = new Group();
-    	dpt_group['redraw'] = function(posx) {
-    	    if (posx == null) posx=100;
-    	    dpt_group.removeChildren();
-        	posy=75;
-        	console.log(posx);
-        	newx = posx;
-        	newy = posy+(Math.floor(data.depth)/1.2);
-            // add white depthlines
-    	    var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
-        	depthline.strokeColor = 'white';
-        	depthline.strokeWidth = 3;    	
-        	dpt_group.addChild(depthline);
-    	}
     	dpt_group['enable'] = function() {dpt_group.strokeColor = 'white';}
-    	dpt_group['disable'] = function() {dpt_group.strokeColor = null;}
+    	dpt_group['disable'] = function() {dpt_group.removeChildren();}
     	dpt_group['select'] = function() {}
     	dpt_group['unselect'] = function() {}
     	dpt_group['data'] = function() {}
-    	dpt_group.redraw();
+    	//dpt_group.redraw();
     	return dpt_group;
 	}
-	
+	setup_lst = function(data) {
+    	var lst_group = new Group();
+    	lst_group['enable'] = function() { }
+    	lst_group['disable'] = function() {lst_group.removeChildren();}
+    	lst_group['select'] = function() {}
+    	lst_group['unselect'] = function() {}
+    	lst_group['data'] = function() {}
+    	return lst_group;
+	}
+	*/
 	show_nst = function(data) {
 
 	}
@@ -163,10 +172,15 @@ $(document).ready(function() {
 			v['destination'] = new Point(newx,newy);
 			v['destination_size'] = ((v.magnitude*20)-70);
 			v['move'] = true;
-			v['dpt_redraw'] = true;
+			
+            // add white depthlines
+    	    var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
+        	depthline.strokeColor = 'white';
+        	depthline.strokeWidth = 3;    	
+        	v['dpt'].addChild(depthline);
+			
 			// move next eq 50 pixels left
 			posx+=50;
-		  //v[current_view].strokeColor = 'white';
 		});
 	}
 	
@@ -188,7 +202,6 @@ $(document).ready(function() {
 						posx=20;
 						posy+=30;
 					}
-					/*
 					var text = new paper.PointText(new paper.Point(posx+5, posy+6));
 					text.characterStyle = {
 						fontSize: 14,
@@ -196,7 +209,7 @@ $(document).ready(function() {
 						font: 'extravaganzzaBold',
 					};
 					text.content=v.day;
-					*/
+					v['lst'].addChild(text);
 					posx+=100;
 				}
 			}
@@ -232,13 +245,6 @@ $(document).ready(function() {
 	view.onFrame = function(event) {
 		if ($.data_loaded) {
 			$.each($.seismi.data.earthquakes, function(k, v) {
-			    if (v['move']) {
-			        if (v['dpt_redraw']) {
-			            //console.log(v['destination'].x);
-    				    v['dpt'].redraw(v['destination'].x);
-    				    v['dpt_redraw'] = false;
-				    }
-				}
 				if (v['move']) {
 					var obj = v['eq_visual'];
 					var vector = v['destination'] - obj.position;
@@ -246,17 +252,19 @@ $(document).ready(function() {
 					obj.position = vd.new_pos;
 					if (vd.dist < 1) {
 						v['move'] = false;
-						v['cleanup'] = true;
+						//v['cleanup'] = true;
 					}
 					if (v['destination_size'] != v['size']) {
 						obj.scale(v['destination_size']/v['size']);
 						v['size'] = v['destination_size'];
 					}
 				}
+				/*
 				if (v['cleanup']) {
 				  //console.log("cleanup");
 				  v['cleanup'] = false;
 				}
+				*/
 			});
 		}
 	}
