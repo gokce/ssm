@@ -21,11 +21,11 @@ $(document).ready(function() {
 		show(current_view);
 	});
 	
-	$('#navi-nst').click(function(){show('nst');});
-	$('#navi-map').click(function(){show('map');});
-	$('#navi-tml').click(function(){show('tml');});
-	$('#navi-dpt').click(function(){show('dpt');});
-	$('#navi-lst').click(function(){show('lst');});
+	$('.nst').click(function(){show('nst');});
+	$('.map').click(function(){show('map');});
+	$('.tml').click(function(){show('tml');});
+	$('.dpt').click(function(){show('dpt');});
+	$('.lst').click(function(){show('lst');});
 	
 	show = function(view_name) {
 		canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
@@ -35,6 +35,11 @@ $(document).ready(function() {
 		        if (v[v2] != null) v[v2].disable();
 	        });
 	    });
+	    if (view_name == 'map') {
+	        $('#mapcontainer').fadeIn(400);
+	    } else {
+	        $('#mapcontainer').fadeOut(400);
+	    }
 		window['show_'+current_view]($.seismi.data.earthquakes);
 	}
 	

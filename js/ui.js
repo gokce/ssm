@@ -28,6 +28,10 @@ $(document).ready(function() {
 	$('#help').delay(1900).fadeOut(1500);
 	*/
 	
+	// init Map	
+	//$("#mapcontainer").map();
+	$("#mapcontainer").mapbox({mousewheel: true}); 
+	
 	// toggle rawdata
 	$('#butr').click(function() {
 		$('#timebar').animate({width:'hide'}, 200, function() {
@@ -36,7 +40,7 @@ $(document).ready(function() {
 	});
 	
 	// toggle help view
-	$('#navi-hlp').click(function() {
+	$('.hlp').click(function() {
 		$('#help').delay(100).fadeToggle(750);
 		$('#help1').delay(100).fadeToggle(500);
 		$('#help2').delay(150).fadeToggle(500);
