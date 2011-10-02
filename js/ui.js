@@ -40,7 +40,7 @@ $(document).ready(function() {
 	});
 	
 	// toggle help view
-	$('#navi-hlp').click(function() {
+	$('.hlp').click(function() {
 		$('#help').delay(100).fadeToggle(750);
 		$('#help1').delay(100).fadeToggle(500);
 		$('#help2').delay(150).fadeToggle(500);
