@@ -15,7 +15,7 @@
 <canvas id="viewcanvas" resize keepalive="true"></canvas>
 	<div id="mainbar">
 		<div id="logo"><a href="seismi.php" title="reload page"><img src="images/seismi-logo.png" alt="Seismi" /></a></div>
-		<div id="navi-nst"></div><div id="navi-map"></div><div id="navi-tml"></div><div id="navi-dpt"></div><div id="navi-lst"></div><div id="navi-hlp"></div>
+		<div id="navi-nst" class="tt" title="Nearest View"></div><div id="navi-map" class="tt" title="Map View"></div><div id="navi-tml" class="tt" title="Timeline View"></div><div id="navi-dpt" class="tt" title="Depth View"></div><div id="navi-lst" class="tt" title="List View"></div><div id="navi-hlp" class="tt" title="Help"></div>
 		<div id="mag1"><div id="mag2"><a href="#" class="tt" title="Depth for selected earthquake"><em id="depth">255</em><em id="depthunit">km</em></a><a href="#" class="tt" title="Magnitude value for selected earthquake"><em id="magnitude">6.4</em></a><div class="i4"></div><div class="i5"></div><div class="i6 isel"></div><div class="i7"></div></div></div>
 		<div id="tec1"><div id="tec2"><a href="#" class="tt" title="show/hide tectonic plates"><em id="tectonic">0FF</em></a></div></div>
 		<div id="vol1"><div id="vol2"><a href="#" class="tt disable" title="show/hide volcanoes"><em id="volcanoes">0FF</em></a></div></div>

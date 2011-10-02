@@ -75,10 +75,10 @@ $(document).ready(function() {
 	});
 
 	// Tooltip
-	/*function ToolTip(){
+	function ToolTip(){
 		xOffset = -190;
 		yOffset = 50;
-		$("a.tt").hover(function(e){
+		$(".tt").hover(function(e){
 			this.t = this.title;
 			this.title = "";
 			$("body").append("<p id='tooltip'>"+ this.t +"</p>");
@@ -91,11 +91,11 @@ $(document).ready(function() {
 			this.title = this.t;
 			$("#tooltip").remove();
 		});
-		$("a.tt").mousemove(function(e){
+		$(".tt").mousemove(function(e){
 			$("#tooltip")
 				.css("top",(e.pageY - yOffset) + "px")
 				.css("left",(e.pageX + xOffset) + "px");
 		});
 	};
-	ToolTip();*/
+	ToolTip();
 });
