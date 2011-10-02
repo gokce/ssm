@@ -38,8 +38,8 @@ font-weight: normal; font-style: normal;
 #mainbar div{position:absolute;}
 
 /* NAVI */
-ul#navi {margin:22px 0 0 140px; font-family:'extravaganzzaBold';font-size:16px;}
-ul#navi li{display:inline;margin:0 0 0 10px;padding:6px 10px;text-align:center;display:inline;list-style-type:none;text-decoration:none;}
+ul#navi {margin:22px 0 0 125px; font-family:'extravaganzzaBold';font-size:16px;}
+ul#navi li{display:inline;margin:0 0 0 8px;padding:6px 10px;text-align:center;display:inline;list-style-type:none;text-decoration:none;}
 ul#navi li:hover{text-shadow:#ddd 0px 0px 4px; background:rgba(255,255,255,0.1); cursor:pointer;}
 ul#navi li.selected {background:rgba(255,255,255,0.1);} 
 
