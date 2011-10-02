@@ -67,6 +67,6 @@
 		</ul>
 	</div>
 	<div id="help"></div><div id="help6"></div><div id="help1"></div><div id="help2"></div><div id="help3"></div><div id="help4"></div><div id="help5"></div>
-	<div id="intro"></div><div id="loading"></div>
+	<div id="intro"><div id="intro-container"><img src="images/beginning.png" id="beginning-img" width="360" height="300"alt="beginning info" /><img src="images/loading-main.gif" id="loading" width="50" height="22" alt="loading..." /></div></div>
 </body>
 </html>
