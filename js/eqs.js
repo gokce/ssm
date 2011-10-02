@@ -11,6 +11,23 @@ $(document).ready(function() {
 	callAPI();
 	
 	function callAPI(resources,parameters) {
+	    if ($.seismi.modified != 'magnitude') {
+    	    var holder_filters_magnitude = $('#timebar').find('.ulmagnitude').find('li').next();
+			holder_filters_magnitude.each(function(i){
+				$(this).find('.count').addClass('loading');
+				$(this).find('.count').html('');
+			});
+		}
+	    if ($.seismi.modified != 'time') {
+    	    var holder_filters_magnitude = $('#timebar').find('.ultime').find('li').next();
+			holder_filters_magnitude.each(function(i){
+				$(this).find('.count').addClass('loading');
+				$(this).find('.count').html('');
+			});
+	    }
+	    // $('.count').addClass('loading');
+        // $('.count').html('');
+        
 	  resources = (typeof resources == 'undefined') ? '' : resources;
 		parameters = (typeof parameters == 'undefined') ? '' : parameters;
 		// Call API
@@ -73,6 +90,7 @@ $(document).ready(function() {
 				holder_filters_magnitude.each(function(i){
 					min_mag = $(this).find('em.var').html();
 					count = counts[min_mag] ? counts[min_mag] : 0;
+					$(this).find('.count').removeClass('loading');
 					$(this).find('.count').html(count);
 				});
 				
@@ -87,6 +105,7 @@ $(document).ready(function() {
 					time_str = time_str.replace("/", ".");
 					//console.log(data);
 					count = data[time_str] ? data[time_str] : 0;
+					$(this).find('.count').removeClass('loading');
 					$(this).find('.count').html(count);
 				});
 			});
