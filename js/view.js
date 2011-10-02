@@ -105,8 +105,12 @@ $(document).ready(function() {
 					return v;
 				}
 				
+				v['nst'] = setup_extra(v);
+				v['map'] = setup_extra(v);
+				v['tml'] = setup_extra(v);
 				v['dpt'] = setup_extra(v);
 				v['lst'] = setup_extra(v);
+				
 								
 				v['eq_visual'] = eq_visual;
 				v['move'] = false;
