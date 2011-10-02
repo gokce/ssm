@@ -21,6 +21,7 @@
 			<p>Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form.</p>
 			<p>In order to use Seismi you need a modern browser &amp; to have javascript enabled</p>
 			<p>Take a look at the <a href="http://seismi.org/api/">API</a>.</p>
+			<p>Seismi is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported">Creative Commons BY-NC-SA 3.0 license</a>.</p>
 		</div>
 		<div id="i2">
 			<h2>Twitter</h2>
@@ -38,6 +39,6 @@
 		</div>
 	</div>
 </div>
-<div id="copy">&copy; Seismi <?php print(Date("Y")); ?></div>
+<div id="copy">&copy; Seismi <?php print(Date("Y")); ?> &bull; Licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported</a> License.</div>
 </body>
 </html>
