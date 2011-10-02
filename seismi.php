@@ -6,6 +6,7 @@
 	<link type="text/css" href="style.css" rel="stylesheet" />
 	<link rel="shortcut icon" href="images/favicon.png"> 
 	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="js/mapbox.min.js"></script>
 	<script type="text/javascript" src="js/paper.js"></script>
 	<script type="text/javascript" src="js/ui.js"></script>
 	<script type="text/javascript" src="js/eqs.js"></script>
