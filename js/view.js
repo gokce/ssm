@@ -35,6 +35,11 @@ $(document).ready(function() {
 		        if (v[v2] != null) v[v2].disable();
 	        });
 	    });
+	    if (view_name == 'map') {
+	        $('#mapcontainer').fadeIn(400);
+	    } else {
+	        $('#mapcontainer').fadeOut(400);
+	    }
 		window['show_'+current_view]($.seismi.data.earthquakes);
 	}
 	

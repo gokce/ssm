@@ -6,6 +6,7 @@
 	<link type="text/css" href="style.css" rel="stylesheet" />
 	<link rel="shortcut icon" href="images/favicon.png"> 
 	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="js/mapbox.min.js"></script>
 	<script type="text/javascript" src="js/paper.js"></script>
 	<script type="text/javascript" src="js/ui.js"></script>
@@ -14,6 +15,23 @@
 </head>
 <body>
 <canvas id="viewcanvas" resize keepalive="true"></canvas>
+	<div id="mapcontainer">
+	    <div id="map-1000"> 
+	        <!--top level map content goes here-->
+	    </div> 
+	    <div id="map-2000"> 
+	        <img src="images/map-2000.png" alt="" /> 
+	        <div class="mapcontent"> 
+	            <!--map content goes here--> 
+	        </div> 
+	    </div> 
+	    <div id="map-4000"> 
+	        <img src="images/map-4000.png" alt="" /> 
+	         <div class="mapcontent"> 
+	            <!--map content goes here--> 
+	        </div> 
+	    </div> 
+	</div>
 	<div id="mainbar">
 		<div id="logo"><a href="seismi.php" title="reload page"><img src="images/seismi-logo.png" alt="Seismi" /></a></div>
 		<div id="navi-nst" class="tt" title="Nearest View"></div><div id="navi-map" class="tt" title="Map View"></div><div id="navi-tml" class="tt" title="Timeline View"></div><div id="navi-dpt" class="tt" title="Depth View"></div><div id="navi-lst" class="tt" title="List View"></div><div id="navi-hlp" class="tt" title="Help"></div>
