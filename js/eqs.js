@@ -123,7 +123,7 @@ $(document).ready(function() {
 	$.init_vis = {
 	  refresh: function() {
 	    $.visualizations.refresh();
-  	  $('#intro').fadeOut(200);
+  	  $('#intro').fadeOut(400);
     }
   }
 	
