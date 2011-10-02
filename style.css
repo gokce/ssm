@@ -80,8 +80,8 @@ ul li {color:#777; padding:12px 120px 12px 25px; background:url('images/sidebar-
 #timebar {text-transform:uppercase;}
 #timebar ul li em.count, #timebar ul li em.loading {float:right; margin-right:-100px; text-align:right; color:#444;}
 #timebar ul li em.loading {background:url('images/loading.gif');width:18px;height:10px;}
-#eqrawdata ul li {padding:5px 25px; background:none; }
-#eqrawdata ul li:hover {color:#ccc; background:none; cursor:pointer; }
+#eqrawdata ul li {padding:5px 25px; background:none;}
+#eqrawdata ul li:hover {color:#ccc; background:none; cursor:pointer;}
 #eqrawdata ul li:first-child {opacity:0.5;}
 #eqrawdata ul li:first-child + li {color:#e573ac;}
 ul.ulmagnitude {padding-bottom:10px;}
@@ -90,6 +90,12 @@ ul.ulmagnitude {padding-bottom:10px;}
 .circle5 {background:#04c; height:6px;  width:6px;  border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
 .circle6 {background:#04c; height:8px;  width:8px;  border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;}
 .circle7 {background:#04c; height:10px; width:10px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+
+.circ_eq4, .circ_eq5, .circ_eq6, .circ_eq7 {color:#04c;float:left;}
+.circ_eq4 {margin:2px 10px 0 6px;font-size:8px;}
+.circ_eq5 {margin:-2px 10px 0 4px;font-size:16px;}
+.circ_eq6 {margin:-6px 10px 0 2px;font-size:24px;}
+.circ_eq7 {margin:-10px 10px 0 0;font-size:32px;}
 
 #timebar ul li:first-child {color:#f0e079;}
 #timebar ul li:first-child:hover {background:url('images/sidebar-bg.png') no-repeat left bottom; cursor:default;}

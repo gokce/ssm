@@ -4,7 +4,7 @@ body{
 font:normal 13px/1.6 Arial,Helvetica,sans-serif;
 color:#999;
 text-align:center;
-background:#050505 url('images/map_bg.png') no-repeat top center;
+background:#111 url('images/map_bg.png') no-repeat top center;
 }
 img{border:none;margin:0;padding:0;}
 @font-face {
@@ -37,15 +37,17 @@ h2{font:normal 16px/1.6 extravaganzza, Arial,Helvetica,sans-serif; color:#fff; b
 
 #documentation #logo{margin-left:-9px;}
 
-#intro-top{margin:150px auto 0 auto; width:715px; height:10px; background:url('images/intro_bg_top.png') no-repeat top center;}
-#intro{margin:0 auto; width:715px; background:url('images/intro_bg_middle.png') repeat-y top center;}
-#intro-bot{margin:0 auto;padding:0; width:715px; height:10px; background:url('images/intro_bg_bottom.png') no-repeat bottom center;}
+#intro-top{margin:150px auto 0 auto; width:715px; height:10px;}
+#intro{margin:0 auto; width:715px; }
+#intro-bot{margin:0 auto;padding:0; width:715px; height:10px; }
 #container{background:#171717;border-top:1px solid #1c1c1c;padding:30px 0 40px 0;margin-top:160px;}
 #info, #documentation{width:920px;margin:0 auto;text-align:left;}
 	#i1,#i2,#i3{float:left;width:280px;border-bottom:1px solid #333;padding-bottom:10px;}
 	#i2{margin-left:40px;}
 	#i3{float:none;margin-left:640px;}
 #copy{margin:20px; color:#333; font-size:12px;}
+#copy a{color:#444;}
+#copy a:hover{color:#666;}
 #documentation {padding:30px; background:rgba(0,0,0,0.7); margin:10px auto 50px auto; }
 
 #i2 p {color:#fe3;}

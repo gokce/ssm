@@ -35,10 +35,10 @@
 	<div class="sidebar" id="timebar">
 		<ul class="ulmagnitude">
 			<li>FILTER BY: MAGNITUDE</li>
-			<li class="selected">&gt; 4 <span class="circle4"></span><em class="count">0</em><em class="var">4</em><em class="type">magnitude</em></li>
-			<li>&gt; 5 <span class="circle5"></span><em class="count">0</em><em class="var">5</em><em class="type">magnitude</em></li>
-			<li>&gt; 6 <span class="circle6"></span><em class="count">0</em><em class="var">6</em><em class="type">magnitude</em></li>
-			<li>&gt; 7 <span class="circle7"></span><em class="count">0</em><em class="var">7</em><em class="type">magnitude</em></li>
+			<li class="selected">&gt; 4 <em class="count">0</em><em class="var">4</em><em class="type">magnitude</em><span class="circ_eq4">&bull;</span></li>
+			<li>&gt; 5 <em class="count">0</em><em class="var">5</em><em class="type">magnitude</em><span class="circ_eq5">&bull;</span></li>
+			<li>&gt; 6 <em class="count">0</em><em class="var">6</em><em class="type">magnitude</em><span class="circ_eq6">&bull;</span></li>
+			<li>&gt; 7 <em class="count">0</em><em class="var">7</em><em class="type">magnitude</em><span class="circ_eq7">&bull;</span></li>
 		</ul>
 		<ul class="ultime">
 			<li>FILTER BY: TIME</li>
