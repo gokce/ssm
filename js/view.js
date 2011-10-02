@@ -32,7 +32,6 @@ $(document).ready(function() {
 		current_view = view_name;
 		$.each($.seismi.data.earthquakes, function(k, v) {
 		    $.each(views, function(k2, v2) {
-		        //console.log(v2);
 		        if (v[v2] != null) v[v2].disable();
 	        });
 	    });
@@ -100,10 +99,7 @@ $(document).ready(function() {
 				
 				v['dpt'] = setup_extra(v);
 				v['lst'] = setup_extra(v);
-				
-				//v['dpt'] = setup_dpt(v);
-				//v['lst'] = setup_lst(v);
-				
+								
 				v['eq_visual'] = eq_visual;
 				v['move'] = false;
 				v['destination'] = -1;
@@ -124,27 +120,6 @@ $(document).ready(function() {
     	extra_group['data'] = function() {}
     	return extra_group;
 	}
-	/*
-	setup_dpt = function(data) {
-    	var dpt_group = new Group();
-    	dpt_group['enable'] = function() {dpt_group.strokeColor = 'white';}
-    	dpt_group['disable'] = function() {dpt_group.removeChildren();}
-    	dpt_group['select'] = function() {}
-    	dpt_group['unselect'] = function() {}
-    	dpt_group['data'] = function() {}
-    	//dpt_group.redraw();
-    	return dpt_group;
-	}
-	setup_lst = function(data) {
-    	var lst_group = new Group();
-    	lst_group['enable'] = function() { }
-    	lst_group['disable'] = function() {lst_group.removeChildren();}
-    	lst_group['select'] = function() {}
-    	lst_group['unselect'] = function() {}
-    	lst_group['data'] = function() {}
-    	return lst_group;
-	}
-	*/
 	show_nst = function(data) {
 
 	}
@@ -191,9 +166,7 @@ $(document).ready(function() {
 		prev_day = ''
 		// For each earthquake in data
 		$.each(data, function(k, v) {
-			// Access to Eq Data:
 			// v.day, v.depth, v.eqid, v.lat, v.lon, v.magnitude, v.region, v.src, v.time, v.timedate
-			
 			// Check if current earthquake is in a new day
 			if (prev_day!=''){
 				if (prev_day!=v.day) {
@@ -261,7 +234,6 @@ $(document).ready(function() {
 				}
 				/*
 				if (v['cleanup']) {
-				  //console.log("cleanup");
 				  v['cleanup'] = false;
 				}
 				*/
