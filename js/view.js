@@ -12,7 +12,9 @@ $(document).ready(function() {
 		tolerance: 5
 	};
 	
-	var current_view = 'lst';
+	var views = ['nst','map','tml','dpt','lst'];
+	
+	var current_view = 'dpt';
 	var canvas;
 	
 	$(window).resize(function() {
@@ -28,6 +30,12 @@ $(document).ready(function() {
 	show = function(view_name) {
 		canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
 		current_view = view_name;
+		$.each($.seismi.data.earthquakes, function(k, v) {
+		    $.each(views, function(k2, v2) {
+		        //console.log(v2);
+		        if (v[v2] != null) v[v2].disable();
+	        });
+	    });
 		window['show_'+current_view]($.seismi.data.earthquakes);
 	}
 	
@@ -66,15 +74,16 @@ $(document).ready(function() {
 
 				// Selection Stroke
 				var eq_stroke = new Path.Circle(new Point(initx, inity), initsize);
-				eq_stroke.strokeWidth = 3;
+				eq_stroke.strokeWidth = 2;
 				//eq_stroke.originalColor = colors[Math.floor(v.magnitude)-4];
 				eq_stroke.originalColor = '#ffffff';
 				eq_stroke.strokeColor = null;
 				eq_stroke.name = 'stroke';
 
 				var eq_visual = new Group();
-				eq_visual.addChild(eq_stroke);
+				
 				eq_visual.addChild(eq_circle);
+				eq_visual.addChild(eq_stroke);
 
 				// Select
 				eq_visual['select'] = function() {
@@ -90,6 +99,7 @@ $(document).ready(function() {
 				}
 				
 				v['dpt'] = setup_dpt(v);
+				v['dpt_redraw'] = false;
 				
 				v['eq_visual'] = eq_visual;
 				v['move'] = false;
@@ -103,18 +113,27 @@ $(document).ready(function() {
 		}
 	}
 	setup_dpt = function(data) {
-	  posx=100;
-		posy=75;
-		newx = canvas.width-posx;
-		newy = posy+(Math.floor(data.depth)/1.2);
-	  // add white depthlines
-		var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
-		depthline.strokeColor = null;
-		//depthline.strokeColor = 'white';
-		depthline.strokeWidth = 3;
-		var dpt_group = new Group();
-		dpt_group.addChild(depthline);
-		return dpt_group;
+    	var dpt_group = new Group();
+    	dpt_group['redraw'] = function(posx) {
+    	    if (posx == null) posx=100;
+    	    dpt_group.removeChildren();
+        	posy=75;
+        	console.log(posx);
+        	newx = posx;
+        	newy = posy+(Math.floor(data.depth)/1.2);
+            // add white depthlines
+    	    var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
+        	depthline.strokeColor = 'white';
+        	depthline.strokeWidth = 3;    	
+        	dpt_group.addChild(depthline);
+    	}
+    	dpt_group['enable'] = function() {dpt_group.strokeColor = 'white';}
+    	dpt_group['disable'] = function() {dpt_group.strokeColor = null;}
+    	dpt_group['select'] = function() {}
+    	dpt_group['unselect'] = function() {}
+    	dpt_group['data'] = function() {}
+    	dpt_group.redraw();
+    	return dpt_group;
 	}
 	
 	show_nst = function(data) {
@@ -144,9 +163,10 @@ $(document).ready(function() {
 			v['destination'] = new Point(newx,newy);
 			v['destination_size'] = ((v.magnitude*20)-70);
 			v['move'] = true;
+			v['dpt_redraw'] = true;
 			// move next eq 50 pixels left
 			posx+=50;
-		  v[current_view].strokeColor = 'white';
+		  //v[current_view].strokeColor = 'white';
 		});
 	}
 	
@@ -212,6 +232,13 @@ $(document).ready(function() {
 	view.onFrame = function(event) {
 		if ($.data_loaded) {
 			$.each($.seismi.data.earthquakes, function(k, v) {
+			    if (v['move']) {
+			        if (v['dpt_redraw']) {
+			            //console.log(v['destination'].x);
+    				    v['dpt'].redraw(v['destination'].x);
+    				    v['dpt_redraw'] = false;
+				    }
+				}
 				if (v['move']) {
 					var obj = v['eq_visual'];
 					var vector = v['destination'] - obj.position;
