@@ -35,7 +35,7 @@
 	<div id="mainbar">
 		<div id="logo"><a href="seismi.php" title="reload page"><img src="images/seismi-logo.png" alt="Seismi" /></a></div>
 		<ul id="navi">
-			<li class="selected nst" title="Nearest View">NST</li>
+			<li class="nst" title="Nearest View">NST</li>
 			<li class="map" title="Map View">MAP</li>
 			<li class="tml" title="Timeline View">TML</li>
 			<li class="dpt" title="Depth View">DPT</li>
