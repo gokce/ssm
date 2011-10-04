@@ -18,6 +18,9 @@ $(document).ready(function() {
 	var current_view = 'map';
 	var canvas;
 	$('#navi').find('.'+current_view).addClass('selected');
+	
+	// init Map
+	$("#mapcontainer").mapbox({afterZoom: function(layer, xcoord, ycoord, viewport) {console.log(".. "+layer);}});
 	var map_size = {};
 	map_size['0'] = {'width':1000,'height':503};
 	map_size['1'] = {'width':$("#map-2000").width(),'height':$("#map-2000").height()};
@@ -292,7 +295,14 @@ $(document).ready(function() {
 	    var vector = event.delta;
 	    if (vector.x != 0) $("#mapcontainer").mapbox("left",vector.x);
     	if (vector.y != 0) $("#mapcontainer").mapbox("up",vector.y);
+    	//var reverse_vector = new Point(vector.x*-1,vector.y*-1);
+    	//paper.view.scrollBy(reverse_vector);
+    	//show(current_view);
 	}
+	$.mapAfterZoom = function(layer, xcoord, ycoord, viewport) {
+	    console.log(layer);
+	}
+	
 	refreshInfobar = function(data) {
 		//data.day, data.depth, data.eqid, data.lat, data.lon, data.magnitude, data.region, data.src, data.time, data.timedate
 		$(holderMagnitude).html(data.magnitude);

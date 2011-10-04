@@ -30,9 +30,6 @@ $(document).ready(function() {
 	$('#help').delay(1900).fadeOut(1500);
 	*/
 	
-	// init Map
-	$("#mapcontainer").mapbox({mousewheel: true});
-	
 	// toggle rawdata
 	$('#butr').click(function() {
 		$('#sidebar').animate({width:'hide'}, 200, function() {
