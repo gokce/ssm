@@ -15,6 +15,7 @@
 </head>
 <body>
 <canvas id="viewcanvas" resize keepalive="true"></canvas>
+	<div id="zoomin"></div><div id="zoomout"></div>
 	<div id="mapcontainer">
 		<div id="map-1000"><!--top level map content goes here--></div>
 		<div id="map-2000">
