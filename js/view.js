@@ -1,6 +1,7 @@
 paper.install(window);
 $(document).ready(function() {
-	$.data_loaded = false;
+    $.data_loaded = false;
+	$.seismi.currentzoom = 0;
 	
 	paper.setup('viewcanvas');
 	var tool = new Tool();
@@ -18,15 +19,31 @@ $(document).ready(function() {
 	var canvas;
 	$('#navi').find('.'+current_view).addClass('selected');
 	
+	// init Map
+	$("#mapcontainer").mapbox({afterZoom: function(layer, xcoord, ycoord, viewport) {console.log(".. "+layer);}});
+	var map_size = {};
+	map_size['0'] = {'width':1000,'height':503};
+	map_size['1'] = {'width':$("#map-2000").width(),'height':$("#map-2000").height()};
+	map_size['2'] = {'width':$("#map-4000").width(),'height':$("#map-4000").height()};
+	
 	$(window).resize(function() {
 		show(current_view);
 	});
+	var mapcontainer = $("#mapcontainer");
+	$("#zoomin").click(function(){zoom(2)});
+	$("#zoomout").click(function(){zoom(0)});
 	
 	$('.nst').click(function(){show('nst');});
 	$('.map').click(function(){show('map');});
 	$('.tml').click(function(){show('tml');});
 	$('.dpt').click(function(){show('dpt');});
 	$('.lst').click(function(){show('lst');});
+	
+	zoom = function(level) {
+	    mapcontainer.mapbox("zoomTo",level);
+	    $.seismi.currentzoom=level;
+	    show(current_view);
+	}
 	
 	show = function(view_name) {
 		canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
@@ -137,9 +154,16 @@ $(document).ready(function() {
 	}
 	show_map = function(data) {
 		$.each(data, function(k, v) {
-			var point = randomPoint();
+		    currentzoom = $.seismi.currentzoom;
+		    map_w = map_size[currentzoom].width;
+		    map_h =map_size[currentzoom].height;
+		    xoffset = (canvas.width-map_w)/2;
+		    yoffset = (canvas.height-map_h)/2;
+			x = mapValues(v.lon, -180, 180, xoffset, xoffset+map_w);
+			y = mapValues(v.lat, 90, -90, yoffset, yoffset+map_h);
+			var point = new Point(x,y);
 			v['destination'] = point;
-			console.log(v.lat);
+			//console.log(v.lat);
 			v['destination_size'] = 2;
 			v['move'] = true;
 		});
@@ -271,7 +295,14 @@ $(document).ready(function() {
 	    var vector = event.delta;
 	    if (vector.x != 0) $("#mapcontainer").mapbox("left",vector.x);
     	if (vector.y != 0) $("#mapcontainer").mapbox("up",vector.y);
+    	//var reverse_vector = new Point(vector.x*-1,vector.y*-1);
+    	//paper.view.scrollBy(reverse_vector);
+    	//show(current_view);
 	}
+	$.mapAfterZoom = function(layer, xcoord, ycoord, viewport) {
+	    console.log(layer);
+	}
+	
 	refreshInfobar = function(data) {
 		//data.day, data.depth, data.eqid, data.lat, data.lon, data.magnitude, data.region, data.src, data.time, data.timedate
 		$(holderMagnitude).html(data.magnitude);
@@ -283,8 +314,11 @@ $(document).ready(function() {
 		$.each(holderIndicator, function(k, v) { v.removeClass('isel'); });
 		$(holderIndicator[Math.floor(data.magnitude)]).addClass('isel');
 	}
+	mapValues = function(value, istart, istop, ostart, ostop) {
+    	   return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
+         }
 	// String Truncate
-	var truncate = function (str, limit) {
+	truncate = function (str, limit) {
 		var bits, i;
 		bits = str.split('');
 		if (bits.length > limit) {

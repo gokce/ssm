@@ -34,7 +34,7 @@
 			<li class="map" title="Map View">MAP</li>
 			<li class="tml" title="Timeline View">TML</li>
 			<li class="dpt" title="Depth View">DPT</li>
-			<li class="lst selected" title="List View">LST</li>
+			<li class="lst" title="List View">LST</li>
 			<li class="hlp" title="Help">?</li>
 		</ul>
 		<div id="mag1"><div id="mag2"><a href="#" class="tt" title="Depth for selected earthquake"><em id="depth">255</em><em id="depthunit">km</em></a><a href="#" class="tt" title="Magnitude value for selected earthquake"><em id="magnitude">6.4</em></a><div class="i4"></div><div class="i5"></div><div class="i6 isel"></div><div class="i7"></div></div></div>

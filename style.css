@@ -29,8 +29,8 @@ font-weight: normal; font-style: normal;
 /* === MAP CONTAINER === */
 #mapcontainer {width:100%;height:100%;cursor:move;margin:0 auto;overflow:hidden;position:relative;z-index:100000;display:none;}
 #map-1000 {background:url('images/map-1000.png') no-repeat center center;width:100%;height:100%;}
-#map-2000 {width:2000px;height:1600px;}
-#map-4000 {width:4000px;height:3200px;}
+#map-2000 {width:2000px;height:1007px;}
+#map-4000 {width:4000px;height:2014px;}
 
 /* === MAINBAR === */
 #mainbar {background:#000 url('images/mainbar-bg.png') repeat-x top; width:100%; height:60px; display:inline; opacity:0.94; border-top:1px solid #000;border-bottom:1px solid #000; position:absolute; bottom:0; left:0; z-index:4000000;}
