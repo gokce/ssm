@@ -1,12 +1,11 @@
 $(document).ready(function() {
 	var start_time = +new Date();
 	
-	$.seismi = {
-		min_magnitude : 4,
-		data : new Object(),
-		modified : '',
-		timefilter : ''
-	};
+    if (typeof $.seismi === 'undefined') $.seismi = {};
+    $.seismi.min_magnitude = 4;
+    $.seismi.data = new Object();
+    $.seismi.modified = '';
+    $.seismi.timefilter = '';
 	
 	callAPI();
 	

@@ -3,6 +3,8 @@ $(document).ready(function() {
 	$('#eqrawdata').animate({width:'hide'}, 0);
 	$('#sidebar').animate({width:'hide'}, 0);
 	
+	if (typeof $.seismi === 'undefined') $.seismi = {};
+	
 	/*
 	$('#help1').fadeOut(0);
 	$('#help2').fadeOut(0);
@@ -29,10 +31,7 @@ $(document).ready(function() {
 	*/
 	
 	// init Map
-	var mapcontainer = $("#mapcontainer");
 	$("#mapcontainer").mapbox({mousewheel: true});
-	$("#zoomin").click(function(){mapcontainer.mapbox("zoomTo",4);});
-	$("#zoomout").click(function(){mapcontainer.mapbox("zoomTo",0);});
 	
 	// toggle rawdata
 	$('#butr').click(function() {

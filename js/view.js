@@ -1,6 +1,7 @@
 paper.install(window);
 $(document).ready(function() {
-	$.data_loaded = false;
+    $.data_loaded = false;
+	$.seismi.currentzoom = 0;
 	
 	paper.setup('viewcanvas');
 	var tool = new Tool();
@@ -17,16 +18,29 @@ $(document).ready(function() {
 	var current_view = 'map';
 	var canvas;
 	$('#navi').find('.'+current_view).addClass('selected');
+	var map_size = {};
+	map_size['0'] = {'width':1000,'height':503};
+	map_size['1'] = {'width':$("#map-2000").width(),'height':$("#map-2000").height()};
+	map_size['2'] = {'width':$("#map-4000").width(),'height':$("#map-4000").height()};
 	
 	$(window).resize(function() {
 		show(current_view);
 	});
+	var mapcontainer = $("#mapcontainer");
+	$("#zoomin").click(function(){zoom(2)});
+	$("#zoomout").click(function(){zoom(0)});
 	
 	$('.nst').click(function(){show('nst');});
 	$('.map').click(function(){show('map');});
 	$('.tml').click(function(){show('tml');});
 	$('.dpt').click(function(){show('dpt');});
 	$('.lst').click(function(){show('lst');});
+	
+	zoom = function(level) {
+	    mapcontainer.mapbox("zoomTo",level);
+	    $.seismi.currentzoom=level;
+	    show(current_view);
+	}
 	
 	show = function(view_name) {
 		canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
@@ -137,10 +151,13 @@ $(document).ready(function() {
 	}
 	show_map = function(data) {
 		$.each(data, function(k, v) {
-		    xoffset = (canvas.width-1000)/2;
-		    yoffset = (canvas.height-503)/2;
-			x = mapValues(v.lon, -180, 180, xoffset, xoffset+1000);
-			y = mapValues(v.lat, 90, -90, yoffset, yoffset+503);
+		    currentzoom = $.seismi.currentzoom;
+		    map_w = map_size[currentzoom].width;
+		    map_h =map_size[currentzoom].height;
+		    xoffset = (canvas.width-map_w)/2;
+		    yoffset = (canvas.height-map_h)/2;
+			x = mapValues(v.lon, -180, 180, xoffset, xoffset+map_w);
+			y = mapValues(v.lat, 90, -90, yoffset, yoffset+map_h);
 			var point = new Point(x,y);
 			v['destination'] = point;
 			//console.log(v.lat);
