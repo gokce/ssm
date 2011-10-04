@@ -137,9 +137,13 @@ $(document).ready(function() {
 	}
 	show_map = function(data) {
 		$.each(data, function(k, v) {
-			var point = randomPoint();
+		    xoffset = (canvas.width-1000)/2;
+		    yoffset = (canvas.height-503)/2;
+			x = mapValues(v.lon, -180, 180, xoffset, xoffset+1000);
+			y = mapValues(v.lat, 90, -90, yoffset, yoffset+503);
+			var point = new Point(x,y);
 			v['destination'] = point;
-			console.log(v.lat);
+			//console.log(v.lat);
 			v['destination_size'] = 2;
 			v['move'] = true;
 		});
@@ -283,8 +287,11 @@ $(document).ready(function() {
 		$.each(holderIndicator, function(k, v) { v.removeClass('isel'); });
 		$(holderIndicator[Math.floor(data.magnitude)]).addClass('isel');
 	}
+	mapValues = function(value, istart, istop, ostart, ostop) {
+    	   return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
+         }
 	// String Truncate
-	var truncate = function (str, limit) {
+	truncate = function (str, limit) {
 		var bits, i;
 		bits = str.split('');
 		if (bits.length > limit) {
