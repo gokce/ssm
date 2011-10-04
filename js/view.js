@@ -14,7 +14,7 @@ $(document).ready(function() {
 	
 	var views = ['nst','map','tml','dpt','lst'];
 	
-	var current_view = 'lst';
+	var current_view = 'map';
 	var canvas;
 	$('#navi').find('.'+current_view).addClass('selected');
 	
@@ -55,7 +55,7 @@ $(document).ready(function() {
 	var holderLatlon = $('#latlon');
 	var holderTectonic = $('#tectonic');
 	var holderVolcanoes = $('#volcanoes');
-	var holderTimebar = $('#timebar');
+	var holderTimebar = $('#sidebar');
 	var holderIndicator = {}
 	holderIndicator['4'] = $('#mag2').find('.i4');
 	holderIndicator['5'] = $('#mag2').find('.i5');
@@ -139,7 +139,8 @@ $(document).ready(function() {
 		$.each(data, function(k, v) {
 			var point = randomPoint();
 			v['destination'] = point;
-			v['destination_size'] = 10;
+			console.log(v.lat);
+			v['destination_size'] = 2;
 			v['move'] = true;
 		});
 	}
@@ -264,6 +265,12 @@ $(document).ready(function() {
 			// Put selected data into Infobar
 			refreshInfobar(hitResult.item.parent.data());
 		}
+		//$("#mapcontainer").mapbox("zoomTo",4);
+	}
+	tool.onMouseDrag = function(event) {
+	    var vector = event.delta;
+	    if (vector.x != 0) $("#mapcontainer").mapbox("left",vector.x);
+    	if (vector.y != 0) $("#mapcontainer").mapbox("up",vector.y);
 	}
 	refreshInfobar = function(data) {
 		//data.day, data.depth, data.eqid, data.lat, data.lon, data.magnitude, data.region, data.src, data.time, data.timedate

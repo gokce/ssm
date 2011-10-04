@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// hide in the beginnning
 	$('#eqrawdata').animate({width:'hide'}, 0);
-	$('#timebar').animate({width:'hide'}, 0);
+	$('#sidebar').animate({width:'hide'}, 0);
 	
 	/*
 	$('#help1').fadeOut(0);
@@ -28,13 +28,15 @@ $(document).ready(function() {
 	$('#help').delay(1900).fadeOut(1500);
 	*/
 	
-	// init Map	
-	//$("#mapcontainer").map();
-	$("#mapcontainer").mapbox({mousewheel: true}); 
+	// init Map
+	var mapcontainer = $("#mapcontainer");
+	$("#mapcontainer").mapbox({mousewheel: true});
+	$("#zoomin").click(function(){mapcontainer.mapbox("zoomTo",4);});
+	$("#zoomout").click(function(){mapcontainer.mapbox("zoomTo",0);});
 	
 	// toggle rawdata
 	$('#butr').click(function() {
-		$('#timebar').animate({width:'hide'}, 200, function() {
+		$('#sidebar').animate({width:'hide'}, 200, function() {
 			$('#eqrawdata').animate({width:'toggle'}, 200);
 		});
 	});
@@ -53,16 +55,16 @@ $(document).ready(function() {
 	// toggle sidebar from time info
 	$('#tim1').click(function() {
 		$('#eqrawdata').animate({width:'hide'}, 200, function() {
-			$('#timebar').animate({width:'toggle'}, 200);
+			$('#sidebar').animate({width:'toggle'}, 200);
 		});
 	});
 	
 	// quick bring of sidebar
 	$("#bringsidebar").mouseenter(function() {
-		$('#timebar').delay(100).animate({width:'show'}, 300);
+		$('#sidebar').delay(100).animate({width:'show'}, 300);
 	})
-	$("#timebar").mouseleave(function(){
-		$('#timebar').delay(300).animate({width:'hide'}, 300);
+	$("#sidebar").mouseleave(function(){
+		$('#sidebar').delay(300).animate({width:'hide'}, 300);
 	});
 	
 	
@@ -72,12 +74,12 @@ $(document).ready(function() {
 			$('#eqrawdata').animate({width:'toggle'}, 200);
 		}
 		if(code == 70) { //70 = f
-			$('#timebar').animate({width:'hide'}, 300);
+			$('#sidebar').animate({width:'hide'}, 300);
 			$('#eqrawdata').animate({width:'hide'}, 300);
 			$('#mainbar').fadeToggle(300, "linear");
 		}
 	});
-
+	
 	// Tooltip
 	function ToolTip(){
 		xOffset = -190;

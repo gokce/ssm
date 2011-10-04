@@ -12,14 +12,14 @@ $(document).ready(function() {
 	
 	function callAPI(resources,parameters) {
 	    if ($.seismi.modified != 'magnitude') {
-    	    var holder_filters_magnitude = $('#timebar').find('.ulmagnitude').find('li').next();
+    	    var holder_filters_magnitude = $('#sidebar').find('.ulmagnitude').find('li').next();
 			holder_filters_magnitude.each(function(i){
 				$(this).find('.count').addClass('loading');
 				$(this).find('.count').html('');
 			});
 		}
 	    if ($.seismi.modified != 'time') {
-    	    var holder_filters_magnitude = $('#timebar').find('.ultime').find('li').next();
+    	    var holder_filters_magnitude = $('#sidebar').find('.ultime').find('li').next();
 			holder_filters_magnitude.each(function(i){
 				$(this).find('.count').addClass('loading');
 				$(this).find('.count').html('');
@@ -64,7 +64,7 @@ $(document).ready(function() {
 			/*
 			counts = countFilters(data.earthquakes);
 			//console.log(counts);
-			var holder_filters_magnitude = $('#timebar').find('.ulmagnitude').find('li').next();
+			var holder_filters_magnitude = $('#sidebar').find('.ulmagnitude').find('li').next();
 			holder_filters_magnitude.each(function(i){
 				min_mag = $(this).find('em.var').html();
 				count = counts.magnitude[min_mag] ? counts.magnitude[min_mag] : 0;
@@ -86,7 +86,7 @@ $(document).ready(function() {
 					}
 				});
 				
-				var holder_filters_magnitude = $('#timebar').find('.ulmagnitude').find('li').next();
+				var holder_filters_magnitude = $('#sidebar').find('.ulmagnitude').find('li').next();
 				holder_filters_magnitude.each(function(i){
 					min_mag = $(this).find('em.var').html();
 					count = counts[min_mag] ? counts[min_mag] : 0;
@@ -99,7 +99,7 @@ $(document).ready(function() {
 		if ($.seismi.modified != 'time') {
 			$.getJSON('call_api.php?r=totals&p=min_magnitude='+$.seismi.min_magnitude, function(data) {
 				//console.log(data);
-				var holder_filters_magnitude = $('#timebar').find('.ultime').find('li').next();
+				var holder_filters_magnitude = $('#sidebar').find('.ultime').find('li').next();
 				holder_filters_magnitude.each(function(i){
 					time_str = $(this).find('em.var').first().html();
 					time_str = time_str.replace("/", ".");
@@ -131,7 +131,7 @@ $(document).ready(function() {
 	setFilterButtons('.ulmagnitude');
 	setFilterButtons('.ultime');
 	function setFilterButtons(listName) {
-		var holder_filters_magnitude = $('#timebar').find(listName).find('li').next();
+		var holder_filters_magnitude = $('#sidebar').find(listName).find('li').next();
 		holder_filters_magnitude.each(function(i){
 			$(this).bind("click", function(){
 				holder_filters_magnitude.each(function(i){

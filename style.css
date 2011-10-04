@@ -73,14 +73,14 @@ ul#navi li.selected {background:rgba(255,255,255,0.1);}
 .isel {width:26px; opacity:1;}
 
 /* === SIDEBAR 2 === */
-.sidebar {position:absolute; right:0; top:0; overflow:scroll; z-index:2100000; height:100%; background:#181818; opacity:0.95; border-left:1px solid #222; border-right:1px solid #000;}
-.sidebar em {font-style:normal;}
-.sidebar ul {list-style-type:none; margin:0; padding:5px 0 50px 10px;}
-.sidebar ul li {color:#777; padding:12px 120px 12px 25px; background:url('images/sidebar-bg.png') no-repeat -1px bottom;}
-.sidebar ul li:hover, .sidebar ul li.selected {background:url('images/sidebar-sel-bg.png') no-repeat left center; color:#ddd; cursor:pointer;}
-#timebar {text-transform:uppercase;}
-#timebar ul li em.count, #timebar ul li em.loading {float:right; margin-right:-100px; text-align:right; color:#444;}
-#timebar ul li em.loading {background:url('images/loading-sidebar.gif');width:18px;height:10px;}
+#sidebar {position:absolute; right:0; top:0; overflow:scroll; z-index:2100000; height:100%; background:#181818; opacity:0.95; border-left:1px solid #222; border-right:1px solid #000;}
+#sidebar em {font-style:normal;}
+#sidebar ul {list-style-type:none; margin:0; padding:5px 0 50px 10px;}
+#sidebar ul li {color:#777; padding:12px 120px 12px 25px; background:url('images/sidebar-bg.png') no-repeat -1px bottom;}
+#sidebar ul li:hover, #sidebar ul li.selected {background:url('images/sidebar-sel-bg.png') no-repeat left center; color:#ddd; cursor:pointer;}
+#sidebar {text-transform:uppercase;}
+#sidebar ul li em.count, #sidebar ul li em.loading {float:right; margin-right:-100px; text-align:right; color:#444;}
+#sidebar ul li em.loading {background:url('images/loading-sidebar.gif');width:18px;height:10px;}
 #eqrawdata ul li {padding:5px 25px; background:none;}
 #eqrawdata ul li:hover {color:#ccc; background:none; cursor:pointer;}
 #eqrawdata ul li:first-child {opacity:0.5;}
@@ -93,13 +93,13 @@ ul.ulmagnitude {padding-bottom:10px;}
 .circ_eq6 {margin:-6px 10px 0 2px;font-size:24px;}
 .circ_eq7 {margin:-10px 10px 0 0;font-size:32px;}
 
-#timebar ul li:first-child {color:#f0e079;}
-#timebar ul li:first-child:hover {background:url('images/sidebar-bg.png') no-repeat left bottom; cursor:default;}
-.sidebar .year {color:#999;}
-.sidebar em.time {color:#f0e079;}
-.sidebar em.high {color:#f66;}
-.sidebar em.var {visibility:hidden;}
-.sidebar em.type {visibility:hidden;}
+#sidebar ul li:first-child {color:#f0e079;}
+#sidebar ul li:first-child:hover {background:url('images/sidebar-bg.png') no-repeat left bottom; cursor:default;}
+#sidebar .year {color:#999;}
+#sidebar em.time {color:#f0e079;}
+#sidebar em.high {color:#f66;}
+#sidebar em.var {visibility:hidden;}
+#sidebar em.type {visibility:hidden;}
 .siderbar .highlight {color:#e573ac;text-decoration: underline;}
 
 #bringsidebar {position:absolute; right:0; top:50%; margin-top:-170px; background:url('images/icon-filter.png') no-repeat left center; width:20px; height:300px; z-index:2000000;}

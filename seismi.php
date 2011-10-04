@@ -52,7 +52,7 @@
 	</div>
 
 	<div id="bringsidebar"></div>
-	<div class="sidebar" id="timebar">
+	<div id="sidebar">
 		<ul class="ulmagnitude">
 			<li>FILTER BY: MAGNITUDE</li>
 			<li class="selected">&gt; 4 <em class="count">0</em><em class="var">4</em><em class="type">magnitude</em><span class="circ_eq4">&bull;</span></li>
