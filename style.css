@@ -72,9 +72,9 @@ ul#navi li.selected {background:rgba(255,255,255,0.1);}
 .isel {width:26px; opacity:1;}
 
 /* === SIDEBAR === */
-#sidebar {position:absolute; right:0; top:0; overflow:scroll; z-index:2100000; height:100%; background:#181818; opacity:0.95; border-left:1px solid #222; border-right:1px solid #000;}
+#sidebar, #eqrawdata {position:absolute; right:0; top:0; overflow:scroll; z-index:2100000; height:100%; background:#181818; opacity:0.95; border-left:1px solid #222; border-right:1px solid #000;}
 #sidebar em {font-style:normal;}
-#sidebar ul {list-style-type:none; margin:0; padding:5px 0 50px 10px;}
+#sidebar ul, #eqrawdata ul {list-style-type:none; margin:0; padding:5px 0 50px 10px;}
 #sidebar ul li {color:#777; padding:12px 120px 12px 25px; background:url('images/sidebar-bg.png') no-repeat -1px bottom;}
 #sidebar ul li:hover, #sidebar ul li.selected {background:url('images/sidebar-sel-bg.png') no-repeat left center; color:#ddd; cursor:pointer;}
 #sidebar {text-transform:uppercase;}
