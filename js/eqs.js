@@ -30,9 +30,28 @@ $(document).ready(function() {
 	  resources = (typeof resources == 'undefined') ? '' : resources;
 		parameters = (typeof parameters == 'undefined') ? '' : parameters;
 		// Call API
+		/*
 		$.getJSON('call_api.php?r=eqs/'+resources+'&p='+parameters, function(data) {
 			$.seismi.data = data;
 			refreshData($.seismi.data);
+		});*/
+		makeAjaxCall('call_api.php?r=eqs/'+resources+'&p='+parameters, 
+		function(data){
+		    $.seismi.data = data;
+			refreshData($.seismi.data);
+		},
+		function(){
+		    console.log("Connection to API failed");
+		    makeAjaxCall('js/test_data.json', 
+		    function(data) {
+		        console.log("Using local test data /js/test_data.json");
+		        $.seismi.data = data;
+    			refreshData($.seismi.data);
+    		    
+	        },
+	        function() {
+	            console.log("There is no js/test_data.json file, place one to launch with test data");
+	        });
 		});
 	}
 	
@@ -174,5 +193,17 @@ $(document).ready(function() {
 		}
 		return b;
 	}
+	function makeAjaxCall(ajaxUrl, functionSuccess, functionFailure){
+            $.ajax(
+            {
+                type: "GET",
+                url: ajaxUrl,
+                contentType: "application/json; charset=utf-8",
+                data: {},
+                dataType: "json",
+                success: functionSuccess,
+                error: functionFailure
+            });
+        }
 	
 });

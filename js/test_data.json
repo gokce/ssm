@@ -1,0 +1,4005 @@
+{
+  "count": "5366",
+  "earthquakes": [
+    {
+      "src": "us",
+      "eqid": "c00064pn",
+      "timedate": "2011-10-05 10:06:13",
+      "lat": "36.4974",
+      "lon": "137.3683",
+      "magnitude": "4.9",
+      "depth": "8.90",
+      "region": "eastern Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064pl",
+      "timedate": "2011-10-05 10:00:02",
+      "lat": "36.5577",
+      "lon": "137.6237",
+      "magnitude": "4.9",
+      "depth": "9.80",
+      "region": "eastern Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064pj",
+      "timedate": "2011-10-05 09:57:41",
+      "lat": "-37.5809",
+      "lon": "176.2176",
+      "magnitude": "4.6",
+      "depth": "315.40",
+      "region": "North Island of New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064ng",
+      "timedate": "2011-10-05 07:34:49",
+      "lat": "5.3803",
+      "lon": "126.7657",
+      "magnitude": "4.8",
+      "depth": "112.30",
+      "region": "Mindanao, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064mk",
+      "timedate": "2011-10-05 04:13:35",
+      "lat": "75.6504",
+      "lon": "7.5769",
+      "magnitude": "4.6",
+      "depth": "11.90",
+      "region": "Greenland Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064ii",
+      "timedate": "2011-10-04 21:00:28",
+      "lat": "-21.5547",
+      "lon": "169.9974",
+      "magnitude": "4.9",
+      "depth": "67.90",
+      "region": "southeast of the Loyalty Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064an",
+      "timedate": "2011-10-04 13:00:04",
+      "lat": "37.3368",
+      "lon": "141.2608",
+      "magnitude": "4.8",
+      "depth": "19.60",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064an",
+      "timedate": "2011-10-04 13:00:04",
+      "lat": "37.3368",
+      "lon": "141.2608",
+      "magnitude": "4.8",
+      "depth": "19.60",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064af",
+      "timedate": "2011-10-04 12:27:59",
+      "lat": "-10.0526",
+      "lon": "122.9422",
+      "magnitude": "4.7",
+      "depth": "55.50",
+      "region": "Savu Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064ad",
+      "timedate": "2011-10-04 12:21:52",
+      "lat": "51.3171",
+      "lon": "160.7096",
+      "magnitude": "4.6",
+      "depth": "32.90",
+      "region": "off the east coast of the Kamchatka Peninsula, Russia"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064a8",
+      "timedate": "2011-10-04 11:58:37",
+      "lat": "35.3638",
+      "lon": "140.9415",
+      "magnitude": "5.0",
+      "depth": "29.00",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00064a8",
+      "timedate": "2011-10-04 11:58:37",
+      "lat": "35.3638",
+      "lon": "140.9415",
+      "magnitude": "5.0",
+      "depth": "29.00",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c000649s",
+      "timedate": "2011-10-04 10:26:26",
+      "lat": "38.6886",
+      "lon": "70.3740",
+      "magnitude": "4.7",
+      "depth": "13.40",
+      "region": "Tajikistan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006493",
+      "timedate": "2011-10-04 09:26:54",
+      "lat": "-3.9111",
+      "lon": "153.9406",
+      "magnitude": "4.7",
+      "depth": "409.40",
+      "region": "New Ireland region, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006490",
+      "timedate": "2011-10-04 09:26:29",
+      "lat": "39.1452",
+      "lon": "21.6566",
+      "magnitude": "4.6",
+      "depth": "10.20",
+      "region": "Greece"
+    },
+    {
+      "src": "us",
+      "eqid": "c000648s",
+      "timedate": "2011-10-04 08:57:52",
+      "lat": "-20.8930",
+      "lon": "-70.8880",
+      "magnitude": "4.8",
+      "depth": "37.90",
+      "region": "offshore Tarapaca, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c000647r",
+      "timedate": "2011-10-04 05:51:53",
+      "lat": "36.6231",
+      "lon": "68.5112",
+      "magnitude": "4.6",
+      "depth": "24.70",
+      "region": "Hindu Kush region, Afghanistan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006471",
+      "timedate": "2011-10-04 03:44:34",
+      "lat": "-28.5921",
+      "lon": "-63.1782",
+      "magnitude": "5.0",
+      "depth": "577.90",
+      "region": "Santiago del Estero, Argentina"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006471",
+      "timedate": "2011-10-04 03:44:34",
+      "lat": "-28.5921",
+      "lon": "-63.1782",
+      "magnitude": "5.0",
+      "depth": "577.90",
+      "region": "Santiago del Estero, Argentina"
+    },
+    {
+      "src": "us",
+      "eqid": "c000646z",
+      "timedate": "2011-10-04 02:40:48",
+      "lat": "45.5785",
+      "lon": "26.4210",
+      "magnitude": "4.7",
+      "depth": "128.40",
+      "region": "Romania"
+    },
+    {
+      "src": "us",
+      "eqid": "c000646z",
+      "timedate": "2011-10-04 02:40:48",
+      "lat": "45.5785",
+      "lon": "26.4210",
+      "magnitude": "4.7",
+      "depth": "128.40",
+      "region": "Romania"
+    },
+    {
+      "src": "us",
+      "eqid": "c000646m",
+      "timedate": "2011-10-04 01:37:27",
+      "lat": "26.7666",
+      "lon": "140.4617",
+      "magnitude": "5.7",
+      "depth": "437.50",
+      "region": "Bonin Islands, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c000645t",
+      "timedate": "2011-10-03 23:22:12",
+      "lat": "-44.4866",
+      "lon": "-81.7880",
+      "magnitude": "5.2",
+      "depth": "10.00",
+      "region": "West Chile Rise"
+    },
+    {
+      "src": "us",
+      "eqid": "c000645j",
+      "timedate": "2011-10-03 22:36:30",
+      "lat": "31.1169",
+      "lon": "-64.8536",
+      "magnitude": "4.5",
+      "depth": "14.90",
+      "region": "Bermuda region"
+    },
+    {
+      "src": "us",
+      "eqid": "c000644h",
+      "timedate": "2011-10-03 22:18:04",
+      "lat": "31.1354",
+      "lon": "-65.0900",
+      "magnitude": "4.5",
+      "depth": "10.00",
+      "region": "Bermuda region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006449",
+      "timedate": "2011-10-03 22:08:05",
+      "lat": "-9.2816",
+      "lon": "120.2058",
+      "magnitude": "4.9",
+      "depth": "69.90",
+      "region": "Sumba region, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063wh",
+      "timedate": "2011-10-03 17:35:52",
+      "lat": "-20.1926",
+      "lon": "-68.9532",
+      "magnitude": "4.9",
+      "depth": "90.50",
+      "region": "Tarapaca, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063uu",
+      "timedate": "2011-10-03 15:30:51",
+      "lat": "17.8464",
+      "lon": "120.9557",
+      "magnitude": "4.5",
+      "depth": "83.10",
+      "region": "Luzon, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063ut",
+      "timedate": "2011-10-03 15:24:00",
+      "lat": "-23.9089",
+      "lon": "178.8709",
+      "magnitude": "4.6",
+      "depth": "553.10",
+      "region": "south of the Fiji Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063tp",
+      "timedate": "2011-10-03 14:18:58",
+      "lat": "-10.6780",
+      "lon": "164.9550",
+      "magnitude": "5.2",
+      "depth": "64.30",
+      "region": "Santa Cruz Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063sf",
+      "timedate": "2011-10-03 08:57:51",
+      "lat": "-5.1610",
+      "lon": "152.6348",
+      "magnitude": "5.2",
+      "depth": "57.40",
+      "region": "New Britain region, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063s8",
+      "timedate": "2011-10-03 06:36:23",
+      "lat": "-4.8936",
+      "lon": "130.0103",
+      "magnitude": "4.6",
+      "depth": "62.60",
+      "region": "Banda Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063s0",
+      "timedate": "2011-10-03 05:17:08",
+      "lat": "-19.5732",
+      "lon": "-70.6722",
+      "magnitude": "4.6",
+      "depth": "27.10",
+      "region": "offshore Tarapaca, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063ry",
+      "timedate": "2011-10-03 05:10:32",
+      "lat": "-21.4801",
+      "lon": "-174.3500",
+      "magnitude": "4.8",
+      "depth": "39.40",
+      "region": "Tonga"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063rx",
+      "timedate": "2011-10-03 04:35:02",
+      "lat": "13.0990",
+      "lon": "95.7732",
+      "magnitude": "4.9",
+      "depth": "27.60",
+      "region": "Andaman Islands, India region"
+    },
+    {
+      "src": "ak",
+      "eqid": "10327452",
+      "timedate": "2011-10-03 00:55:43",
+      "lat": "58.0970",
+      "lon": "-153.2663",
+      "magnitude": "4.5",
+      "depth": "30.20",
+      "region": "Kodiak Island region, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063qh",
+      "timedate": "2011-10-02 21:48:59",
+      "lat": "35.5462",
+      "lon": "140.8517",
+      "magnitude": "4.7",
+      "depth": "26.50",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063ip",
+      "timedate": "2011-10-02 16:49:02",
+      "lat": "37.3583",
+      "lon": "141.4218",
+      "magnitude": "5.3",
+      "depth": "14.90",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063i8",
+      "timedate": "2011-10-02 14:56:59",
+      "lat": "1.3558",
+      "lon": "126.2204",
+      "magnitude": "5.3",
+      "depth": "40.10",
+      "region": "Molucca Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063i6",
+      "timedate": "2011-10-02 14:39:12",
+      "lat": "1.4577",
+      "lon": "126.3139",
+      "magnitude": "4.8",
+      "depth": "46.90",
+      "region": "Molucca Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063i6",
+      "timedate": "2011-10-02 14:39:12",
+      "lat": "1.4577",
+      "lon": "126.3139",
+      "magnitude": "4.8",
+      "depth": "46.90",
+      "region": "Molucca Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063hi",
+      "timedate": "2011-10-02 13:30:13",
+      "lat": "38.4470",
+      "lon": "144.4453",
+      "magnitude": "5.1",
+      "depth": "24.30",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063gu",
+      "timedate": "2011-10-02 11:43:00",
+      "lat": "56.0230",
+      "lon": "162.4993",
+      "magnitude": "4.7",
+      "depth": "43.70",
+      "region": "near the east coast of the Kamchatka Peninsula, Russia"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063ge",
+      "timedate": "2011-10-02 09:19:25",
+      "lat": "8.3849",
+      "lon": "126.7226",
+      "magnitude": "5.0",
+      "depth": "46.90",
+      "region": "Mindanao, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063g0",
+      "timedate": "2011-10-02 06:37:40",
+      "lat": "-33.0339",
+      "lon": "-178.7514",
+      "magnitude": "4.7",
+      "depth": "35.00",
+      "region": "south of the Kermadec Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063fq",
+      "timedate": "2011-10-02 03:36:04",
+      "lat": "51.4947",
+      "lon": "-179.3687",
+      "magnitude": "4.5",
+      "depth": "59.60",
+      "region": "Andreanof Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063f8",
+      "timedate": "2011-10-02 00:25:19",
+      "lat": "-38.9594",
+      "lon": "-17.4090",
+      "magnitude": "4.8",
+      "depth": "10.00",
+      "region": "southern Mid-Atlantic Ridge"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063ej",
+      "timedate": "2011-10-01 23:20:15",
+      "lat": "-25.0515",
+      "lon": "-179.7858",
+      "magnitude": "5.1",
+      "depth": "523.30",
+      "region": "south of the Fiji Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063c4",
+      "timedate": "2011-10-01 19:28:52",
+      "lat": "18.2756",
+      "lon": "120.7666",
+      "magnitude": "4.5",
+      "depth": "31.20",
+      "region": "Luzon, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063a6",
+      "timedate": "2011-10-01 15:44:22",
+      "lat": "38.4489",
+      "lon": "133.6648",
+      "magnitude": "4.6",
+      "depth": "445.40",
+      "region": "Sea of Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00063a6",
+      "timedate": "2011-10-01 15:44:22",
+      "lat": "38.4489",
+      "lon": "133.6648",
+      "magnitude": "4.6",
+      "depth": "445.40",
+      "region": "Sea of Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c000639i",
+      "timedate": "2011-10-01 14:17:10",
+      "lat": "-6.7553",
+      "lon": "130.6423",
+      "magnitude": "4.6",
+      "depth": "129.60",
+      "region": "Banda Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006390",
+      "timedate": "2011-10-01 12:48:59",
+      "lat": "13.0114",
+      "lon": "95.8531",
+      "magnitude": "5.1",
+      "depth": "29.40",
+      "region": "Andaman Islands, India region"
+    },
+    {
+      "src": "us",
+      "eqid": "c000638g",
+      "timedate": "2011-10-01 10:54:34",
+      "lat": "-48.9665",
+      "lon": "164.3480",
+      "magnitude": "5.6",
+      "depth": "34.90",
+      "region": "off the west coast of the South Island of New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006386",
+      "timedate": "2011-10-01 10:16:41",
+      "lat": "-17.1044",
+      "lon": "-175.0201",
+      "magnitude": "4.8",
+      "depth": "204.10",
+      "region": "Tonga"
+    },
+    {
+      "src": "us",
+      "eqid": "c000637z",
+      "timedate": "2011-10-01 09:23:48",
+      "lat": "51.7808",
+      "lon": "172.1098",
+      "magnitude": "5.6",
+      "depth": "5.80",
+      "region": "Near Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c000637s",
+      "timedate": "2011-10-01 08:27:06",
+      "lat": "-2.9782",
+      "lon": "126.7658",
+      "magnitude": "4.8",
+      "depth": "50.40",
+      "region": "Ceram Sea, Indonesia"
+    },
+    {
+      "src": "nn",
+      "eqid": "00349692",
+      "timedate": "2011-10-01 07:07:00",
+      "lat": "38.8929",
+      "lon": "-118.7663",
+      "magnitude": "4.4",
+      "depth": "6.70",
+      "region": "Nevada"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006374",
+      "timedate": "2011-10-01 05:12:09",
+      "lat": "17.7593",
+      "lon": "145.6147",
+      "magnitude": "4.7",
+      "depth": "251.40",
+      "region": "Alamagan region, Northern Mariana Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c000636n",
+      "timedate": "2011-10-01 04:22:19",
+      "lat": "12.9647",
+      "lon": "95.7904",
+      "magnitude": "5.4",
+      "depth": "41.10",
+      "region": "Andaman Islands, India region"
+    },
+    {
+      "src": "us",
+      "eqid": "c000636i",
+      "timedate": "2011-10-01 04:21:51",
+      "lat": "7.3643",
+      "lon": "123.7513",
+      "magnitude": "5.2",
+      "depth": "610.50",
+      "region": "Mindanao, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006311",
+      "timedate": "2011-09-30 20:40:31",
+      "lat": "38.7099",
+      "lon": "33.9038",
+      "magnitude": "4.4",
+      "depth": "11.00",
+      "region": "central Turkey"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006311",
+      "timedate": "2011-09-30 20:40:31",
+      "lat": "38.7099",
+      "lon": "33.9038",
+      "magnitude": "4.4",
+      "depth": "11.00",
+      "region": "central Turkey"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062ws",
+      "timedate": "2011-09-30 17:20:04",
+      "lat": "35.3712",
+      "lon": "140.8268",
+      "magnitude": "4.7",
+      "depth": "49.50",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062vl",
+      "timedate": "2011-09-30 15:51:08",
+      "lat": "39.5240",
+      "lon": "142.6796",
+      "magnitude": "4.8",
+      "depth": "21.20",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062t9",
+      "timedate": "2011-09-30 13:06:35",
+      "lat": "6.3938",
+      "lon": "127.7936",
+      "magnitude": "5.1",
+      "depth": "187.50",
+      "region": "Philippine Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062td",
+      "timedate": "2011-09-30 12:34:37",
+      "lat": "-2.2122",
+      "lon": "-79.8784",
+      "magnitude": "4.5",
+      "depth": "38.40",
+      "region": "near the coast of Ecuador"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062rx",
+      "timedate": "2011-09-30 10:42:24",
+      "lat": "-37.1648",
+      "lon": "177.8530",
+      "magnitude": "4.8",
+      "depth": "206.30",
+      "region": "off the east coast of the North Island of New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062rx",
+      "timedate": "2011-09-30 10:42:24",
+      "lat": "-37.1648",
+      "lon": "177.8530",
+      "magnitude": "4.8",
+      "depth": "206.30",
+      "region": "off the east coast of the North Island of New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062rs",
+      "timedate": "2011-09-30 10:28:52",
+      "lat": "45.3495",
+      "lon": "150.9879",
+      "magnitude": "4.8",
+      "depth": "70.90",
+      "region": "Kuril Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062rh",
+      "timedate": "2011-09-30 10:18:27",
+      "lat": "-49.6466",
+      "lon": "163.6789",
+      "magnitude": "4.6",
+      "depth": "26.80",
+      "region": "Auckland Islands, New Zealand region"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062ra",
+      "timedate": "2011-09-30 09:21:21",
+      "lat": "48.2374",
+      "lon": "146.2228",
+      "magnitude": "4.2",
+      "depth": "458.90",
+      "region": "Sea of Okhotsk"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062qk",
+      "timedate": "2011-09-30 07:23:27",
+      "lat": "17.9366",
+      "lon": "-105.9939",
+      "magnitude": "4.4",
+      "depth": "39.30",
+      "region": "off the coast of Jalisco, Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062q7",
+      "timedate": "2011-09-30 05:19:33",
+      "lat": "-22.6419",
+      "lon": "171.4150",
+      "magnitude": "5.0",
+      "depth": "81.20",
+      "region": "southeast of the Loyalty Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062q5",
+      "timedate": "2011-09-30 05:09:02",
+      "lat": "39.3998",
+      "lon": "145.0727",
+      "magnitude": "5.0",
+      "depth": "32.90",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062ph",
+      "timedate": "2011-09-30 01:27:27",
+      "lat": "-19.0431",
+      "lon": "169.4642",
+      "magnitude": "4.6",
+      "depth": "279.50",
+      "region": "Vanuatu"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062nc",
+      "timedate": "2011-09-29 23:01:32",
+      "lat": "47.1557",
+      "lon": "143.7081",
+      "magnitude": "4.3",
+      "depth": "401.50",
+      "region": "Sakhalin, Russia"
+    },
+    {
+      "src": "ak",
+      "eqid": "10325943",
+      "timedate": "2011-09-29 22:51:20",
+      "lat": "67.1159",
+      "lon": "-156.9792",
+      "magnitude": "4.0",
+      "depth": "15.20",
+      "region": "northern Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c00062c7",
+      "timedate": "2011-09-29 18:26:56",
+      "lat": "26.6485",
+      "lon": "127.7456",
+      "magnitude": "5.0",
+      "depth": "44.90",
+      "region": "Ryukyu Islands, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c000628l",
+      "timedate": "2011-09-29 16:08:13",
+      "lat": "79.1516",
+      "lon": "127.5184",
+      "magnitude": "4.5",
+      "depth": "13.60",
+      "region": "east of Severnaya Zemlya"
+    },
+    {
+      "src": "us",
+      "eqid": "c000627s",
+      "timedate": "2011-09-29 15:44:47",
+      "lat": "36.0709",
+      "lon": "141.9638",
+      "magnitude": "4.6",
+      "depth": "25.70",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c000627s",
+      "timedate": "2011-09-29 15:44:47",
+      "lat": "36.0709",
+      "lon": "141.9638",
+      "magnitude": "4.6",
+      "depth": "25.70",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c000627j",
+      "timedate": "2011-09-29 15:40:51",
+      "lat": "-37.9327",
+      "lon": "-74.0142",
+      "magnitude": "5.1",
+      "depth": "20.40",
+      "region": "offshore Bio-Bio, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006253",
+      "timedate": "2011-09-29 10:23:54",
+      "lat": "-15.3257",
+      "lon": "-177.2421",
+      "magnitude": "4.4",
+      "depth": "389.60",
+      "region": "Fiji region"
+    },
+    {
+      "src": "us",
+      "eqid": "c000624z",
+      "timedate": "2011-09-29 10:05:08",
+      "lat": "37.1955",
+      "lon": "140.6203",
+      "magnitude": "5.1",
+      "depth": "10.10",
+      "region": "eastern Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c000624v",
+      "timedate": "2011-09-29 09:13:36",
+      "lat": "-13.1266",
+      "lon": "166.9670",
+      "magnitude": "4.6",
+      "depth": "211.90",
+      "region": "Vanuatu"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006247",
+      "timedate": "2011-09-29 05:16:33",
+      "lat": "8.4933",
+      "lon": "127.1799",
+      "magnitude": "4.9",
+      "depth": "42.00",
+      "region": "Philippine Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c000623c",
+      "timedate": "2011-09-29 00:27:11",
+      "lat": "-7.5826",
+      "lon": "130.6740",
+      "magnitude": "4.6",
+      "depth": "35.00",
+      "region": "Kepulauan Tanimbar, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c000623a",
+      "timedate": "2011-09-29 00:08:03",
+      "lat": "-13.0380",
+      "lon": "-14.4644",
+      "magnitude": "5.0",
+      "depth": "10.40",
+      "region": "southern Mid-Atlantic Ridge"
+    },
+    {
+      "src": "us",
+      "eqid": "c000622x",
+      "timedate": "2011-09-28 23:17:46",
+      "lat": "18.2587",
+      "lon": "-101.4196",
+      "magnitude": "4.8",
+      "depth": "67.20",
+      "region": "Guerrero, Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c000622q",
+      "timedate": "2011-09-28 22:45:36",
+      "lat": "-2.3406",
+      "lon": "134.2454",
+      "magnitude": "4.6",
+      "depth": "29.20",
+      "region": "near the north coast of Papua, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c000622g",
+      "timedate": "2011-09-28 22:40:13",
+      "lat": "-37.9627",
+      "lon": "-73.9033",
+      "magnitude": "5.6",
+      "depth": "12.90",
+      "region": "offshore Bio-Bio, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006220",
+      "timedate": "2011-09-28 22:30:18",
+      "lat": "-3.2462",
+      "lon": "130.7961",
+      "magnitude": "4.8",
+      "depth": "45.90",
+      "region": "Seram, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c000621v",
+      "timedate": "2011-09-28 22:25:47",
+      "lat": "9.4318",
+      "lon": "-83.6781",
+      "magnitude": "4.3",
+      "depth": "10.00",
+      "region": "Costa Rica"
+    },
+    {
+      "src": "ak",
+      "eqid": "10325263",
+      "timedate": "2011-09-28 20:13:13",
+      "lat": "63.2862",
+      "lon": "-150.6100",
+      "magnitude": "4.8",
+      "depth": "139.20",
+      "region": "Central Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c00061tm",
+      "timedate": "2011-09-28 17:56:34",
+      "lat": "-22.9528",
+      "lon": "171.9402",
+      "magnitude": "5.1",
+      "depth": "19.90",
+      "region": "southeast of the Loyalty Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c00061t9",
+      "timedate": "2011-09-28 17:36:13",
+      "lat": "-22.9409",
+      "lon": "171.8407",
+      "magnitude": "5.3",
+      "depth": "21.40",
+      "region": "southeast of the Loyalty Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c00061gh",
+      "timedate": "2011-09-28 02:17:06",
+      "lat": "40.1361",
+      "lon": "142.2517",
+      "magnitude": "4.7",
+      "depth": "55.60",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c00061fu",
+      "timedate": "2011-09-28 00:31:24",
+      "lat": "52.8030",
+      "lon": "-167.9100",
+      "magnitude": "4.2",
+      "depth": "40.30",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c00061g4",
+      "timedate": "2011-09-28 00:26:37",
+      "lat": "-15.5670",
+      "lon": "-173.1734",
+      "magnitude": "4.9",
+      "depth": "15.50",
+      "region": "Tonga"
+    },
+    {
+      "src": "us",
+      "eqid": "c00061d7",
+      "timedate": "2011-09-27 21:13:45",
+      "lat": "-22.8343",
+      "lon": "171.9570",
+      "magnitude": "4.9",
+      "depth": "23.40",
+      "region": "southeast of the Loyalty Islands"
+    },
+    {
+      "src": "pr",
+      "eqid": "11270008",
+      "timedate": "2011-09-27 19:27:09",
+      "lat": "18.9220",
+      "lon": "-64.3519",
+      "magnitude": "4.6",
+      "depth": "19.00",
+      "region": "Virgin Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006178",
+      "timedate": "2011-09-27 17:42:33",
+      "lat": "-22.8866",
+      "lon": "171.9330",
+      "magnitude": "5.2",
+      "depth": "39.40",
+      "region": "southeast of the Loyalty Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006178",
+      "timedate": "2011-09-27 17:42:33",
+      "lat": "-22.8866",
+      "lon": "171.9330",
+      "magnitude": "5.2",
+      "depth": "39.40",
+      "region": "southeast of the Loyalty Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006148",
+      "timedate": "2011-09-27 15:06:06",
+      "lat": "51.5560",
+      "lon": "-179.5332",
+      "magnitude": "5.4",
+      "depth": "70.30",
+      "region": "Andreanof Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c000612a",
+      "timedate": "2011-09-27 13:06:35",
+      "lat": "34.2538",
+      "lon": "23.6814",
+      "magnitude": "4.4",
+      "depth": "33.80",
+      "region": "Crete, Greece"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006120",
+      "timedate": "2011-09-27 12:34:33",
+      "lat": "-24.6567",
+      "lon": "-175.4611",
+      "magnitude": "4.8",
+      "depth": "39.20",
+      "region": "south of Tonga"
+    },
+    {
+      "src": "us",
+      "eqid": "c000611w",
+      "timedate": "2011-09-27 12:25:12",
+      "lat": "34.2133",
+      "lon": "23.8065",
+      "magnitude": "4.3",
+      "depth": "10.00",
+      "region": "Crete, Greece"
+    },
+    {
+      "src": "us",
+      "eqid": "c000611t",
+      "timedate": "2011-09-27 12:08:21",
+      "lat": "34.4133",
+      "lon": "23.6766",
+      "magnitude": "5.1",
+      "depth": "19.10",
+      "region": "Crete, Greece"
+    },
+    {
+      "src": "us",
+      "eqid": "c000611e",
+      "timedate": "2011-09-27 11:03:00",
+      "lat": "36.6536",
+      "lon": "76.6823",
+      "magnitude": "5.0",
+      "depth": "93.80",
+      "region": "Kashmir-Xinjiang border region"
+    },
+    {
+      "src": "us",
+      "eqid": "c000610e",
+      "timedate": "2011-09-27 08:58:54",
+      "lat": "41.3379",
+      "lon": "44.0714",
+      "magnitude": "4.3",
+      "depth": "10.00",
+      "region": "Georgia (Sak'art'velo)"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006100",
+      "timedate": "2011-09-27 08:30:08",
+      "lat": "-7.2628",
+      "lon": "129.1313",
+      "magnitude": "4.7",
+      "depth": "130.40",
+      "region": "Kepulauan Babar, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060zh",
+      "timedate": "2011-09-27 06:46:17",
+      "lat": "50.1761",
+      "lon": "178.7069",
+      "magnitude": "5.2",
+      "depth": "34.80",
+      "region": "Rat Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060yt",
+      "timedate": "2011-09-27 01:36:16",
+      "lat": "-13.1439",
+      "lon": "167.0977",
+      "magnitude": "5.1",
+      "depth": "198.60",
+      "region": "Vanuatu"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060yt",
+      "timedate": "2011-09-27 01:36:16",
+      "lat": "-13.1439",
+      "lon": "167.0977",
+      "magnitude": "5.1",
+      "depth": "198.60",
+      "region": "Vanuatu"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060yh",
+      "timedate": "2011-09-27 00:46:17",
+      "lat": "-4.7377",
+      "lon": "152.6982",
+      "magnitude": "4.8",
+      "depth": "65.00",
+      "region": "New Britain region, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060y8",
+      "timedate": "2011-09-27 00:37:36",
+      "lat": "-17.7212",
+      "lon": "-178.2507",
+      "magnitude": "4.9",
+      "depth": "536.90",
+      "region": "Fiji region"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060mu",
+      "timedate": "2011-09-26 20:08:46",
+      "lat": "52.7173",
+      "lon": "-174.0140",
+      "magnitude": "4.7",
+      "depth": "203.50",
+      "region": "Andreanof Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060ep",
+      "timedate": "2011-09-26 07:49:17",
+      "lat": "42.1004",
+      "lon": "142.5120",
+      "magnitude": "4.6",
+      "depth": "19.30",
+      "region": "Hokkaido, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060dz",
+      "timedate": "2011-09-26 07:27:51",
+      "lat": "-16.7160",
+      "lon": "-173.3940",
+      "magnitude": "5.1",
+      "depth": "31.90",
+      "region": "Tonga"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060dl",
+      "timedate": "2011-09-26 06:21:18",
+      "lat": "-11.3350",
+      "lon": "166.3790",
+      "magnitude": "5.2",
+      "depth": "110.10",
+      "region": "Santa Cruz Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060dh",
+      "timedate": "2011-09-26 05:22:20",
+      "lat": "54.6661",
+      "lon": "160.2021",
+      "magnitude": "4.8",
+      "depth": "101.50",
+      "region": "near the east coast of the Kamchatka Peninsula, Russia"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060d5",
+      "timedate": "2011-09-26 03:39:24",
+      "lat": "-7.3623",
+      "lon": "123.1413",
+      "magnitude": "5.1",
+      "depth": "554.60",
+      "region": "Banda Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060d5",
+      "timedate": "2011-09-26 03:39:24",
+      "lat": "-7.3623",
+      "lon": "123.1413",
+      "magnitude": "5.1",
+      "depth": "554.60",
+      "region": "Banda Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060c8",
+      "timedate": "2011-09-26 01:02:57",
+      "lat": "63.4539",
+      "lon": "-126.3300",
+      "magnitude": "5.3",
+      "depth": "2.90",
+      "region": "Northwest Territories, Canada"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060au",
+      "timedate": "2011-09-25 21:29:39",
+      "lat": "14.0793",
+      "lon": "-90.3278",
+      "magnitude": "4.5",
+      "depth": "7.90",
+      "region": "Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c00060aw",
+      "timedate": "2011-09-25 21:05:42",
+      "lat": "19.9592",
+      "lon": "-45.7998",
+      "magnitude": "4.9",
+      "depth": "10.00",
+      "region": "northern Mid-Atlantic Ridge"
+    },
+    {
+      "src": "ak",
+      "eqid": "10323227",
+      "timedate": "2011-09-25 20:05:20",
+      "lat": "51.7262",
+      "lon": "-171.4722",
+      "magnitude": "4.0",
+      "depth": "41.30",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c000609z",
+      "timedate": "2011-09-25 19:59:16",
+      "lat": "-15.6437",
+      "lon": "-75.1041",
+      "magnitude": "4.6",
+      "depth": "30.80",
+      "region": "near the coast of central Peru"
+    },
+    {
+      "src": "us",
+      "eqid": "c000609z",
+      "timedate": "2011-09-25 19:59:16",
+      "lat": "-15.6437",
+      "lon": "-75.1041",
+      "magnitude": "4.6",
+      "depth": "30.80",
+      "region": "near the coast of central Peru"
+    },
+    {
+      "src": "us",
+      "eqid": "c000609j",
+      "timedate": "2011-09-25 19:11:07",
+      "lat": "-16.8626",
+      "lon": "171.4337",
+      "magnitude": "4.8",
+      "depth": "14.70",
+      "region": "Vanuatu region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006094",
+      "timedate": "2011-09-25 17:43:41",
+      "lat": "-24.8215",
+      "lon": "179.8247",
+      "magnitude": "4.7",
+      "depth": "500.20",
+      "region": "south of the Fiji Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006092",
+      "timedate": "2011-09-25 17:34:27",
+      "lat": "-12.3319",
+      "lon": "166.6843",
+      "magnitude": "4.9",
+      "depth": "37.00",
+      "region": "Santa Cruz Islands"
+    },
+    {
+      "src": "ak",
+      "eqid": "10323177",
+      "timedate": "2011-09-25 15:25:18",
+      "lat": "54.8470",
+      "lon": "-160.2936",
+      "magnitude": "4.0",
+      "depth": "11.20",
+      "region": "Alaska Peninsula"
+    },
+    {
+      "src": "us",
+      "eqid": "c000607d",
+      "timedate": "2011-09-25 12:36:44",
+      "lat": "51.1835",
+      "lon": "93.2151",
+      "magnitude": "4.8",
+      "depth": "30.10",
+      "region": "southwestern Siberia, Russia"
+    },
+    {
+      "src": "us",
+      "eqid": "c000607d",
+      "timedate": "2011-09-25 12:36:44",
+      "lat": "51.1835",
+      "lon": "93.2151",
+      "magnitude": "4.8",
+      "depth": "30.10",
+      "region": "southwestern Siberia, Russia"
+    },
+    {
+      "src": "us",
+      "eqid": "c000607d",
+      "timedate": "2011-09-25 12:36:44",
+      "lat": "51.1835",
+      "lon": "93.2151",
+      "magnitude": "4.8",
+      "depth": "30.10",
+      "region": "southwestern Siberia, Russia"
+    },
+    {
+      "src": "us",
+      "eqid": "c000606m",
+      "timedate": "2011-09-25 09:46:51",
+      "lat": "-22.8840",
+      "lon": "171.9148",
+      "magnitude": "4.9",
+      "depth": "30.90",
+      "region": "southeast of the Loyalty Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c000605w",
+      "timedate": "2011-09-25 05:34:57",
+      "lat": "-22.5152",
+      "lon": "-179.8754",
+      "magnitude": "4.2",
+      "depth": "594.60",
+      "region": "south of the Fiji Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c000605q",
+      "timedate": "2011-09-25 04:18:21",
+      "lat": "41.9648",
+      "lon": "144.0480",
+      "magnitude": "5.0",
+      "depth": "33.00",
+      "region": "Hokkaido, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006051",
+      "timedate": "2011-09-25 02:01:32",
+      "lat": "29.4897",
+      "lon": "140.9398",
+      "magnitude": "4.5",
+      "depth": "94.20",
+      "region": "Izu Islands, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c000604u",
+      "timedate": "2011-09-25 00:35:08",
+      "lat": "-5.9288",
+      "lon": "-81.7338",
+      "magnitude": "5.0",
+      "depth": "32.70",
+      "region": "near the coast of northern Peru"
+    },
+    {
+      "src": "us",
+      "eqid": "c000604n",
+      "timedate": "2011-09-24 23:55:57",
+      "lat": "21.6155",
+      "lon": "-66.5669",
+      "magnitude": "4.6",
+      "depth": "15.10",
+      "region": "North Atlantic Ocean"
+    },
+    {
+      "src": "us",
+      "eqid": "c0006043",
+      "timedate": "2011-09-24 22:08:39",
+      "lat": "-18.6201",
+      "lon": "65.5467",
+      "magnitude": "4.8",
+      "depth": "10.00",
+      "region": "Mauritius - Reunion region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zyv",
+      "timedate": "2011-09-24 15:21:33",
+      "lat": "33.9734",
+      "lon": "75.2332",
+      "magnitude": "4.2",
+      "depth": "45.10",
+      "region": "eastern Kashmir"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zy6",
+      "timedate": "2011-09-24 13:26:40",
+      "lat": "-42.7873",
+      "lon": "-82.6722",
+      "magnitude": "4.8",
+      "depth": "9.80",
+      "region": "West Chile Rise"
+    },
+    {
+      "src": "ak",
+      "eqid": "10322917",
+      "timedate": "2011-09-24 10:52:53",
+      "lat": "63.2878",
+      "lon": "-152.5169",
+      "magnitude": "4.0",
+      "depth": "6.00",
+      "region": "Central Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zx4",
+      "timedate": "2011-09-24 08:39:12",
+      "lat": "41.6717",
+      "lon": "22.0201",
+      "magnitude": "4.2",
+      "depth": "10.80",
+      "region": "Macedonia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zwk",
+      "timedate": "2011-09-24 05:27:48",
+      "lat": "-17.2377",
+      "lon": "-177.7632",
+      "magnitude": "5.1",
+      "depth": "380.20",
+      "region": "Fiji region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zvj",
+      "timedate": "2011-09-24 02:57:52",
+      "lat": "-6.3370",
+      "lon": "151.5640",
+      "magnitude": "5.2",
+      "depth": "67.00",
+      "region": "New Britain region, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ztc",
+      "timedate": "2011-09-23 22:44:55",
+      "lat": "-9.2461",
+      "lon": "-109.6047",
+      "magnitude": "5.0",
+      "depth": "10.00",
+      "region": "central East Pacific Rise"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zmk",
+      "timedate": "2011-09-23 19:02:48",
+      "lat": "-9.0541",
+      "lon": "-109.5264",
+      "magnitude": "5.6",
+      "depth": "10.00",
+      "region": "central East Pacific Rise"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zm1",
+      "timedate": "2011-09-23 18:35:11",
+      "lat": "39.6484",
+      "lon": "143.0336",
+      "magnitude": "4.9",
+      "depth": "35.00",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ziz",
+      "timedate": "2011-09-23 14:02:13",
+      "lat": "10.8041",
+      "lon": "141.7939",
+      "magnitude": "4.9",
+      "depth": "36.40",
+      "region": "State of Yap, Federated States of Micronesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zip",
+      "timedate": "2011-09-23 13:12:26",
+      "lat": "39.2769",
+      "lon": "141.9385",
+      "magnitude": "4.9",
+      "depth": "48.40",
+      "region": "eastern Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zhu",
+      "timedate": "2011-09-23 10:15:09",
+      "lat": "-11.8738",
+      "lon": "-75.9090",
+      "magnitude": "4.5",
+      "depth": "95.30",
+      "region": "central Peru"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zhm",
+      "timedate": "2011-09-23 09:44:10",
+      "lat": "-19.1287",
+      "lon": "175.6329",
+      "magnitude": "5.0",
+      "depth": "56.20",
+      "region": "south of the Fiji Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zhm",
+      "timedate": "2011-09-23 09:44:10",
+      "lat": "-19.1287",
+      "lon": "175.6329",
+      "magnitude": "5.0",
+      "depth": "56.20",
+      "region": "south of the Fiji Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zh7",
+      "timedate": "2011-09-23 09:39:06",
+      "lat": "15.8646",
+      "lon": "-95.6024",
+      "magnitude": "4.3",
+      "depth": "23.20",
+      "region": "offshore Oaxaca, Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zgk",
+      "timedate": "2011-09-23 08:16:01",
+      "lat": "36.7905",
+      "lon": "140.4739",
+      "magnitude": "5.0",
+      "depth": "35.00",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zf7",
+      "timedate": "2011-09-23 02:59:23",
+      "lat": "17.2291",
+      "lon": "-99.8708",
+      "magnitude": "4.6",
+      "depth": "42.10",
+      "region": "Guerrero, Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zda",
+      "timedate": "2011-09-22 23:07:03",
+      "lat": "-15.3657",
+      "lon": "-175.2174",
+      "magnitude": "6.4",
+      "depth": "9.80",
+      "region": "Tonga"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zcx",
+      "timedate": "2011-09-22 22:50:02",
+      "lat": "15.0930",
+      "lon": "-94.1065",
+      "magnitude": "4.4",
+      "depth": "57.90",
+      "region": "offshore Chiapas, Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zcl",
+      "timedate": "2011-09-22 22:43:12",
+      "lat": "52.6346",
+      "lon": "159.1839",
+      "magnitude": "4.9",
+      "depth": "64.40",
+      "region": "off the east coast of the Kamchatka Peninsula, Russia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zcl",
+      "timedate": "2011-09-22 22:43:12",
+      "lat": "52.6346",
+      "lon": "159.1839",
+      "magnitude": "4.9",
+      "depth": "64.40",
+      "region": "off the east coast of the Kamchatka Peninsula, Russia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005zca",
+      "timedate": "2011-09-22 22:28:14",
+      "lat": "31.2705",
+      "lon": "69.8988",
+      "magnitude": "4.2",
+      "depth": "9.90",
+      "region": "Pakistan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005z54",
+      "timedate": "2011-09-22 19:59:18",
+      "lat": "37.3825",
+      "lon": "141.4481",
+      "magnitude": "5.0",
+      "depth": "13.80",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005z54",
+      "timedate": "2011-09-22 19:59:18",
+      "lat": "37.3825",
+      "lon": "141.4481",
+      "magnitude": "5.0",
+      "depth": "13.80",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "pr",
+      "eqid": "11265002",
+      "timedate": "2011-09-22 16:33:10",
+      "lat": "18.6170",
+      "lon": "-68.6520",
+      "magnitude": "4.0",
+      "depth": "156.50",
+      "region": "Dominican Republic"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ytz",
+      "timedate": "2011-09-22 14:17:34",
+      "lat": "23.6313",
+      "lon": "94.9669",
+      "magnitude": "4.7",
+      "depth": "137.60",
+      "region": "Myanmar"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ykt",
+      "timedate": "2011-09-22 10:20:31",
+      "lat": "-4.1663",
+      "lon": "103.0115",
+      "magnitude": "5.3",
+      "depth": "101.90",
+      "region": "southern Sumatra, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005yki",
+      "timedate": "2011-09-22 10:13:38",
+      "lat": "12.9578",
+      "lon": "-88.5573",
+      "magnitude": "4.4",
+      "depth": "90.20",
+      "region": "offshore El Salvador"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005yfg",
+      "timedate": "2011-09-22 05:46:29",
+      "lat": "36.8390",
+      "lon": "141.2618",
+      "magnitude": "4.5",
+      "depth": "45.50",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005yei",
+      "timedate": "2011-09-22 04:43:05",
+      "lat": "-57.8124",
+      "lon": "-25.8850",
+      "magnitude": "4.8",
+      "depth": "53.80",
+      "region": "South Sandwich Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ye0",
+      "timedate": "2011-09-22 03:49:20",
+      "lat": "15.2125",
+      "lon": "119.8366",
+      "magnitude": "5.0",
+      "depth": "52.70",
+      "region": "Luzon, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ycv",
+      "timedate": "2011-09-22 03:22:36",
+      "lat": "39.6973",
+      "lon": "38.6689",
+      "magnitude": "5.5",
+      "depth": "4.40",
+      "region": "eastern Turkey"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005yay",
+      "timedate": "2011-09-22 00:49:59",
+      "lat": "-17.2893",
+      "lon": "-172.2458",
+      "magnitude": "4.9",
+      "depth": "36.40",
+      "region": "Tonga region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ya4",
+      "timedate": "2011-09-21 23:43:10",
+      "lat": "33.7530",
+      "lon": "139.6530",
+      "magnitude": "4.4",
+      "depth": "126.00",
+      "region": "Izu Islands, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005y8a",
+      "timedate": "2011-09-21 23:10:46",
+      "lat": "-16.9910",
+      "lon": "-172.8508",
+      "magnitude": "4.9",
+      "depth": "34.80",
+      "region": "Samoa Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005y70",
+      "timedate": "2011-09-21 22:18:32",
+      "lat": "24.0338",
+      "lon": "121.6957",
+      "magnitude": "5.1",
+      "depth": "17.90",
+      "region": "Taiwan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xzp",
+      "timedate": "2011-09-21 19:52:30",
+      "lat": "-9.6450",
+      "lon": "117.7698",
+      "magnitude": "5.1",
+      "depth": "44.60",
+      "region": "Sumbawa region, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xt0",
+      "timedate": "2011-09-21 13:31:03",
+      "lat": "36.7634",
+      "lon": "140.3209",
+      "magnitude": "5.2",
+      "depth": "51.40",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xr9",
+      "timedate": "2011-09-21 10:27:30",
+      "lat": "16.1693",
+      "lon": "-94.6562",
+      "magnitude": "4.1",
+      "depth": "41.80",
+      "region": "offshore Oaxaca, Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xq1",
+      "timedate": "2011-09-21 04:40:04",
+      "lat": "-6.8616",
+      "lon": "132.4658",
+      "magnitude": "4.6",
+      "depth": "50.20",
+      "region": "Kepulauan Tanimbar, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xq1",
+      "timedate": "2011-09-21 04:40:04",
+      "lat": "-6.8616",
+      "lon": "132.4658",
+      "magnitude": "4.6",
+      "depth": "50.20",
+      "region": "Kepulauan Tanimbar, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xmt",
+      "timedate": "2011-09-20 22:44:42",
+      "lat": "-22.0664",
+      "lon": "-176.4061",
+      "magnitude": "4.7",
+      "depth": "131.30",
+      "region": "south of the Fiji Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xmt",
+      "timedate": "2011-09-20 22:44:42",
+      "lat": "-22.0664",
+      "lon": "-176.4061",
+      "magnitude": "4.7",
+      "depth": "131.30",
+      "region": "south of the Fiji Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xl5",
+      "timedate": "2011-09-20 21:44:19",
+      "lat": "6.4772",
+      "lon": "124.7328",
+      "magnitude": "4.6",
+      "depth": "42.70",
+      "region": "Mindanao, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xl5",
+      "timedate": "2011-09-20 21:44:19",
+      "lat": "6.4772",
+      "lon": "124.7328",
+      "magnitude": "4.6",
+      "depth": "42.70",
+      "region": "Mindanao, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xki",
+      "timedate": "2011-09-20 21:28:28",
+      "lat": "-18.8241",
+      "lon": "169.1752",
+      "magnitude": "5.3",
+      "depth": "209.90",
+      "region": "Vanuatu"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xjl",
+      "timedate": "2011-09-20 20:59:05",
+      "lat": "38.5748",
+      "lon": "141.7442",
+      "magnitude": "5.0",
+      "depth": "57.50",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005xhh",
+      "timedate": "2011-09-20 20:24:59",
+      "lat": "51.2915",
+      "lon": "-169.5266",
+      "magnitude": "4.6",
+      "depth": "18.10",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x7a",
+      "timedate": "2011-09-20 06:32:44",
+      "lat": "13.2240",
+      "lon": "-89.9396",
+      "magnitude": "4.2",
+      "depth": "83.50",
+      "region": "offshore El Salvador"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x7e",
+      "timedate": "2011-09-20 06:05:35",
+      "lat": "-38.2466",
+      "lon": "-17.1043",
+      "magnitude": "5.2",
+      "depth": "10.00",
+      "region": "southern Mid-Atlantic Ridge"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x6u",
+      "timedate": "2011-09-20 04:28:52",
+      "lat": "14.2448",
+      "lon": "-90.2587",
+      "magnitude": "4.6",
+      "depth": "24.00",
+      "region": "Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x6i",
+      "timedate": "2011-09-20 03:48:49",
+      "lat": "-3.5213",
+      "lon": "135.4866",
+      "magnitude": "4.8",
+      "depth": "38.10",
+      "region": "Papua, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x60",
+      "timedate": "2011-09-20 02:40:22",
+      "lat": "-4.5722",
+      "lon": "-105.2814",
+      "magnitude": "5.0",
+      "depth": "9.80",
+      "region": "central East Pacific Rise"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x5z",
+      "timedate": "2011-09-20 02:31:07",
+      "lat": "-0.6433",
+      "lon": "131.6073",
+      "magnitude": "4.8",
+      "depth": "40.70",
+      "region": "near the north coast of Papua, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x5w",
+      "timedate": "2011-09-20 02:21:46",
+      "lat": "-4.2340",
+      "lon": "34.2810",
+      "magnitude": "4.9",
+      "depth": "8.40",
+      "region": "Tanzania"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x5e",
+      "timedate": "2011-09-20 00:22:52",
+      "lat": "14.1793",
+      "lon": "-90.1474",
+      "magnitude": "4.3",
+      "depth": "40.10",
+      "region": "Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x4a",
+      "timedate": "2011-09-19 22:30:55",
+      "lat": "29.4210",
+      "lon": "56.7053",
+      "magnitude": "4.6",
+      "depth": "104.20",
+      "region": "southern Iran"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x2t",
+      "timedate": "2011-09-19 21:31:47",
+      "lat": "-5.5868",
+      "lon": "149.3253",
+      "magnitude": "4.7",
+      "depth": "172.10",
+      "region": "New Britain region, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005x1a",
+      "timedate": "2011-09-19 20:30:04",
+      "lat": "14.0582",
+      "lon": "-90.2763",
+      "magnitude": "4.5",
+      "depth": "40.90",
+      "region": "Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wyt",
+      "timedate": "2011-09-19 19:17:54",
+      "lat": "14.2884",
+      "lon": "-90.2028",
+      "magnitude": "4.8",
+      "depth": "36.90",
+      "region": "Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wx9",
+      "timedate": "2011-09-19 18:34:00",
+      "lat": "14.3319",
+      "lon": "-90.1421",
+      "magnitude": "5.8",
+      "depth": "39.40",
+      "region": "Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wwr",
+      "timedate": "2011-09-19 18:00:01",
+      "lat": "14.4001",
+      "lon": "-90.2168",
+      "magnitude": "4.8",
+      "depth": "61.00",
+      "region": "Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wsi",
+      "timedate": "2011-09-19 10:34:27",
+      "lat": "51.5722",
+      "lon": "-176.4482",
+      "magnitude": "4.4",
+      "depth": "48.60",
+      "region": "Andreanof Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wrs",
+      "timedate": "2011-09-19 09:07:23",
+      "lat": "47.9215",
+      "lon": "147.3454",
+      "magnitude": "4.8",
+      "depth": "417.30",
+      "region": "northwest of the Kuril Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wrc",
+      "timedate": "2011-09-19 08:14:15",
+      "lat": "52.0415",
+      "lon": "-171.8583",
+      "magnitude": "5.8",
+      "depth": "34.70",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wqq",
+      "timedate": "2011-09-19 07:03:09",
+      "lat": "53.3657",
+      "lon": "-169.9851",
+      "magnitude": "5.4",
+      "depth": "154.50",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wqf",
+      "timedate": "2011-09-19 06:20:37",
+      "lat": "14.0662",
+      "lon": "-92.5429",
+      "magnitude": "4.2",
+      "depth": "12.90",
+      "region": "offshore Chiapas, Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wq0",
+      "timedate": "2011-09-19 01:51:30",
+      "lat": "-43.6200",
+      "lon": "172.8000",
+      "magnitude": "4.0",
+      "depth": "12.00",
+      "region": "South Island of New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wnv",
+      "timedate": "2011-09-18 23:09:18",
+      "lat": "-2.1549",
+      "lon": "125.0581",
+      "magnitude": "5.3",
+      "depth": "5.10",
+      "region": "Kepulauan Sula, Indonesia"
+    },
+    {
+      "src": "ld",
+      "eqid": "60026001",
+      "timedate": "2011-09-18 19:19:14",
+      "lat": "45.6013",
+      "lon": "-75.2345",
+      "magnitude": "4.0",
+      "depth": "5.00",
+      "region": "Ontario-Quebec border region, Canada"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wic",
+      "timedate": "2011-09-18 18:35:24",
+      "lat": "-10.5369",
+      "lon": "161.4369",
+      "magnitude": "5.2",
+      "depth": "63.90",
+      "region": "Solomon Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wia",
+      "timedate": "2011-09-18 18:32:24",
+      "lat": "37.8226",
+      "lon": "141.4119",
+      "magnitude": "5.1",
+      "depth": "42.70",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005whe",
+      "timedate": "2011-09-18 13:54:18",
+      "lat": "27.3772",
+      "lon": "88.2661",
+      "magnitude": "4.6",
+      "depth": "20.10",
+      "region": "Sikkim, India"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wgx",
+      "timedate": "2011-09-18 13:11:57",
+      "lat": "27.4463",
+      "lon": "88.3908",
+      "magnitude": "4.8",
+      "depth": "20.00",
+      "region": "Sikkim, India"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wg6",
+      "timedate": "2011-09-18 12:40:48",
+      "lat": "27.7230",
+      "lon": "88.0640",
+      "magnitude": "6.9",
+      "depth": "19.70",
+      "region": "Sikkim, India"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wg6",
+      "timedate": "2011-09-18 12:40:48",
+      "lat": "27.7230",
+      "lon": "88.0640",
+      "magnitude": "6.9",
+      "depth": "19.70",
+      "region": "Sikkim, India"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wfv",
+      "timedate": "2011-09-18 10:39:48",
+      "lat": "41.9534",
+      "lon": "142.4617",
+      "magnitude": "5.0",
+      "depth": "68.80",
+      "region": "Hokkaido, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wft",
+      "timedate": "2011-09-18 10:01:28",
+      "lat": "18.6377",
+      "lon": "145.2893",
+      "magnitude": "4.6",
+      "depth": "225.50",
+      "region": "Pagan region, Northern Mariana Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wff",
+      "timedate": "2011-09-18 07:55:30",
+      "lat": "-23.9583",
+      "lon": "-66.7355",
+      "magnitude": "4.5",
+      "depth": "189.90",
+      "region": "Jujuy, Argentina"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wf5",
+      "timedate": "2011-09-18 07:04:19",
+      "lat": "39.7697",
+      "lon": "143.4937",
+      "magnitude": "5.6",
+      "depth": "34.90",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wf1",
+      "timedate": "2011-09-18 06:45:40",
+      "lat": "-0.9549",
+      "lon": "97.8385",
+      "magnitude": "4.5",
+      "depth": "28.10",
+      "region": "Kepulauan Batu, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wey",
+      "timedate": "2011-09-18 06:27:03",
+      "lat": "-16.8000",
+      "lon": "41.9774",
+      "magnitude": "4.6",
+      "depth": "10.10",
+      "region": "Mozambique Channel"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wdf",
+      "timedate": "2011-09-17 23:37:27",
+      "lat": "28.0283",
+      "lon": "52.9387",
+      "magnitude": "4.6",
+      "depth": "10.20",
+      "region": "southern Iran"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w9a",
+      "timedate": "2011-09-17 17:54:47",
+      "lat": "40.2802",
+      "lon": "143.1875",
+      "magnitude": "5.2",
+      "depth": "24.10",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w9a",
+      "timedate": "2011-09-17 17:54:47",
+      "lat": "40.2802",
+      "lon": "143.1875",
+      "magnitude": "5.2",
+      "depth": "24.10",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w8u",
+      "timedate": "2011-09-17 17:41:04",
+      "lat": "-28.7583",
+      "lon": "-70.9827",
+      "magnitude": "4.9",
+      "depth": "26.10",
+      "region": "Atacama, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005wev",
+      "timedate": "2011-09-17 16:28:29",
+      "lat": "-20.2140",
+      "lon": "147.6140",
+      "magnitude": "4.1",
+      "depth": "5.00",
+      "region": "Queensland, Australia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w7l",
+      "timedate": "2011-09-17 16:09:15",
+      "lat": "-7.7894",
+      "lon": "-74.6220",
+      "magnitude": "4.5",
+      "depth": "144.00",
+      "region": "northern Peru"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w76",
+      "timedate": "2011-09-17 15:13:23",
+      "lat": "38.3014",
+      "lon": "141.9765",
+      "magnitude": "4.8",
+      "depth": "52.90",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w4k",
+      "timedate": "2011-09-17 08:59:30",
+      "lat": "48.9057",
+      "lon": "154.7938",
+      "magnitude": "5.4",
+      "depth": "59.10",
+      "region": "Kuril Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w4k",
+      "timedate": "2011-09-17 08:59:30",
+      "lat": "48.9057",
+      "lon": "154.7938",
+      "magnitude": "5.4",
+      "depth": "59.10",
+      "region": "Kuril Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w4i",
+      "timedate": "2011-09-17 08:24:01",
+      "lat": "39.9582",
+      "lon": "143.2640",
+      "magnitude": "4.6",
+      "depth": "35.60",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w44",
+      "timedate": "2011-09-17 07:33:59",
+      "lat": "40.3085",
+      "lon": "142.9011",
+      "magnitude": "5.9",
+      "depth": "39.50",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w3r",
+      "timedate": "2011-09-17 05:03:32",
+      "lat": "-17.5438",
+      "lon": "-178.7568",
+      "magnitude": "4.2",
+      "depth": "543.40",
+      "region": "Fiji region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w25",
+      "timedate": "2011-09-17 01:32:55",
+      "lat": "-12.2167",
+      "lon": "165.8440",
+      "magnitude": "4.9",
+      "depth": "45.60",
+      "region": "Santa Cruz Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w21",
+      "timedate": "2011-09-17 01:18:55",
+      "lat": "40.3130",
+      "lon": "143.0264",
+      "magnitude": "4.9",
+      "depth": "34.70",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w1n",
+      "timedate": "2011-09-16 23:07:43",
+      "lat": "28.3091",
+      "lon": "54.8640",
+      "magnitude": "4.6",
+      "depth": "33.80",
+      "region": "southern Iran"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w19",
+      "timedate": "2011-09-16 22:40:42",
+      "lat": "40.2877",
+      "lon": "143.1739",
+      "magnitude": "5.5",
+      "depth": "5.40",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w0i",
+      "timedate": "2011-09-16 22:09:31",
+      "lat": "-5.0770",
+      "lon": "129.4612",
+      "magnitude": "4.8",
+      "depth": "242.10",
+      "region": "Banda Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005w1t",
+      "timedate": "2011-09-16 21:50:09",
+      "lat": "-11.2534",
+      "lon": "-77.1972",
+      "magnitude": "4.2",
+      "depth": "64.20",
+      "region": "near the coast of central Peru"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vzu",
+      "timedate": "2011-09-16 21:36:36",
+      "lat": "40.1219",
+      "lon": "143.3306",
+      "magnitude": "5.6",
+      "depth": "17.60",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vyj",
+      "timedate": "2011-09-16 21:08:05",
+      "lat": "40.2209",
+      "lon": "143.0500",
+      "magnitude": "6.0",
+      "depth": "20.20",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vx3",
+      "timedate": "2011-09-16 20:11:14",
+      "lat": "40.3046",
+      "lon": "143.1797",
+      "magnitude": "5.5",
+      "depth": "19.00",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vvx",
+      "timedate": "2011-09-16 19:39:46",
+      "lat": "40.4034",
+      "lon": "142.0339",
+      "magnitude": "5.2",
+      "depth": "10.40",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vv7",
+      "timedate": "2011-09-16 19:26:42",
+      "lat": "40.2881",
+      "lon": "142.7274",
+      "magnitude": "6.6",
+      "depth": "36.30",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vta",
+      "timedate": "2011-09-16 18:23:26",
+      "lat": "-20.7322",
+      "lon": "169.7235",
+      "magnitude": "5.6",
+      "depth": "113.10",
+      "region": "Vanuatu"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vp9",
+      "timedate": "2011-09-16 11:52:17",
+      "lat": "18.2196",
+      "lon": "119.3402",
+      "magnitude": "5.2",
+      "depth": "9.90",
+      "region": "Philippine Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vn5",
+      "timedate": "2011-09-16 06:43:16",
+      "lat": "7.4844",
+      "lon": "-36.9387",
+      "magnitude": "4.9",
+      "depth": "10.00",
+      "region": "central Mid-Atlantic Ridge"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vn5",
+      "timedate": "2011-09-16 06:43:16",
+      "lat": "7.4844",
+      "lon": "-36.9387",
+      "magnitude": "4.9",
+      "depth": "10.00",
+      "region": "central Mid-Atlantic Ridge"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vmz",
+      "timedate": "2011-09-16 06:08:22",
+      "lat": "5.2649",
+      "lon": "-82.5367",
+      "magnitude": "4.4",
+      "depth": "10.00",
+      "region": "south of Panama"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vmd",
+      "timedate": "2011-09-16 05:27:10",
+      "lat": "35.4645",
+      "lon": "140.8498",
+      "magnitude": "4.6",
+      "depth": "41.80",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vm9",
+      "timedate": "2011-09-16 05:11:36",
+      "lat": "14.8416",
+      "lon": "-95.2707",
+      "magnitude": "4.1",
+      "depth": "11.10",
+      "region": "off the coast of Oaxaca, Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vly",
+      "timedate": "2011-09-16 02:51:43",
+      "lat": "-20.5618",
+      "lon": "-179.0012",
+      "magnitude": "4.7",
+      "depth": "650.60",
+      "region": "Fiji region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vjq",
+      "timedate": "2011-09-15 22:17:40",
+      "lat": "51.8108",
+      "lon": "-171.5867",
+      "magnitude": "4.3",
+      "depth": "25.20",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vkb",
+      "timedate": "2011-09-15 22:15:07",
+      "lat": "34.2041",
+      "lon": "135.5594",
+      "magnitude": "4.6",
+      "depth": "69.80",
+      "region": "near the south coast of western Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vje",
+      "timedate": "2011-09-15 22:03:37",
+      "lat": "36.4013",
+      "lon": "70.5114",
+      "magnitude": "4.4",
+      "depth": "146.80",
+      "region": "Hindu Kush region, Afghanistan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vhb",
+      "timedate": "2011-09-15 20:40:21",
+      "lat": "-56.3077",
+      "lon": "-26.8205",
+      "magnitude": "5.1",
+      "depth": "105.30",
+      "region": "South Sandwich Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vcv",
+      "timedate": "2011-09-15 19:31:02",
+      "lat": "-21.5594",
+      "lon": "-179.3685",
+      "magnitude": "7.3",
+      "depth": "626.10",
+      "region": "Fiji region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005vac",
+      "timedate": "2011-09-15 16:54:50",
+      "lat": "-54.0752",
+      "lon": "-1.5509",
+      "magnitude": "4.9",
+      "depth": "14.90",
+      "region": "Bouvet Island region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005v87",
+      "timedate": "2011-09-15 16:08:32",
+      "lat": "-54.0405",
+      "lon": "-1.9708",
+      "magnitude": "5.1",
+      "depth": "16.30",
+      "region": "Bouvet Island region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005v6u",
+      "timedate": "2011-09-15 15:27:01",
+      "lat": "36.3827",
+      "lon": "82.5278",
+      "magnitude": "5.1",
+      "depth": "6.50",
+      "region": "southern Xinjiang, China"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005v5w",
+      "timedate": "2011-09-15 14:25:09",
+      "lat": "39.8263",
+      "lon": "141.9961",
+      "magnitude": "4.7",
+      "depth": "35.00",
+      "region": "eastern Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005v2y",
+      "timedate": "2011-09-15 11:59:52",
+      "lat": "-14.8480",
+      "lon": "-177.8124",
+      "magnitude": "5.5",
+      "depth": "370.00",
+      "region": "Fiji region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005uyq",
+      "timedate": "2011-09-15 11:02:14",
+      "lat": "49.5729",
+      "lon": "-127.1820",
+      "magnitude": "4.1",
+      "depth": "25.20",
+      "region": "Vancouver Island, Canada region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005uxw",
+      "timedate": "2011-09-15 10:46:28",
+      "lat": "3.3627",
+      "lon": "126.6615",
+      "magnitude": "4.9",
+      "depth": "19.10",
+      "region": "Kepulauan Talaud, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005us9",
+      "timedate": "2011-09-15 08:43:06",
+      "lat": "19.5627",
+      "lon": "-78.0078",
+      "magnitude": "5.1",
+      "depth": "5.00",
+      "region": "Cuba region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005us9",
+      "timedate": "2011-09-15 08:43:06",
+      "lat": "19.5627",
+      "lon": "-78.0078",
+      "magnitude": "5.1",
+      "depth": "5.00",
+      "region": "Cuba region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005us7",
+      "timedate": "2011-09-15 08:42:24",
+      "lat": "35.8189",
+      "lon": "25.6399",
+      "magnitude": "4.4",
+      "depth": "41.60",
+      "region": "Crete, Greece"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005us7",
+      "timedate": "2011-09-15 08:42:24",
+      "lat": "35.8189",
+      "lon": "25.6399",
+      "magnitude": "4.4",
+      "depth": "41.60",
+      "region": "Crete, Greece"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005urj",
+      "timedate": "2011-09-15 08:00:07",
+      "lat": "36.2895",
+      "lon": "141.3084",
+      "magnitude": "6.2",
+      "depth": "10.00",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005urj",
+      "timedate": "2011-09-15 08:00:07",
+      "lat": "36.2895",
+      "lon": "141.3084",
+      "magnitude": "6.2",
+      "depth": "10.00",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005urf",
+      "timedate": "2011-09-15 07:53:12",
+      "lat": "-35.4300",
+      "lon": "-177.8778",
+      "magnitude": "6.0",
+      "depth": "13.40",
+      "region": "east of the North Island of New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005uqa",
+      "timedate": "2011-09-15 03:44:03",
+      "lat": "21.6266",
+      "lon": "143.0054",
+      "magnitude": "4.4",
+      "depth": "294.00",
+      "region": "Mariana Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005uqa",
+      "timedate": "2011-09-15 03:44:03",
+      "lat": "21.6266",
+      "lon": "143.0054",
+      "magnitude": "4.4",
+      "depth": "294.00",
+      "region": "Mariana Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005upu",
+      "timedate": "2011-09-15 02:06:48",
+      "lat": "59.1320",
+      "lon": "-138.1213",
+      "magnitude": "4.5",
+      "depth": "7.30",
+      "region": "Southeastern Alaska"
+    },
+    {
+      "src": "ak",
+      "eqid": "10316421",
+      "timedate": "2011-09-15 00:21:05",
+      "lat": "59.9021",
+      "lon": "-151.8233",
+      "magnitude": "4.1",
+      "depth": "53.70",
+      "region": "Kenai Peninsula, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ucf",
+      "timedate": "2011-09-14 18:10:07",
+      "lat": "53.1380",
+      "lon": "173.0219",
+      "magnitude": "6.1",
+      "depth": "1.00",
+      "region": "Near Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u9r",
+      "timedate": "2011-09-14 15:54:51",
+      "lat": "-6.2309",
+      "lon": "103.6114",
+      "magnitude": "5.3",
+      "depth": "43.60",
+      "region": "southwest of Sumatra, Indonesia"
+    },
+    {
+      "src": "ci",
+      "eqid": "11006189",
+      "timedate": "2011-09-14 14:44:51",
+      "lat": "33.9528",
+      "lon": "-117.0758",
+      "magnitude": "4.1",
+      "depth": "16.90",
+      "region": "Greater Los Angeles area, California"
+    },
+    {
+      "src": "ci",
+      "eqid": "11006189",
+      "timedate": "2011-09-14 14:44:51",
+      "lat": "33.9528",
+      "lon": "-117.0758",
+      "magnitude": "4.1",
+      "depth": "16.90",
+      "region": "Greater Los Angeles area, California"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u7f",
+      "timedate": "2011-09-14 13:36:38",
+      "lat": "-35.1328",
+      "lon": "-179.0492",
+      "magnitude": "5.6",
+      "depth": "40.80",
+      "region": "east of the North Island of New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u6b",
+      "timedate": "2011-09-14 11:26:16",
+      "lat": "36.4506",
+      "lon": "70.3667",
+      "magnitude": "4.5",
+      "depth": "214.90",
+      "region": "Hindu Kush region, Afghanistan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u5k",
+      "timedate": "2011-09-14 10:37:02",
+      "lat": "0.7555",
+      "lon": "100.0337",
+      "magnitude": "4.6",
+      "depth": "189.30",
+      "region": "northern Sumatra, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u51",
+      "timedate": "2011-09-14 09:24:39",
+      "lat": "4.6424",
+      "lon": "126.3659",
+      "magnitude": "4.6",
+      "depth": "68.10",
+      "region": "Kepulauan Talaud, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u4r",
+      "timedate": "2011-09-14 08:09:24",
+      "lat": "-18.2054",
+      "lon": "167.5734",
+      "magnitude": "4.9",
+      "depth": "43.70",
+      "region": "Vanuatu"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u4c",
+      "timedate": "2011-09-14 07:03:51",
+      "lat": "-32.7337",
+      "lon": "-71.6134",
+      "magnitude": "5.9",
+      "depth": "19.00",
+      "region": "offshore Valparaiso, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u3p",
+      "timedate": "2011-09-14 03:35:31",
+      "lat": "37.2034",
+      "lon": "22.0121",
+      "magnitude": "5.0",
+      "depth": "22.00",
+      "region": "southern Greece"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u1t",
+      "timedate": "2011-09-13 23:18:26",
+      "lat": "-24.3682",
+      "lon": "179.9009",
+      "magnitude": "4.5",
+      "depth": "505.60",
+      "region": "south of the Fiji Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005u0j",
+      "timedate": "2011-09-13 22:09:40",
+      "lat": "26.9659",
+      "lon": "127.3478",
+      "magnitude": "4.8",
+      "depth": "90.50",
+      "region": "Ryukyu Islands, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ty2",
+      "timedate": "2011-09-13 21:18:17",
+      "lat": "-37.2044",
+      "lon": "-73.5209",
+      "magnitude": "4.7",
+      "depth": "17.40",
+      "region": "Bio-Bio, Chile"
+    },
+    {
+      "src": "ci",
+      "eqid": "11005933",
+      "timedate": "2011-09-13 20:18:09",
+      "lat": "32.1048",
+      "lon": "-115.1752",
+      "magnitude": "4.0",
+      "depth": "26.70",
+      "region": "Baja California, Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ttr",
+      "timedate": "2011-09-13 19:59:22",
+      "lat": "51.2221",
+      "lon": "-175.9888",
+      "magnitude": "4.4",
+      "depth": "47.50",
+      "region": "Andreanof Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "2011qubi",
+      "timedate": "2011-09-13 16:19:29",
+      "lat": "34.4089",
+      "lon": "23.7038",
+      "magnitude": "5.0",
+      "depth": "24.20",
+      "region": "Crete, Greece"
+    },
+    {
+      "src": "us",
+      "eqid": "2011qube",
+      "timedate": "2011-09-13 14:24:28",
+      "lat": "-4.6707",
+      "lon": "143.9376",
+      "magnitude": "4.1",
+      "depth": "97.40",
+      "region": "New Guinea, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005tl7",
+      "timedate": "2011-09-13 14:14:33",
+      "lat": "38.7200",
+      "lon": "142.3426",
+      "magnitude": "4.7",
+      "depth": "59.60",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005tib",
+      "timedate": "2011-09-13 09:10:19",
+      "lat": "35.2007",
+      "lon": "141.2627",
+      "magnitude": "5.0",
+      "depth": "27.50",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ti4",
+      "timedate": "2011-09-13 08:27:36",
+      "lat": "-6.9071",
+      "lon": "143.8677",
+      "magnitude": "4.8",
+      "depth": "10.00",
+      "region": "New Guinea, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005thy",
+      "timedate": "2011-09-13 07:56:09",
+      "lat": "-6.8789",
+      "lon": "143.9323",
+      "magnitude": "5.2",
+      "depth": "15.50",
+      "region": "New Guinea, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005tgt",
+      "timedate": "2011-09-13 05:24:39",
+      "lat": "36.9432",
+      "lon": "-104.7559",
+      "magnitude": "4.0",
+      "depth": "5.00",
+      "region": "New Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005tgt",
+      "timedate": "2011-09-13 05:24:39",
+      "lat": "36.9432",
+      "lon": "-104.7559",
+      "magnitude": "4.0",
+      "depth": "5.00",
+      "region": "New Mexico"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005tgm",
+      "timedate": "2011-09-13 04:49:37",
+      "lat": "5.6330",
+      "lon": "-77.5020",
+      "magnitude": "5.7",
+      "depth": "25.70",
+      "region": "near the west coast of Colombia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005tgg",
+      "timedate": "2011-09-13 04:38:49",
+      "lat": "5.6354",
+      "lon": "-77.5340",
+      "magnitude": "5.0",
+      "depth": "18.90",
+      "region": "near the west coast of Colombia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005teu",
+      "timedate": "2011-09-13 00:48:24",
+      "lat": "11.3830",
+      "lon": "-86.7082",
+      "magnitude": "4.2",
+      "depth": "60.60",
+      "region": "near the coast of Nicaragua"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005tc7",
+      "timedate": "2011-09-12 23:02:42",
+      "lat": "35.6944",
+      "lon": "143.3231",
+      "magnitude": "5.0",
+      "depth": "26.10",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005tbb",
+      "timedate": "2011-09-12 22:44:31",
+      "lat": "-3.6380",
+      "lon": "144.1599",
+      "magnitude": "6.2",
+      "depth": "34.90",
+      "region": "near the north coast of New Guinea, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005t77",
+      "timedate": "2011-09-12 21:16:42",
+      "lat": "6.8916",
+      "lon": "-76.7535",
+      "magnitude": "4.4",
+      "depth": "47.00",
+      "region": "northern Colombia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005t0k",
+      "timedate": "2011-09-12 18:23:55",
+      "lat": "-6.4875",
+      "lon": "103.6361",
+      "magnitude": "5.0",
+      "depth": "14.70",
+      "region": "southwest of Sumatra, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005szd",
+      "timedate": "2011-09-12 17:42:42",
+      "lat": "36.5710",
+      "lon": "140.9241",
+      "magnitude": "4.9",
+      "depth": "61.20",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "2011qtbm",
+      "timedate": "2011-09-12 16:49:59",
+      "lat": "42.6634",
+      "lon": "142.4245",
+      "magnitude": "4.7",
+      "depth": "91.90",
+      "region": "Hokkaido, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "2011qtbe",
+      "timedate": "2011-09-12 15:25:58",
+      "lat": "35.5377",
+      "lon": "141.1233",
+      "magnitude": "4.6",
+      "depth": "36.10",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ssw",
+      "timedate": "2011-09-12 10:25:19",
+      "lat": "14.7713",
+      "lon": "-91.7292",
+      "magnitude": "4.5",
+      "depth": "100.40",
+      "region": "Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005ssi",
+      "timedate": "2011-09-12 09:37:32",
+      "lat": "50.7811",
+      "lon": "-129.9474",
+      "magnitude": "4.2",
+      "depth": "29.40",
+      "region": "Vancouver Island, Canada region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005srh",
+      "timedate": "2011-09-12 07:30:35",
+      "lat": "5.0386",
+      "lon": "127.4111",
+      "magnitude": "5.0",
+      "depth": "117.10",
+      "region": "Philippine Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005srd",
+      "timedate": "2011-09-12 07:05:19",
+      "lat": "-30.6264",
+      "lon": "-178.0943",
+      "magnitude": "4.8",
+      "depth": "98.70",
+      "region": "Kermadec Islands, New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sqy",
+      "timedate": "2011-09-12 05:15:13",
+      "lat": "23.7378",
+      "lon": "122.8212",
+      "magnitude": "5.1",
+      "depth": "43.10",
+      "region": "Taiwan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005squ",
+      "timedate": "2011-09-12 04:32:30",
+      "lat": "-13.9012",
+      "lon": "-76.0369",
+      "magnitude": "4.7",
+      "depth": "48.20",
+      "region": "near the coast of central Peru"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sqs",
+      "timedate": "2011-09-12 03:47:47",
+      "lat": "-9.8696",
+      "lon": "117.7583",
+      "magnitude": "4.6",
+      "depth": "75.30",
+      "region": "Sumbawa region, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005spk",
+      "timedate": "2011-09-11 23:37:36",
+      "lat": "-18.1861",
+      "lon": "167.8737",
+      "magnitude": "6.0",
+      "depth": "35.10",
+      "region": "Vanuatu"
+    },
+    {
+      "src": "us",
+      "eqid": "2011qsaw",
+      "timedate": "2011-09-11 14:22:42",
+      "lat": "34.8187",
+      "lon": "89.8622",
+      "magnitude": "4.6",
+      "depth": "52.00",
+      "region": "Xizang-Qinghai border region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005shs",
+      "timedate": "2011-09-11 12:40:55",
+      "lat": "-13.3633",
+      "lon": "-76.3112",
+      "magnitude": "4.7",
+      "depth": "22.90",
+      "region": "near the coast of central Peru"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005shp",
+      "timedate": "2011-09-11 12:27:45",
+      "lat": "32.8743",
+      "lon": "-100.8042",
+      "magnitude": "4.4",
+      "depth": "10.30",
+      "region": "western Texas"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sha",
+      "timedate": "2011-09-11 10:09:28",
+      "lat": "35.5096",
+      "lon": "140.0128",
+      "magnitude": "4.6",
+      "depth": "63.90",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sgi",
+      "timedate": "2011-09-11 05:45:00",
+      "lat": "39.8148",
+      "lon": "15.2738",
+      "magnitude": "4.4",
+      "depth": "285.40",
+      "region": "southern Italy"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sgi",
+      "timedate": "2011-09-11 05:45:00",
+      "lat": "39.8148",
+      "lon": "15.2738",
+      "magnitude": "4.4",
+      "depth": "285.40",
+      "region": "southern Italy"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sfx",
+      "timedate": "2011-09-11 03:24:52",
+      "lat": "-26.3067",
+      "lon": "-70.3419",
+      "magnitude": "4.8",
+      "depth": "68.00",
+      "region": "Atacama, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sfi",
+      "timedate": "2011-09-11 01:58:59",
+      "lat": "3.5238",
+      "lon": "126.8446",
+      "magnitude": "4.8",
+      "depth": "71.80",
+      "region": "Kepulauan Talaud, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sff",
+      "timedate": "2011-09-11 01:41:27",
+      "lat": "51.9164",
+      "lon": "-171.7259",
+      "magnitude": "4.4",
+      "depth": "38.00",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sej",
+      "timedate": "2011-09-11 00:09:11",
+      "lat": "-10.4220",
+      "lon": "123.9084",
+      "magnitude": "4.6",
+      "depth": "20.60",
+      "region": "Timor region, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sca",
+      "timedate": "2011-09-10 23:19:00",
+      "lat": "-43.6000",
+      "lon": "172.7600",
+      "magnitude": "4.5",
+      "depth": "11.00",
+      "region": "South Island of New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sci",
+      "timedate": "2011-09-10 23:14:06",
+      "lat": "41.2914",
+      "lon": "142.7936",
+      "magnitude": "4.7",
+      "depth": "40.20",
+      "region": "Hokkaido, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005sat",
+      "timedate": "2011-09-10 22:07:29",
+      "lat": "28.4235",
+      "lon": "-112.0071",
+      "magnitude": "4.6",
+      "depth": "10.00",
+      "region": "Gulf of California"
+    },
+    {
+      "src": "pr",
+      "eqid": "11253003",
+      "timedate": "2011-09-10 21:52:40",
+      "lat": "19.8299",
+      "lon": "-66.5410",
+      "magnitude": "4.4",
+      "depth": "42.60",
+      "region": "Puerto Rico region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s9j",
+      "timedate": "2011-09-10 20:02:50",
+      "lat": "48.4447",
+      "lon": "154.3498",
+      "magnitude": "4.8",
+      "depth": "49.60",
+      "region": "Kuril Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s8k",
+      "timedate": "2011-09-10 18:53:04",
+      "lat": "-8.7709",
+      "lon": "67.5175",
+      "magnitude": "5.0",
+      "depth": "13.90",
+      "region": "Mid-Indian Ridge"
+    },
+    {
+      "src": "us",
+      "eqid": "2011qra7",
+      "timedate": "2011-09-10 15:20:29",
+      "lat": "29.6332",
+      "lon": "115.4577",
+      "magnitude": "4.5",
+      "depth": "10.00",
+      "region": "Hubei-Jiangxi border region, China"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s3l",
+      "timedate": "2011-09-10 12:19:29",
+      "lat": "52.1940",
+      "lon": "-171.6393",
+      "magnitude": "4.7",
+      "depth": "35.00",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s2c",
+      "timedate": "2011-09-10 09:28:00",
+      "lat": "15.4252",
+      "lon": "-61.2125",
+      "magnitude": "4.2",
+      "depth": "148.60",
+      "region": "Dominica region, Leeward Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s1x",
+      "timedate": "2011-09-10 09:18:49",
+      "lat": "28.3148",
+      "lon": "-112.1428",
+      "magnitude": "4.4",
+      "depth": "10.40",
+      "region": "Gulf of California"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s17",
+      "timedate": "2011-09-10 08:42:51",
+      "lat": "28.1267",
+      "lon": "-112.2482",
+      "magnitude": "4.0",
+      "depth": "12.00",
+      "region": "Gulf of California"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s17",
+      "timedate": "2011-09-10 08:42:51",
+      "lat": "28.1267",
+      "lon": "-112.2482",
+      "magnitude": "4.0",
+      "depth": "12.00",
+      "region": "Gulf of California"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s0v",
+      "timedate": "2011-09-10 06:21:42",
+      "lat": "36.7831",
+      "lon": "142.2786",
+      "magnitude": "4.7",
+      "depth": "33.00",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s0s",
+      "timedate": "2011-09-10 06:00:33",
+      "lat": "36.5231",
+      "lon": "140.5679",
+      "magnitude": "4.8",
+      "depth": "60.30",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s0s",
+      "timedate": "2011-09-10 06:00:33",
+      "lat": "36.5231",
+      "lon": "140.5679",
+      "magnitude": "4.8",
+      "depth": "60.30",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s0i",
+      "timedate": "2011-09-10 04:31:21",
+      "lat": "-30.0006",
+      "lon": "-178.6455",
+      "magnitude": "4.8",
+      "depth": "363.00",
+      "region": "Kermadec Islands, New Zealand"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005s03",
+      "timedate": "2011-09-10 03:17:07",
+      "lat": "-34.2474",
+      "lon": "-72.2611",
+      "magnitude": "5.1",
+      "depth": "19.10",
+      "region": "offshore Libertador O'Higgins, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rzl",
+      "timedate": "2011-09-10 02:23:12",
+      "lat": "55.4010",
+      "lon": "164.6683",
+      "magnitude": "4.6",
+      "depth": "34.80",
+      "region": "Komandorskiye Ostrova, Russia region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rzi",
+      "timedate": "2011-09-10 02:22:15",
+      "lat": "36.7646",
+      "lon": "26.5460",
+      "magnitude": "4.2",
+      "depth": "5.20",
+      "region": "Dodecanese Islands, Greece"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rxb",
+      "timedate": "2011-09-09 22:33:33",
+      "lat": "12.3289",
+      "lon": "143.9624",
+      "magnitude": "4.9",
+      "depth": "22.50",
+      "region": "Guam region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rvm",
+      "timedate": "2011-09-09 21:29:20",
+      "lat": "8.5840",
+      "lon": "-82.9743",
+      "magnitude": "4.6",
+      "depth": "38.70",
+      "region": "Panama-Costa Rica border region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rsj",
+      "timedate": "2011-09-09 19:41:34",
+      "lat": "49.4928",
+      "lon": "-126.9669",
+      "magnitude": "6.4",
+      "depth": "23.00",
+      "region": "Vancouver Island, Canada region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rsj",
+      "timedate": "2011-09-09 19:41:34",
+      "lat": "49.4928",
+      "lon": "-126.9669",
+      "magnitude": "6.4",
+      "depth": "23.00",
+      "region": "Vancouver Island, Canada region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rrg",
+      "timedate": "2011-09-09 19:26:00",
+      "lat": "-49.6749",
+      "lon": "163.9946",
+      "magnitude": "5.9",
+      "depth": "10.50",
+      "region": "Auckland Islands, New Zealand region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rmi",
+      "timedate": "2011-09-09 16:32:10",
+      "lat": "-21.1404",
+      "lon": "-68.5240",
+      "magnitude": "4.5",
+      "depth": "108.30",
+      "region": "Antofagasta, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rke",
+      "timedate": "2011-09-09 13:40:46",
+      "lat": "51.8784",
+      "lon": "175.3873",
+      "magnitude": "4.3",
+      "depth": "52.40",
+      "region": "Rat Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rke",
+      "timedate": "2011-09-09 13:40:46",
+      "lat": "51.8784",
+      "lon": "175.3873",
+      "magnitude": "4.3",
+      "depth": "52.40",
+      "region": "Rat Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rk5",
+      "timedate": "2011-09-09 13:25:05",
+      "lat": "-12.5773",
+      "lon": "44.9571",
+      "magnitude": "5.0",
+      "depth": "13.70",
+      "region": "Comoros region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005riy",
+      "timedate": "2011-09-09 10:11:24",
+      "lat": "14.9564",
+      "lon": "-61.3100",
+      "magnitude": "5.0",
+      "depth": "150.60",
+      "region": "Martinique region, Windward Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "2011qqaq",
+      "timedate": "2011-09-09 04:30:32",
+      "lat": "13.5125",
+      "lon": "-90.6648",
+      "magnitude": "4.2",
+      "depth": "68.70",
+      "region": "offshore Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rh8",
+      "timedate": "2011-09-09 02:51:12",
+      "lat": "-59.3854",
+      "lon": "-21.3209",
+      "magnitude": "5.2",
+      "depth": "9.60",
+      "region": "east of the South Sandwich Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rh6",
+      "timedate": "2011-09-09 02:46:22",
+      "lat": "-17.1938",
+      "lon": "-174.5572",
+      "magnitude": "4.8",
+      "depth": "121.30",
+      "region": "Tonga"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rh4",
+      "timedate": "2011-09-09 02:33:53",
+      "lat": "-22.4394",
+      "lon": "-68.6479",
+      "magnitude": "5.4",
+      "depth": "95.20",
+      "region": "Antofagasta, Chile"
+    },
+    {
+      "src": "ak",
+      "eqid": "10313361",
+      "timedate": "2011-09-08 22:32:44",
+      "lat": "52.0580",
+      "lon": "-171.6519",
+      "magnitude": "4.0",
+      "depth": "28.50",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rea",
+      "timedate": "2011-09-08 22:06:23",
+      "lat": "39.8743",
+      "lon": "142.1639",
+      "magnitude": "4.7",
+      "depth": "49.50",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005rc1",
+      "timedate": "2011-09-08 21:03:45",
+      "lat": "-19.0474",
+      "lon": "167.6322",
+      "magnitude": "5.0",
+      "depth": "27.90",
+      "region": "Vanuatu region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005r8g",
+      "timedate": "2011-09-08 19:46:52",
+      "lat": "38.9963",
+      "lon": "70.7065",
+      "magnitude": "5.0",
+      "depth": "51.30",
+      "region": "Tajikistan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005r6w",
+      "timedate": "2011-09-08 19:02:47",
+      "lat": "51.7790",
+      "lon": "5.9598",
+      "magnitude": "4.2",
+      "depth": "14.30",
+      "region": "The Netherlands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005r2t",
+      "timedate": "2011-09-08 16:00:52",
+      "lat": "11.4781",
+      "lon": "143.6705",
+      "magnitude": "4.9",
+      "depth": "40.00",
+      "region": "south of the Mariana Islands"
+    },
+    {
+      "src": "pr",
+      "eqid": "11251007",
+      "timedate": "2011-09-08 15:30:39",
+      "lat": "18.8579",
+      "lon": "-65.1880",
+      "magnitude": "4.0",
+      "depth": "37.00",
+      "region": "Puerto Rico region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005r23",
+      "timedate": "2011-09-08 15:27:14",
+      "lat": "46.7799",
+      "lon": "152.6031",
+      "magnitude": "5.1",
+      "depth": "60.30",
+      "region": "Kuril Islands"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005r25",
+      "timedate": "2011-09-08 15:19:47",
+      "lat": "13.4840",
+      "lon": "120.8997",
+      "magnitude": "4.6",
+      "depth": "93.40",
+      "region": "Mindoro, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005r0v",
+      "timedate": "2011-09-08 13:38:12",
+      "lat": "37.2723",
+      "lon": "141.9130",
+      "magnitude": "5.2",
+      "depth": "29.00",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005qyr",
+      "timedate": "2011-09-08 08:58:47",
+      "lat": "-16.4664",
+      "lon": "177.8419",
+      "magnitude": "4.9",
+      "depth": "21.30",
+      "region": "Fiji"
+    },
+    {
+      "src": "us",
+      "eqid": "2011qpaf",
+      "timedate": "2011-09-08 02:16:13",
+      "lat": "37.0404",
+      "lon": "143.2229",
+      "magnitude": "4.7",
+      "depth": "35.00",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005qbz",
+      "timedate": "2011-09-07 17:58:21",
+      "lat": "28.9953",
+      "lon": "77.2234",
+      "magnitude": "4.3",
+      "depth": "10.00",
+      "region": "Haryana-Delhi-Uttar Pradesh region, India"
+    },
+    {
+      "src": "ak",
+      "eqid": "10312101",
+      "timedate": "2011-09-07 15:19:17",
+      "lat": "51.9293",
+      "lon": "-171.4578",
+      "magnitude": "4.4",
+      "depth": "42.00",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q8m",
+      "timedate": "2011-09-07 13:29:41",
+      "lat": "42.2405",
+      "lon": "142.3869",
+      "magnitude": "5.3",
+      "depth": "8.80",
+      "region": "Hokkaido, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q8c",
+      "timedate": "2011-09-07 11:36:33",
+      "lat": "52.0520",
+      "lon": "-171.5683",
+      "magnitude": "4.4",
+      "depth": "52.10",
+      "region": "Fox Islands, Aleutian Islands, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q81",
+      "timedate": "2011-09-07 11:21:48",
+      "lat": "-33.3266",
+      "lon": "-72.2487",
+      "magnitude": "5.0",
+      "depth": "11.80",
+      "region": "offshore Valparaiso, Chile"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q7y",
+      "timedate": "2011-09-07 10:16:39",
+      "lat": "-17.8740",
+      "lon": "-178.6220",
+      "magnitude": "4.6",
+      "depth": "605.80",
+      "region": "Fiji region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q7s",
+      "timedate": "2011-09-07 10:06:56",
+      "lat": "-5.4295",
+      "lon": "125.0979",
+      "magnitude": "4.3",
+      "depth": "11.70",
+      "region": "Banda Sea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q78",
+      "timedate": "2011-09-07 07:55:32",
+      "lat": "-27.7250",
+      "lon": "-178.5114",
+      "magnitude": "5.1",
+      "depth": "243.90",
+      "region": "Kermadec Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q78",
+      "timedate": "2011-09-07 07:55:32",
+      "lat": "-27.7250",
+      "lon": "-178.5114",
+      "magnitude": "5.1",
+      "depth": "243.90",
+      "region": "Kermadec Islands region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q75",
+      "timedate": "2011-09-07 07:37:30",
+      "lat": "37.2352",
+      "lon": "144.0843",
+      "magnitude": "4.8",
+      "depth": "34.50",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q73",
+      "timedate": "2011-09-07 07:29:30",
+      "lat": "-4.9145",
+      "lon": "134.2627",
+      "magnitude": "4.7",
+      "depth": "23.30",
+      "region": "near the south coast of Papua, Indonesia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q70",
+      "timedate": "2011-09-07 06:07:37",
+      "lat": "9.9836",
+      "lon": "125.9600",
+      "magnitude": "5.1",
+      "depth": "100.00",
+      "region": "Mindanao, Philippines"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q6z",
+      "timedate": "2011-09-07 05:42:17",
+      "lat": "39.1981",
+      "lon": "140.4376",
+      "magnitude": "4.6",
+      "depth": "41.30",
+      "region": "eastern Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q6z",
+      "timedate": "2011-09-07 05:42:17",
+      "lat": "39.1981",
+      "lon": "140.4376",
+      "magnitude": "4.6",
+      "depth": "41.30",
+      "region": "eastern Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "2011qnai",
+      "timedate": "2011-09-07 03:20:21",
+      "lat": "-5.1003",
+      "lon": "152.0131",
+      "magnitude": "4.7",
+      "depth": "96.10",
+      "region": "New Britain region, Papua New Guinea"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q6k",
+      "timedate": "2011-09-07 01:23:30",
+      "lat": "55.6368",
+      "lon": "162.9554",
+      "magnitude": "5.2",
+      "depth": "5.30",
+      "region": "near the east coast of the Kamchatka Peninsula, Russia"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q66",
+      "timedate": "2011-09-07 00:10:00",
+      "lat": "39.9578",
+      "lon": "143.4011",
+      "magnitude": "4.9",
+      "depth": "26.50",
+      "region": "off the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q63",
+      "timedate": "2011-09-06 23:31:38",
+      "lat": "13.4307",
+      "lon": "-90.5022",
+      "magnitude": "4.2",
+      "depth": "51.00",
+      "region": "offshore Guatemala"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005q1q",
+      "timedate": "2011-09-06 22:27:25",
+      "lat": "42.1100",
+      "lon": "143.1316",
+      "magnitude": "4.7",
+      "depth": "54.50",
+      "region": "Hokkaido, Japan region"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005pt9",
+      "timedate": "2011-09-06 18:03:43",
+      "lat": "36.6622",
+      "lon": "141.6241",
+      "magnitude": "4.7",
+      "depth": "28.90",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005pt4",
+      "timedate": "2011-09-06 17:54:52",
+      "lat": "36.6978",
+      "lon": "141.6498",
+      "magnitude": "5.1",
+      "depth": "27.90",
+      "region": "near the east coast of Honshu, Japan"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005pt2",
+      "timedate": "2011-09-06 17:54:23",
+      "lat": "54.8186",
+      "lon": "-163.0362",
+      "magnitude": "4.7",
+      "depth": "25.50",
+      "region": "Unimak Island region, Alaska"
+    },
+    {
+      "src": "us",
+      "eqid": "c0005pr8",
+      "timedate": "2011-09-06 15:13:34",
+      "lat": "-10.8961",
+      "lon": "163.8299",
+      "magnitude": "5.0",
+      "depth": "15.90",
+      "region": "Solomon Islands"
+    }
+  ]
+}
