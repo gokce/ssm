@@ -192,21 +192,18 @@ $(document).ready(function() {
 			
 			// Store previous day
 			prev_day = ''
-			// For each earthquake in data
-			$.each(data, function(k, v) {
-				// Check if current earthquake is in a new day
-				if (prev_day!=''){
-					if (prev_day!=v.day) {
-						var text = new paper.PointText(new paper.Point(posx+5, posy+6));
-						text.characterStyle = {
-							fontSize: 14,
-							fillColor: 'white',
-							font: 'extravaganzzaBold',
-						};
-						text.content=v.day;
-						v['dpt'].addChild(text);
-						posx+=100;
-					}
+			// Check if current earthquake is in a new day
+			if (prev_day!=''){
+				if (prev_day!=v.day) {
+					var text = new paper.PointText(new paper.Point(posx+5, posy+6));
+					text.characterStyle = {
+						fontSize: 14,
+						fillColor: 'white',
+						font: 'extravaganzzaBold',
+					};
+					text.content=v.day;
+					v['dpt'].addChild(text);
+					posx+=100;
 				}
 			}
 			// move next eq 50 pixels left
