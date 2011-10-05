@@ -15,7 +15,7 @@ $(document).ready(function() {
 	
 	var views = ['nst','map','tml','dpt','lst'];
 	
-	var current_view = 'map';
+	var current_view = 'dpt';
 	var canvas;
 	$('#navi').find('.'+current_view).addClass('selected');
 	
@@ -194,9 +194,9 @@ $(document).ready(function() {
 	
 	show_dpt = function(data) {
 		posx=100;
-		barwidth=1;
+		barwidth=0;
 		posy=75;
-		prev_day = ''
+		prev_day = '';
 		$.each(data, function(k, v) {
 			newx = canvas.width-posx;
 			newy = posy+(Math.floor(v.depth)/1.2);
@@ -207,17 +207,21 @@ $(document).ready(function() {
 			// add white depthlines
 			var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
 			depthline.strokeColor = 'white';
-			depthline.strokeWidth = 3;
+			depthline.strokeWidth = 4;
 			v['dpt'].addChild(depthline);
       
 			// Check if current earthquake is in a new day
-			prev_day=v.day;
-			if (prev_day!='' && prev_day!=v.day){
-				var daybox = new new Path.Line(new Point(newx,posy-15), new Point(barwidth*50,posy-15));
-				daybox.fillColor = 'white';
+			
+			if (prev_day=='') {
+			  prev_day = v.day;
+			}
+			if (prev_day!=v.day){
+				var daybox = new Path.Line(new Point(newx+48,posy-15), new Point(newx+2+(barwidth*50),posy-15));
+				daybox.strokeColor = 'white';
 				daybox.strokeWidth = 30;
 				v['dpt'].addChild(daybox);
-				barwidth=1;
+				barwidth=0;
+				prev_day=v.day;
 			}
 			
 			// move next eq 50 pixels left
