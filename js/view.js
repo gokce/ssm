@@ -1,6 +1,6 @@
 paper.install(window);
 $(document).ready(function() {
-	$.data_loaded = false;
+  $.data_loaded = false;
 	$.seismi.currentzoom = 0;
 	
 	paper.setup('viewcanvas');
@@ -20,11 +20,17 @@ $(document).ready(function() {
 	$('#navi').find('.'+current_view).addClass('selected');
 	
 	// init Map
-	$("#mapcontainer").mapbox({afterZoom: function(layer, xcoord, ycoord, viewport) {console.log(".. "+layer);}});
+	$("#mapcontainer").mapbox({
+    pan: false,
+    callAfter: function(l, x, y, v) {project.activeLayer.translate(new Point(x,y));}
+    });
 	var map_size = {};
 	map_size['0'] = {'width':1000,'height':503};
 	map_size['1'] = {'width':$("#map-2000").width(),'height':$("#map-2000").height()};
 	map_size['2'] = {'width':$("#map-4000").width(),'height':$("#map-4000").height()};
+	var draggingAllowed = true;
+	var defaultSpeed = 4;
+	var speed = defaultSpeed;
 	
 	$(window).resize(function() {
 		show(current_view);
@@ -39,10 +45,22 @@ $(document).ready(function() {
 	$('.dpt').click(function(){show('dpt');});
 	$('.lst').click(function(){show('lst');});
 	
+	//dragging debug with keyboard
+	$(window).keydown(function(event){
+	  key = event.keyCode;
+	  var amount = 20;
+	  if (key==37) $("#mapcontainer").mapbox("left",amount);
+	  if (key==38) $("#mapcontainer").mapbox("up",amount);
+	  if (key==39) $("#mapcontainer").mapbox("left",-amount);
+	  if (key==40) $("#mapcontainer").mapbox("up",-amount);
+  });
+	
 	zoom = function(level) {
-	    mapcontainer.mapbox("zoomTo",level);
-	    $.seismi.currentzoom=level;
-	    show(current_view);
+	  speed = 1;
+	  //mapcontainer.mapbox("right",300);
+    mapcontainer.mapbox("zoomTo",level);
+    $.seismi.currentzoom=level;
+    show(current_view);
 	}
 	
 	show = function(view_name) {
@@ -266,27 +284,29 @@ $(document).ready(function() {
 		if ($.data_loaded) {
 			$.each($.seismi.data.earthquakes, function(k, v) {
 				if (v['move']) {
+				  draggingAllowed = false;
 					var obj = v['eq_visual'];
 					var vector = v['destination'] - obj.position;
-					var vd = vectorDiff(v['destination'], obj.position, 4);
+					var vd = vectorDiff(v['destination'], obj.position, speed);
 					obj.position = vd.new_pos;
 					if (vd.dist < 1) {
 						v['move'] = false;
-						//v['cleanup'] = true;
+						v['cleanup'] = true;
 					}
 					if (v['destination_size'] != v['size']) {
 						obj.scale(v['destination_size']/v['size']);
 						v['size'] = v['destination_size'];
 					}
 				}
-				/*
 				if (v['cleanup']) {
 				  v['cleanup'] = false;
+				  draggingAllowed = true;
+				  speed = defaultSpeed;
 				}
-				*/
 			});
 		}
 	}
+	//tool.distanceThreshold = 50;
 	tool.onMouseDown = function(event) {
 		var hitResult = project.hitTest(event.point, hitOptions);
 		// Clear selected
@@ -302,15 +322,20 @@ $(document).ready(function() {
 		//$("#mapcontainer").mapbox("zoomTo",4);
 	}
 	tool.onMouseDrag = function(event) {
-		var vector = event.delta;
-		if (vector.x != 0) $("#mapcontainer").mapbox("left",vector.x);
-		if (vector.y != 0) $("#mapcontainer").mapbox("up",vector.y);
-		//var reverse_vector = new Point(vector.x*-1,vector.y*-1);
-		//paper.view.scrollBy(reverse_vector);
-		//show(current_view);
-	}
-	$.mapAfterZoom = function(layer, xcoord, ycoord, viewport) {
-		console.log(layer);
+	  if (draggingAllowed) {
+	    var vector = event.delta;
+	    var direction;
+	    if (vector.x != 0) {
+	      direction = 'left';
+	      if (vector.x < 0) { direction = 'right';}
+	      $("#mapcontainer").mapbox(direction,Math.abs(vector.x));
+	    }
+    	if (vector.y != 0) {
+    	  direction = 'up';
+    	  if (vector.y < 0) { direction = 'down'; }
+    	  $("#mapcontainer").mapbox(direction,Math.abs(vector.y)); 
+    	}
+  	}
 	}
 	
 	refreshInfobar = function(data) {
