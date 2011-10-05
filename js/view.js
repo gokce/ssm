@@ -216,12 +216,25 @@ $(document).ready(function() {
 			  prev_day = v.day;
 			}
 			if (prev_day!=v.day){
-				var daybox = new Path.Line(new Point(newx+48,posy-15), new Point(newx+2+(barwidth*50),posy-15));
+				var daybox = new Path.Line(new Point(newx+48,posy-8), new Point(newx+2+(barwidth*50),posy-8));
 				daybox.strokeColor = 'white';
-				daybox.strokeWidth = 30;
+				daybox.strokeWidth = 16;
 				v['dpt'].addChild(daybox);
+				
+				// add text
+				if (barwidth>1) {
+  				var text = new paper.PointText(new paper.Point(newx-63+(barwidth*50), posy-28));
+  				text.characterStyle = {
+  					fontSize: 14,
+  					fillColor: 'white',
+  					font: 'extravaganzzaBold',
+  				};
+  				text.content=prev_day;
+  				v['lst'].addChild(text);
+				}
+				
 				barwidth=0;
-				prev_day=v.day;
+  		  prev_day=v.day;
 			}
 			
 			// move next eq 50 pixels left
