@@ -1,6 +1,6 @@
 paper.install(window);
 $(document).ready(function() {
-    $.data_loaded = false;
+	$.data_loaded = false;
 	$.seismi.currentzoom = 0;
 	
 	paper.setup('viewcanvas');
@@ -51,15 +51,15 @@ $(document).ready(function() {
 		$('#navi').find('.'+view_name).addClass('selected');
 		current_view = view_name;
 		$.each($.seismi.data.earthquakes, function(k, v) {
-		    $.each(views, function(k2, v2) {
-		        if (v[v2] != null) v[v2].disable();
-	        });
-	    });
-	    if (view_name == 'map') {
-	        $('#mapcontainer').fadeIn(400);
-	    } else {
-	        $('#mapcontainer').fadeOut(400);
-	    }
+			$.each(views, function(k2, v2) {
+				if (v[v2] != null) v[v2].disable();
+			});
+		});
+		if (view_name == 'map') {
+			$('#mapcontainer').fadeIn(400);
+		} else {
+			$('#mapcontainer').fadeOut(400);
+		}
 		window['show_'+current_view]($.seismi.data.earthquakes);
 	}
 	
@@ -81,8 +81,8 @@ $(document).ready(function() {
 	
 	$.visualizations = {
 		refresh: function() {
-		  canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
-		  project.activeLayer.removeChildren()
+			canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
+			project.activeLayer.removeChildren()
 			$.each($.seismi.data.earthquakes, function(k, v) {
 				initx = Math.random()*view._viewSize._width;
 				inity = Math.random()*-100;
@@ -128,7 +128,6 @@ $(document).ready(function() {
 				v['dpt'] = setup_extra(v);
 				v['lst'] = setup_extra(v);
 				
-								
 				v['eq_visual'] = eq_visual;
 				v['move'] = false;
 				v['destination'] = -1;
@@ -141,24 +140,24 @@ $(document).ready(function() {
 		}
 	}
 	setup_extra = function(data) {
-	    var extra_group = new Group();
-    	extra_group['enable'] = function() {}
-    	extra_group['disable'] = function() {extra_group.removeChildren();}
-    	extra_group['select'] = function() {}
-    	extra_group['unselect'] = function() {}
-    	extra_group['data'] = function() {}
-    	return extra_group;
+		var extra_group = new Group();
+		extra_group['enable'] = function() {}
+		extra_group['disable'] = function() {extra_group.removeChildren();}
+		extra_group['select'] = function() {}
+		extra_group['unselect'] = function() {}
+		extra_group['data'] = function() {}
+		return extra_group;
 	}
 	show_nst = function(data) {
 
 	}
 	show_map = function(data) {
 		$.each(data, function(k, v) {
-		    currentzoom = $.seismi.currentzoom;
-		    map_w = map_size[currentzoom].width;
-		    map_h =map_size[currentzoom].height;
-		    xoffset = (canvas.width-map_w)/2;
-		    yoffset = (canvas.height-map_h)/2;
+			currentzoom = $.seismi.currentzoom;
+			map_w = map_size[currentzoom].width;
+			map_h =map_size[currentzoom].height;
+			xoffset = (canvas.width-map_w)/2;
+			yoffset = (canvas.height-map_h)/2;
 			x = mapValues(v.lon, -180, 180, xoffset, xoffset+map_w);
 			y = mapValues(v.lat, 90, -90, yoffset, yoffset+map_h);
 			var point = new Point(x,y);
@@ -185,12 +184,31 @@ $(document).ready(function() {
 			v['destination_size'] = ((v.magnitude*20)-70);
 			v['move'] = true;
 			
-            // add white depthlines
-    	    var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
-        	depthline.strokeColor = 'white';
-        	depthline.strokeWidth = 3;    	
-        	v['dpt'].addChild(depthline);
+			// add white depthlines
+			var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
+			depthline.strokeColor = 'white';
+			depthline.strokeWidth = 3;    	
+			v['dpt'].addChild(depthline);
 			
+			// Store previous day
+			prev_day = ''
+			// For each earthquake in data
+			$.each(data, function(k, v) {
+				// Check if current earthquake is in a new day
+				if (prev_day!=''){
+					if (prev_day!=v.day) {
+						var text = new paper.PointText(new paper.Point(posx+5, posy+6));
+						text.characterStyle = {
+							fontSize: 14,
+							fillColor: 'white',
+							font: 'extravaganzzaBold',
+						};
+						text.content=v.day;
+						v['dpt'].addChild(text);
+						posx+=100;
+					}
+				}
+			}
 			// move next eq 50 pixels left
 			posx+=50;
 		});
@@ -235,7 +253,7 @@ $(document).ready(function() {
 			prev_day=v.day;
 		});
 	}
-		
+	
 	randomPoint = function() {
 		var point = new Point(0, 0);
 		//var point = Point.random() * view.size; //NaN
@@ -292,15 +310,15 @@ $(document).ready(function() {
 		//$("#mapcontainer").mapbox("zoomTo",4);
 	}
 	tool.onMouseDrag = function(event) {
-	    var vector = event.delta;
-	    if (vector.x != 0) $("#mapcontainer").mapbox("left",vector.x);
-    	if (vector.y != 0) $("#mapcontainer").mapbox("up",vector.y);
-    	//var reverse_vector = new Point(vector.x*-1,vector.y*-1);
-    	//paper.view.scrollBy(reverse_vector);
-    	//show(current_view);
+		var vector = event.delta;
+		if (vector.x != 0) $("#mapcontainer").mapbox("left",vector.x);
+		if (vector.y != 0) $("#mapcontainer").mapbox("up",vector.y);
+		//var reverse_vector = new Point(vector.x*-1,vector.y*-1);
+		//paper.view.scrollBy(reverse_vector);
+		//show(current_view);
 	}
 	$.mapAfterZoom = function(layer, xcoord, ycoord, viewport) {
-	    console.log(layer);
+		console.log(layer);
 	}
 	
 	refreshInfobar = function(data) {
@@ -315,8 +333,8 @@ $(document).ready(function() {
 		$(holderIndicator[Math.floor(data.magnitude)]).addClass('isel');
 	}
 	mapValues = function(value, istart, istop, ostart, ostop) {
-    	   return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
-         }
+		return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
+	}
 	// String Truncate
 	truncate = function (str, limit) {
 		var bits, i;
