@@ -176,7 +176,9 @@ $(document).ready(function() {
 	
 	show_dpt = function(data) {
 		posx=100;
+		barwidth=1;
 		posy=75;
+		prev_day = ''
 		$.each(data, function(k, v) {
 			newx = canvas.width-posx;
 			newy = posy+(Math.floor(v.depth)/1.2);
@@ -187,27 +189,22 @@ $(document).ready(function() {
 			// add white depthlines
 			var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
 			depthline.strokeColor = 'white';
-			depthline.strokeWidth = 3;    	
+			depthline.strokeWidth = 3;
 			v['dpt'].addChild(depthline);
-			
-			// Store previous day
-			prev_day = ''
+      
 			// Check if current earthquake is in a new day
-			if (prev_day!=''){
-				if (prev_day!=v.day) {
-					var text = new paper.PointText(new paper.Point(posx+5, posy+6));
-					text.characterStyle = {
-						fontSize: 14,
-						fillColor: 'white',
-						font: 'extravaganzzaBold',
-					};
-					text.content=v.day;
-					v['dpt'].addChild(text);
-					posx+=100;
-				}
+			prev_day=v.day;
+			if (prev_day!='' && prev_day!=v.day){
+				var daybox = new new Path.Line(new Point(newx,posy-15), new Point(barwidth*50,posy-15));
+				daybox.fillColor = 'white';
+				daybox.strokeWidth = 30;
+				v['dpt'].addChild(daybox);
+				barwidth=1;
 			}
+			
 			// move next eq 50 pixels left
 			posx+=50;
+			barwidth+=1;
 		});
 	}
 	
@@ -220,23 +217,21 @@ $(document).ready(function() {
 		$.each(data, function(k, v) {
 			// v.day, v.depth, v.eqid, v.lat, v.lon, v.magnitude, v.region, v.src, v.time, v.timedate
 			// Check if current earthquake is in a new day
-			if (prev_day!=''){
-				if (prev_day!=v.day) {
-					// Move one line down if text would go out of bounds
-					if (canvas.width-posx < 75) {
-						posx=20;
-						posy+=30;
-					}
-					var text = new paper.PointText(new paper.Point(posx+5, posy+6));
-					text.characterStyle = {
-						fontSize: 14,
-						fillColor: 'white',
-						font: 'extravaganzzaBold',
-					};
-					text.content=v.day;
-					v['lst'].addChild(text);
-					posx+=100;
+			if (prev_day!='' && prev_day!=v.day){
+				// Move one line down if text would go out of bounds
+				if (canvas.width-posx < 75) {
+					posx=20;
+					posy+=30;
 				}
+				var text = new paper.PointText(new paper.Point(posx+5, posy+6));
+				text.characterStyle = {
+					fontSize: 14,
+					fillColor: 'white',
+					font: 'extravaganzzaBold',
+				};
+				text.content=v.day;
+				v['lst'].addChild(text);
+				posx+=100;
 			}
 			// Move one line down if circle is out of bounds
 			if (canvas.width-posx < 10) {
