@@ -205,7 +205,7 @@ $(document).ready(function() {
 			v['move'] = true;
 			
 			// add white depthlines
-			var depthline = new Path.Line(new Point(newx,posy), new Point(newx,newy));
+			var depthline = new Path.Line(new Point(newx,posy-10), new Point(newx,newy));
 			depthline.strokeColor = 'white';
 			depthline.strokeWidth = 4;
 			v['dpt'].addChild(depthline);
@@ -216,14 +216,14 @@ $(document).ready(function() {
 			  prev_day = v.day;
 			}
 			if (prev_day!=v.day){
-				var daybox = new Path.Line(new Point(newx+48,posy-8), new Point(newx+2+(barwidth*50),posy-8));
+				var daybox = new Path.Line(new Point(newx+48,posy-18), new Point(newx+2+(barwidth*50),posy-18));
 				daybox.strokeColor = 'white';
 				daybox.strokeWidth = 16;
 				v['dpt'].addChild(daybox);
 				
 				// add text
 				if (barwidth>1) {
-  				var text = new paper.PointText(new paper.Point(newx-63+(barwidth*50), posy-28));
+  				var text = new paper.PointText(new paper.Point(newx-63+(barwidth*50), posy-38));
   				text.characterStyle = {
   					fontSize: 14,
   					fillColor: 'white',
