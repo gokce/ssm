@@ -18,6 +18,8 @@ $(document).ready(function() {
 	var current_view = 'dpt';
 	var canvas;
 	$('#navi').find('.'+current_view).addClass('selected');
+	var current_selection;
+	var eq_count;
 	
 	// init Map
 	$("#mapcontainer").mapbox({
@@ -49,10 +51,13 @@ $(document).ready(function() {
 	$(window).keydown(function(event){
 	  key = event.keyCode;
 	  var amount = 20;
-	  if (key==37) $("#mapcontainer").mapbox("left",amount);
-	  if (key==38) $("#mapcontainer").mapbox("up",amount);
-	  if (key==39) $("#mapcontainer").mapbox("left",-amount);
-	  if (key==40) $("#mapcontainer").mapbox("up",-amount);
+	  //37,38,39,40
+    // if (key==37) $("#mapcontainer").mapbox("left",amount);
+    // if (key==38) $("#mapcontainer").mapbox("up",amount);
+    // if (key==39) $("#mapcontainer").mapbox("left",-amount);
+    // if (key==40) $("#mapcontainer").mapbox("up",-amount);
+    if (key==37) selectNextEarthquake();
+    if (key==39) selectPreviousEarthquake();
   });
 	
 	zoom = function(level) {
@@ -101,6 +106,7 @@ $(document).ready(function() {
 		refresh: function() {
 			canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
 			project.activeLayer.removeChildren()
+			eq_count = $.seismi.data.earthquakes.length;
 			$.each($.seismi.data.earthquakes, function(k, v) {
 				initx = Math.random()*view._viewSize._width;
 				inity = Math.random()*-100;
@@ -130,6 +136,8 @@ $(document).ready(function() {
 				// Select
 				eq_visual['select'] = function() {
 					eq_stroke.strokeColor = eq_stroke.originalColor;
+					current_selection = k;
+					refreshInfobar(v);
 				}
 				// Unselect
 				eq_visual['unselect'] = function() {
@@ -249,7 +257,7 @@ $(document).ready(function() {
 		// Store previous day
 		prev_day = ''
 		// For each earthquake in data
-		$.each(data.reverse(), function(k, v) {
+		$.each(data, function(k, v) {
 			// v.day, v.depth, v.eqid, v.lat, v.lon, v.magnitude, v.region, v.src, v.time, v.timedate
 			// Check if current earthquake is in a new day
 			if (prev_day!='' && prev_day!=v.day){
@@ -334,7 +342,6 @@ $(document).ready(function() {
 		if (hitResult && hitResult.item) {
 			hitResult.item.parent.select();
 			// Put selected data into Infobar
-			refreshInfobar(hitResult.item.parent.data());
 		}
 		//$("#mapcontainer").mapbox("zoomTo",4);
 	}
@@ -353,6 +360,18 @@ $(document).ready(function() {
     	  $("#mapcontainer").mapbox(direction,Math.abs(vector.y)); 
     	}
   	}
+	}
+	
+	selectNextEarthquake = function() {selectEarthquake(current_selection+1);}
+	selectPreviousEarthquake = function() {selectEarthquake(current_selection-1);}
+	
+	selectEarthquake = function(key) {
+	  if ((key>=0) && (key<eq_count)) {
+  	  $.each(project.activeLayer.children, function(k, v) {
+  			v.unselect();
+  		});
+  		$.seismi.data.earthquakes[key].eq_visual.select();
+		}
 	}
 	
 	refreshInfobar = function(data) {
