@@ -25,7 +25,7 @@ $(document).ready(function() {
 	$("#mapcontainer").mapbox({
     pan: false,
     callAfter: function(l, x, y, v) {project.activeLayer.translate(new Point(x,y));}
-    });
+  });
 	var map_size = {};
 	map_size['0'] = {'width':1000,'height':503};
 	map_size['1'] = {'width':$("#map-2000").width(),'height':$("#map-2000").height()};

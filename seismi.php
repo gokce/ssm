@@ -15,7 +15,6 @@
 </head>
 <body>
 <canvas id="viewcanvas" resize keepalive="true"></canvas>
-	<div id="zoomin"></div><div id="zoomout"></div>
 	<div id="mapcontainer">
 		<div id="map-1000"><!--top level map content goes here--></div>
 		<div id="map-2000">
@@ -45,6 +44,7 @@
 		<div id="butr"></div><div id="buth"></div>
 	</div>
 	
+	<div id="button_ctrl_1"></div><div id="button_ctrl_2"></div>
 	<div class="sidebar" id="eqrawdata">
 		<ul>
 			<li class="info"># raw earthquake data<br /> # number of earthquakes: 0</li>
@@ -52,7 +52,7 @@
 		</ul>
 	</div>
 
-	<div id="bringsidebar"></div>
+	<div id="bringsidebarhandle"></div><div id="bringsidebarborder"></div>
 	<div id="sidebar">
 		<ul class="ulmagnitude">
 			<li>FILTER BY: MAGNITUDE</li>

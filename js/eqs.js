@@ -11,23 +11,23 @@ $(document).ready(function() {
 	callAPI();
 	
 	function callAPI(resources,parameters) {
-	    if ($.seismi.modified != 'magnitude') {
-    	    var holder_filters_magnitude = $('#sidebar').find('.ulmagnitude').find('li').next();
-			holder_filters_magnitude.each(function(i){
-				$(this).find('.count').addClass('loading');
-				$(this).find('.count').html('');
-			});
+	  if ($.seismi.modified != 'magnitude') {
+      var holder_filters_magnitude = $('#sidebar').find('.ulmagnitude').find('li').next();
+		  holder_filters_magnitude.each(function(i){
+			  $(this).find('.count').addClass('loading');
+			  $(this).find('.count').html('');
+		  });
 		}
-	    if ($.seismi.modified != 'time') {
-    	    var holder_filters_magnitude = $('#sidebar').find('.ultime').find('li').next();
+	  if ($.seismi.modified != 'time') {
+      var holder_filters_magnitude = $('#sidebar').find('.ultime').find('li').next();
 			holder_filters_magnitude.each(function(i){
 				$(this).find('.count').addClass('loading');
 				$(this).find('.count').html('');
 			});
-	    }
-	    // $('.count').addClass('loading');
-        // $('.count').html('');
-        
+	  }
+	  // $('.count').addClass('loading');
+    // $('.count').html('');
+    
 	  resources = (typeof resources == 'undefined') ? '' : resources;
 		parameters = (typeof parameters == 'undefined') ? '' : parameters;
 		// Call API
@@ -38,21 +38,20 @@ $(document).ready(function() {
 		});*/
 		makeAjaxCall('call_api.php?r=eqs/'+resources+'&p='+parameters, 
 		function(data){
-		    $.seismi.data = data;
+		  $.seismi.data = data;
 			refreshData($.seismi.data);
 		},
 		function(){
-		    console.log("Connection to API failed");
-		    makeAjaxCall('js/test_data.json', 
-		    function(data) {
-		        console.log("Using local test data /js/test_data.json");
-		        $.seismi.data = data;
-    			refreshData($.seismi.data);
-    		    
-	        },
-	        function() {
-	            console.log("There is no js/test_data.json file, place one to launch with test data");
-	        });
+		  console.log("Connection to API failed");
+		  makeAjaxCall('js/test_data.json', 
+		  function(data) {
+		    console.log("Using local test data /js/test_data.json");
+		    $.seismi.data = data;
+    		refreshData($.seismi.data);
+    	},
+	    function() {
+	      console.log("There is no js/test_data.json file, place one to launch with test data");
+	    });
 		});
 	}
 	
@@ -180,7 +179,7 @@ $(document).ready(function() {
 	}
 	
 	String.prototype.capitalize = function() {
-	    return this.charAt(0).toUpperCase() + this.slice(1);
+	  return this.charAt(0).toUpperCase() + this.slice(1);
 	}
 	function countFilters(a) {
 		var b = {}, i = a.length, j, mag;
@@ -202,16 +201,14 @@ $(document).ready(function() {
 		return b;
 	}
 	function makeAjaxCall(ajaxUrl, functionSuccess, functionFailure){
-            $.ajax(
-            {
-                type: "GET",
-                url: ajaxUrl,
-                contentType: "application/json; charset=utf-8",
-                data: {},
-                dataType: "json",
-                success: functionSuccess,
-                error: functionFailure
-            });
-        }
-	
+    $.ajax({
+      type: "GET",
+      url: ajaxUrl,
+      contentType: "application/json; charset=utf-8",
+      data: {},
+      dataType: "json",
+      success: functionSuccess,
+      error: functionFailure
+    });
+  }
 });

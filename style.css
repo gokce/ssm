@@ -72,7 +72,7 @@ ul#navi li.selected {background:rgba(255,255,255,0.1);}
 .isel {width:26px; opacity:1;}
 
 /* === SIDEBAR === */
-#sidebar, #eqrawdata {position:absolute; right:0; top:0; overflow:scroll; z-index:2100000; height:100%; background:#181818; opacity:0.95; border-left:1px solid #222; border-right:1px solid #000;}
+#sidebar, #eqrawdata {position:absolute; right:0; top:0; overflow:scroll; z-index:2100000; height:100%; background:#1f1f1f; opacity:0.95; border-left:1px solid #262626; border-right:1px solid #000;}
 #sidebar em {font-style:normal;}
 #sidebar ul, #eqrawdata ul {list-style-type:none; margin:0; padding:5px 0 50px 10px;}
 #sidebar ul li {color:#777; padding:12px 120px 12px 25px; background:url('images/sidebar-bg.png') no-repeat -1px bottom;}
@@ -95,7 +95,8 @@ ul.ulmagnitude {padding-bottom:10px;}
 #sidebar em.type {visibility:hidden;}
 .siderbar .highlight {color:#e573ac;text-decoration: underline;}
 
-#bringsidebar {position:absolute; right:0; top:50%; margin-top:-170px; background:url('images/icon-filter.png') no-repeat left center; width:20px; height:300px; z-index:2000000;}
+#bringsidebarhandle {position:absolute; right:0; top:50%; margin-top:-70px; background:url('images/icon-filter2.png') no-repeat left center; width:41px; height:100px; z-index:2000001;}
+#bringsidebarborder {position:absolute; right:0; top:0; height:100%; width:5px; background:#1f1f1f; border-left:1px solid #262626; z-index:2000000;}
 
 .circ_eq4, .circ_eq5, .circ_eq6, .circ_eq7 {color:#04c;float:left;}
 .circ_eq4 {margin:2px 10px 0 6px;font-size:8px;}
@@ -108,11 +109,11 @@ a{color:#666;text-decoration:none;border:none;}
 a:hover{color:#eee;}
 img{border:none;}
 
-#zoomin, #zoomout {position:absolute; z-index:2400000; width:30px; height:30px; left:15px; top:15px;}
-#zoomin  {background:url('images/zoom-in.png') no-repeat top;}
-#zoomout {background:url('images/zoom-out.png') no-repeat top; top:50px;}
-#zoomin:hover  {background:url('images/zoom-in.png') no-repeat bottom; cursor:pointer;}
-#zoomout:hover {background:url('images/zoom-out.png') no-repeat bottom; cursor:pointer;}
+#button_ctrl_1, #button_ctrl_2 {position:absolute; z-index:2000000; width:28px; height:28px; right:13px; top:8px;}
+#button_ctrl_1 {background:url('images/button-arrow-left.png') no-repeat top;}
+#button_ctrl_2 {background:url('images/button-arrow-right.png') no-repeat top; top:40px;}
+#button_ctrl_1:hover {background:url('images/button-arrow-left.png') no-repeat bottom; cursor:pointer;}
+#button_ctrl_2:hover {background:url('images/button-arrow-right.png') no-repeat bottom; cursor:pointer;}
 
 .rc, #navi li{-moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px;}
 

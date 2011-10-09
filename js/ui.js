@@ -56,11 +56,13 @@ $(document).ready(function() {
 	});
 	
 	// quick bring of sidebar
-	$("#bringsidebar").mouseenter(function() {
+	$("#bringsidebarhandle").mouseenter(function() {
 		$('#sidebar').delay(100).animate({width:'show'}, 300);
+		$('#bringsidebarhandle').delay(50).animate({width:'hide'}, 300);
 	})
 	$("#sidebar").mouseleave(function(){
 		$('#sidebar').delay(300).animate({width:'hide'}, 300);
+		$('#bringsidebarhandle').delay(150).animate({width:'show'}, 300);
 	});
 	
 	
