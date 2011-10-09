@@ -249,7 +249,7 @@ $(document).ready(function() {
 		// Store previous day
 		prev_day = ''
 		// For each earthquake in data
-		$.each(data, function(k, v) {
+		$.each(data.reverse(), function(k, v) {
 			// v.day, v.depth, v.eqid, v.lat, v.lon, v.magnitude, v.region, v.src, v.time, v.timedate
 			// Check if current earthquake is in a new day
 			if (prev_day!='' && prev_day!=v.day){
