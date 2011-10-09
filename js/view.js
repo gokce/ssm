@@ -263,7 +263,7 @@ $(document).ready(function() {
 			// Check if current earthquake is in a new day
 			if (prev_day!='' && prev_day!=v.day){
 				// Move one line down if text would go out of bounds
-				if (canvas.width-posx < 75) {
+				if (canvas.width-posx < 120) {
 					posx=20;
 					posy+=30;
 				}
@@ -278,7 +278,7 @@ $(document).ready(function() {
 				posx+=100;
 			}
 			// Move one line down if circle is out of bounds
-			if (canvas.width-posx < 10) {
+			if (canvas.width-posx < 55) {
 				posx=20;
 				posy+=30;
 			}
