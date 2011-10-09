@@ -1,11 +1,12 @@
 $(document).ready(function() {
 	var start_time = +new Date();
 	
-    if (typeof $.seismi === 'undefined') $.seismi = {};
-    $.seismi.min_magnitude = 4;
-    $.seismi.data = new Object();
-    $.seismi.modified = '';
-    $.seismi.timefilter = '';
+  if (typeof $.seismi === 'undefined') $.seismi = {};
+  $.seismi.min_magnitude = 4;
+  $.seismi.data = new Object();
+  $.seismi.modified = '';
+  $.seismi.timefilter = '';
+	$.selectEarthquake = function(key){}
 	
 	callAPI();
 	
@@ -74,7 +75,14 @@ $(document).ready(function() {
 		holder_rawdata.append('<li># raw earthquake data<br /> # number of earthquakes: '+data.count+'</li>');
 		$.each(data.earthquakes, function(key, val) {
 			//console.log(val.magnitude);
-			holder_rawdata.append('<li><em class="day">'+val.day+'</em> - <em class="time">'+val.time+'</em>&nbsp;&nbsp;[&nbsp;&nbsp;<em class="magnitude">'+val.magnitude+'</em>&nbsp;&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;<em class="location">'+val.lat+'&deg; '+val.lon+'&deg;</em>&nbsp;&nbsp;]&nbsp;&nbsp;Near: <em class="near">'+val.region+'</em></li>');
+			var raw_line = $('<li><em class="day">'+val.day+'</em> - <em class="time">'+val.time+'</em>&nbsp;&nbsp;[&nbsp;&nbsp;<em class="magnitude">'+val.magnitude+'</em>&nbsp;&nbsp;]&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;<em class="location">'+val.lat+'&deg; '+val.lon+'&deg;</em>&nbsp;&nbsp;]&nbsp;&nbsp;Near: <em class="near">'+val.region+'</em></li>');
+      val['raw_line'] = raw_line;
+      val['raw_line_select'] = function() {
+        $('#eqrawdata').find('ul').find('li').each(function(i,j) {$(j).removeClass('rawselected');});
+			  val['raw_line'].addClass('rawselected');
+      }
+			raw_line.click(function(){$.selectEarthquake(key);});
+			holder_rawdata.append(raw_line);
 		});
 		
 		// Refresh filter button counts - magnitude

@@ -83,7 +83,7 @@ ul#navi li.selected {background:rgba(255,255,255,0.1);}
 #eqrawdata ul li {padding:5px 25px; background:none;}
 #eqrawdata ul li:hover {color:#ccc; background:none; cursor:pointer;}
 #eqrawdata ul li:first-child {opacity:0.5;}
-#eqrawdata ul li:first-child + li {color:#e573ac;}
+#eqrawdata ul li.rawselected {color:#e573ac;}
 ul.ulmagnitude {padding-bottom:10px;}
 
 #sidebar ul li:first-child {color:#f0e079;}

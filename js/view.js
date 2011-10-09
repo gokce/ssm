@@ -137,6 +137,7 @@ $(document).ready(function() {
 				eq_visual['select'] = function() {
 					eq_stroke.strokeColor = eq_stroke.originalColor;
 					current_selection = k;
+					v['raw_line_select']();
 					refreshInfobar(v);
 				}
 				// Unselect
@@ -362,10 +363,10 @@ $(document).ready(function() {
   	}
 	}
 	
-	selectNextEarthquake = function() {selectEarthquake(current_selection+1);}
-	selectPreviousEarthquake = function() {selectEarthquake(current_selection-1);}
+	selectNextEarthquake = function() {$.selectEarthquake(current_selection+1);}
+	selectPreviousEarthquake = function() {$.selectEarthquake(current_selection-1);}
 	
-	selectEarthquake = function(key) {
+	$.selectEarthquake = function(key) {
 	  if ((key>=0) && (key<eq_count)) {
   	  $.each(project.activeLayer.children, function(k, v) {
   			v.unselect();
