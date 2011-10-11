@@ -44,7 +44,7 @@
 		<div id="butr"></div><div id="buth"></div>
 	</div>
 	
-	<div id="controlbuttons">
+	<div id="controlbuttons" class="rc">
 		<div id="b-zoom-in"></div><div id="b-zoom-out"></div>
 		<div id="b-left"></div><div id="b-right"></div>
 		<div id="b-up"></div><div id="b-down"></div>
