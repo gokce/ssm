@@ -34,6 +34,11 @@ $(document).ready(function() {
 	var defaultSpeed = 4;
 	var speed = defaultSpeed;
 	
+	var controlbuttons = {};
+	controlbuttons['dpt'] = ['b-left','b-right'];
+	controlbuttons['lst'] = ['b-up','b-down'];
+	controlbuttons['map'] = ['b-zoom-in','b-zoom-out'];
+	
 	$(window).resize(function() {
 		show(current_view);
 	});
@@ -84,6 +89,8 @@ $(document).ready(function() {
 			$('#mapcontainer').fadeOut(400);
 		}
 		window['show_'+current_view]($.seismi.data.earthquakes);
+		$('#controlbuttons').children().hide();
+		$.each(controlbuttons[view_name], function(k, v){ $('#controlbuttons').find('#'+v).show()});
 	}
 	
 	// Placeholders for Infobar
