@@ -43,8 +43,12 @@ $(document).ready(function() {
 		show(current_view);
 	});
 	var mapcontainer = $("#mapcontainer");
-	$("#zoomin").click(function(){zoom(2)});
-	$("#zoomout").click(function(){zoom(0)});
+	$("#b-zoom-in").click(function(){zoom(2)});
+	$("#b-zoom-out").click(function(){zoom(0)});
+  $("#b-left").click(function(){move('left',100)});
+  $("#b-right").click(function(){move('right',100)});
+  $("#b-up").click(function(){move('up',100)});
+  $("#b-down").click(function(){move('down',100)});
 	
 	$('.nst').click(function(){show('nst');});
 	$('.map').click(function(){show('map');});
@@ -71,6 +75,26 @@ $(document).ready(function() {
     mapcontainer.mapbox("zoomTo",level);
     $.seismi.currentzoom=level;
     show(current_view);
+	}
+	
+	move = function(direction, amount) {
+	  var x=0;
+	  var y=0;
+	  switch(direction) {
+    case 'left':
+      x = -amount;
+      break;
+    case 'right':
+      x = amount;
+      break;
+    case 'up':
+      y = -amount;
+      break;
+    case 'down':
+      y = amount;
+      break;
+    }
+    project.activeLayer.translate(new Point(x,y));
 	}
 	
 	show = function(view_name) {
