@@ -109,11 +109,20 @@ a{color:#666;text-decoration:none;border:none;}
 a:hover{color:#eee;}
 img{border:none;}
 
-#button_ctrl_1, #button_ctrl_2 {position:absolute; z-index:2000000; width:28px; height:28px; right:13px; top:8px;}
-#button_ctrl_1 {background:url('images/button-arrow-left.png') no-repeat top;}
-#button_ctrl_2 {background:url('images/button-arrow-right.png') no-repeat top; top:40px;}
-#button_ctrl_1:hover {background:url('images/button-arrow-left.png') no-repeat bottom; cursor:pointer;}
-#button_ctrl_2:hover {background:url('images/button-arrow-right.png') no-repeat bottom; cursor:pointer;}
+#controlbuttons div {position:absolute; z-index:2000000; width:28px; height:28px; right:13px; top:8px;}
+#controlbuttons div#b-zoom-in  {background:url('images/button-zoom-in.png') no-repeat top; display:none;}
+#controlbuttons div#b-zoom-out {background:url('images/button-zoom-out.png') no-repeat top; top:40px; display:none;}
+#controlbuttons div#b-left  {background:url('images/button-arrow-left.png') no-repeat top; }
+#controlbuttons div#b-right {background:url('images/button-arrow-right.png') no-repeat top; top:40px;}
+#controlbuttons div#b-up   {background:url('images/button-arrow-up.png') no-repeat top; display:none;}
+#controlbuttons div#b-down {background:url('images/button-arrow-down.png') no-repeat top; top:40px; display:none;}
+#controlbuttons div:hover {cursor:pointer;}
+#controlbuttons div#b-zoom-in:hover {background:url('images/button-zoom-in.png') no-repeat bottom;}
+#controlbuttons div#b-zoom-out:hover {background:url('images/button-zoom-out.png') no-repeat bottom;}
+#controlbuttons div#b-left:hover {background:url('images/button-arrow-left.png') no-repeat bottom;}
+#controlbuttons div#b-right:hover {background:url('images/button-arrow-right.png') no-repeat bottom;}
+#controlbuttons div#b-up:hover {background:url('images/button-arrow-up.png') no-repeat bottom;}
+#controlbuttons div#b-down:hover {background:url('images/button-arrow-down.png') no-repeat bottom;}
 
 .rc, #navi li{-moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px;}
 

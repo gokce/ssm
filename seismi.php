@@ -44,8 +44,12 @@
 		<div id="butr"></div><div id="buth"></div>
 	</div>
 	
-	<div id="button_ctrl_1"></div><div id="button_ctrl_2"></div>
-	<div class="sidebar" id="eqrawdata">
+	<div id="controlbuttons">
+		<div id="b-zoom-in"></div><div id="b-zoom-out"></div>
+		<div id="b-left"></div><div id="b-right"></div>
+		<div id="b-up"></div><div id="b-down"></div>
+	</div>
+	<div id="eqrawdata">
 		<ul>
 			<li class="info"># raw earthquake data<br /> # number of earthquakes: 0</li>
 			<li>Refreshing earthquake data. Please wait.</li>
