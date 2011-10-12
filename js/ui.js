@@ -59,15 +59,14 @@ $(document).ready(function() {
 	$("#bringsidebarhandle").mouseenter(function() {
 		$('#sidebar').delay(100).animate({width:'show'}, 300);
 		$('#bringsidebarhandle').delay(50).animate({width:'hide'}, 300);
-		//$('#bringsidebarhandle').delay(90).animate({right:306}, 300);
 	})
 	$("#sidebar").mouseleave(function(){
 		$('#sidebar').delay(300).animate({width:'hide'}, 300);
-		$('#bringsidebarhandle').delay(290).animate({width:'hide'}, 300);
+		$('#bringsidebarhandle').delay(300).animate({width:'show'}, 300);
 	});
 	$("#viewcanvas").click(function(){
 		$('#sidebar').delay(300).animate({width:'hide'}, 300);
-		$('#bringsidebarhandle').delay(290).animate({width:'hide'}, 300);
+		$('#bringsidebarhandle').delay(300).animate({width:'show'}, 300);
 	});
 	
 	$(document).keydown(function(e) {
