@@ -9,11 +9,10 @@
 </head>
 <body>
 	<img id="logo" src="images/seismi-logo.png" alt="Seismi" />
-	<div id="intro-top"></div>
 	<div id="intro">
 		<h1>Seismi is an earthquake data visualization project which is using publicly available data provided by <a href="http://www.usgs.gov/" title="USGS - U.S. Geological Survey">USGS</a> and transforming it to a more informative, human readable and visually interesting form.</h1>
 		<a href="seismi.php" onclick="loading(1);" title="Launch Seismi" id="launch"><img src="images/button_launch.png" alt="Launch Seismi" /></a>
-	</div><div id="intro-bot"></div>
+	</div>
 <div id="container">
 	<div id="info">
 		<div id="i1">
