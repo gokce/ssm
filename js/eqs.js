@@ -63,7 +63,11 @@ $(document).ready(function() {
 			var printDate = dateSplit[2]+"."+dateSplit[1]+"."+dateSplit[0].slice(2,4);
 			val.day = printDate;
 			val.time = timedateSplit[1].slice(0,5);
-			val.region = val.region.capitalize();
+			if (val.region == null) {
+			  val.region = '.';
+		  } else {
+		    val.region = val.region.capitalize();
+	    }
 		});
 		
 		// Clear selected info area

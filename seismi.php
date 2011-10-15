@@ -25,6 +25,10 @@
 			<img src="images/map-4000.png" alt="" /> 
 			<div class="mapcontent"><!--map content goes here--></div>
 		</div>
+		<div id="map-16000">
+			<img src="images/map-4000.png" alt="" /> 
+			<div class="mapcontent"><!--map content goes here--></div>
+		</div>
 	</div>
 	<div id="mainbar">
 		<div id="logo"><a href="seismi.php" title="reload page"><img src="images/seismi-logo.png" alt="Seismi" /></a></div>
