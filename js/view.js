@@ -52,29 +52,33 @@ $(document).ready(function() {
 	
 	$('.nst').click(function(){show('nst');});
 	$('.map').click(function(){show('map');});
-	$('.tml').click(function(){show('tml');});
+	//$('.tml').click(function(){show('tml');});
 	$('.dpt').click(function(){show('dpt');});
 	$('.lst').click(function(){show('lst');});
 	
-	//dragging debug with keyboard
-	$(window).keydown(function(event){
-	  key = event.keyCode;
-	  var amount = 20;
-	  //37,38,39,40
-    // if (key==37) $("#mapcontainer").mapbox("left",amount);
-    // if (key==38) $("#mapcontainer").mapbox("up",amount);
-    // if (key==39) $("#mapcontainer").mapbox("left",-amount);
-    // if (key==40) $("#mapcontainer").mapbox("up",-amount);
-    if (key==37) selectNextEarthquake();
-    if (key==39) selectPreviousEarthquake();
-  });
+	$(document).keydown(function(e) {
+		var code = (e.keyCode ? e.keyCode : e.which);
+		if(code == 49 || code == 78) { show('nst'); } // 1 or n = NST
+		if(code == 50 || code == 77) { show('map'); } // 2 or m = MAP
+		if(code == 51 || code == 68) { show('dpt'); } // 3 or d = DPT
+		if(code == 52 || code == 76) { show('lst'); } // 4 or l = LST
+		if(code == 48) { selectNewestEarthquake();  } // 0 = Select newest earthquake
+		if(code == 37) { selectNextEarthquake(); }    // left arrow
+		if(code == 39) { selectPreviousEarthquake(); }// right arrow
+		
+		var amount = 20;
+		// if (key==37) $("#mapcontainer").mapbox("left",amount);
+		// if (key==38) $("#mapcontainer").mapbox("up",amount);
+		// if (key==39) $("#mapcontainer").mapbox("left",-amount);
+		// if (key==40) $("#mapcontainer").mapbox("up",-amount);
+	});
 	
 	zoom = function(level) {
-	  speed = 1;
-	  //mapcontainer.mapbox("right",300);
-    mapcontainer.mapbox("zoomTo",level);
-    $.seismi.currentzoom=level;
-    show(current_view);
+		speed = 1;
+		//mapcontainer.mapbox("right",300);
+		mapcontainer.mapbox("zoomTo",level);
+		$.seismi.currentzoom=level;
+		show(current_view);
 	}
 	
 	move = function(direction, amount) {
@@ -394,6 +398,7 @@ $(document).ready(function() {
   	}
 	}
 	
+	selectNewestEarthquake = function() {$.selectEarthquake(0);}
 	selectNextEarthquake = function() {$.selectEarthquake(current_selection+1);}
 	selectPreviousEarthquake = function() {$.selectEarthquake(current_selection-1);}
 	

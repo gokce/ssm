@@ -71,10 +71,10 @@ $(document).ready(function() {
 	
 	$(document).keydown(function(e) {
 		var code = (e.keyCode ? e.keyCode : e.which);
-		if(code == 82) { //82 = r
+		if(code == 82) { //82 = r = show raw data
 			$('#eqrawdata').animate({width:'toggle'}, 200);
 		}
-		if(code == 70) { //70 = f
+		if(code == 70) { //70 = f = fullscreen
 			$('#sidebar').animate({width:'hide'}, 300);
 			$('#eqrawdata').animate({width:'hide'}, 300);
 			$('#mainbar').fadeToggle(300, "linear");
