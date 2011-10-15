@@ -45,10 +45,10 @@ $(document).ready(function() {
 	var mapcontainer = $("#mapcontainer");
 	$("#b-zoom-in").click(function(){zoom(2)});
 	$("#b-zoom-out").click(function(){zoom(0)});
-  $("#b-left").click(function(){move('left',100)});
-  $("#b-right").click(function(){move('right',100)});
-  $("#b-up").click(function(){move('up',100)});
-  $("#b-down").click(function(){move('down',100)});
+	$("#b-left").click(function(){move('left',100)});
+	$("#b-right").click(function(){move('right',100)});
+	$("#b-up").click(function(){move('up',100)});
+	$("#b-down").click(function(){move('down',100)});
 	
 	$('.nst').click(function(){show('nst');});
 	$('.map').click(function(){show('map');});
@@ -63,8 +63,14 @@ $(document).ready(function() {
 		if(code == 51 || code == 68) { show('dpt'); } // 3 or d = DPT
 		if(code == 52 || code == 76) { show('lst'); } // 4 or l = LST
 		if(code == 48) { selectNewestEarthquake();  } // 0 = Select newest earthquake
-		if(code == 37) { selectNextEarthquake(); }    // left arrow
-		if(code == 39) { selectPreviousEarthquake(); }// right arrow
+		if(code == 37) { selectNextEarthquake(); }    // left arrow = select next earthquake
+		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
+		if(code == 37 && e.shiftKey && current_view != 'lst') { move('left',canvas.width-50); } // move left
+		if(code == 39 && e.shiftKey && current_view != 'lst') { move('right',canvas.width-50); } // move right
+		if(code == 38 && e.shiftKey && current_view != 'dpt') { move('up',100); } // move up
+		if(code == 40 && e.shiftKey && current_view != 'dpt') { move('down',100); } // move down
+		if(code == 38 && e.shiftKey) { zoom(2) } // zoom in
+		if(code == 40 && e.shiftKey) { zoom(0) } // zoom out
 		
 		var amount = 20;
 		// if (key==37) $("#mapcontainer").mapbox("left",amount);
@@ -86,10 +92,10 @@ $(document).ready(function() {
 	  var y=0;
 	  switch(direction) {
     case 'left':
-      x = -amount;
+      x = amount;
       break;
     case 'right':
-      x = amount;
+      x = -amount;
       break;
     case 'up':
       y = -amount;
