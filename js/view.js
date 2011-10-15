@@ -30,6 +30,7 @@ $(document).ready(function() {
 	map_size['0'] = {'width':1000,'height':503};
 	map_size['1'] = {'width':$("#map-2000").width(),'height':$("#map-2000").height()};
 	map_size['2'] = {'width':$("#map-4000").width(),'height':$("#map-4000").height()};
+	map_size['3'] = {'width':$("#map-16000").width(),'height':$("#map-16000").height()};
 	var draggingAllowed = true;
 	var defaultSpeed = 4;
 	var speed = defaultSpeed;
@@ -38,6 +39,7 @@ $(document).ready(function() {
 	controlbuttons['dpt'] = ['b-left','b-right'];
 	controlbuttons['lst'] = ['b-up','b-down'];
 	controlbuttons['map'] = ['b-zoom-in','b-zoom-out'];
+	controlbuttons['nst'] = [];
 	
 	$(window).resize(function() {
 		show(current_view);
@@ -115,7 +117,7 @@ $(document).ready(function() {
 				if (v[v2] != null) v[v2].disable();
 			});
 		});
-		if (view_name == 'map') {
+		if (view_name == 'map' || view_name == 'nst') {
 			$('#mapcontainer').fadeIn(400);
 		} else {
 			$('#mapcontainer').fadeOut(400);
@@ -215,7 +217,20 @@ $(document).ready(function() {
 		return extra_group;
 	}
 	show_nst = function(data) {
-
+    $.each(data, function(k, v) {
+			map_w = map_size[3].width;
+			map_h =map_size[3].height;
+			$("#mapcontainer").mapbox("zoomTo",3);
+			xoffset = (canvas.width-map_w)/2;
+			yoffset = (canvas.height-map_h)/2;
+			x = mapValues(v.lon, -180, 180, xoffset, xoffset+map_w);
+			y = mapValues(v.lat, 90, -90, yoffset, yoffset+map_h);
+			var point = new Point(x,y);
+			v['destination'] = point;
+			v['destination_size'] = 10;
+			v['move'] = true;
+		});
+		//project.activeLayer.translate(project.activeLayer.position - $.seismi.data.earthquakes[0].eq_visual.position);
 	}
 	show_map = function(data) {
 		$.each(data, function(k, v) {
