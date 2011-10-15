@@ -36,10 +36,10 @@
 			<li class="lst" title="List View">LST</li>
 			<li class="hlp" title="Help">?</li>
 		</ul>
-		<div id="mag1"><div id="mag2"><a href="#" class="tt" title="Depth for selected earthquake"><em id="depth">255</em><em id="depthunit">km</em></a><a href="#" class="tt" title="Magnitude value for selected earthquake"><em id="magnitude">6.4</em></a><div class="i4"></div><div class="i5"></div><div class="i6 isel"></div><div class="i7"></div></div></div>
+		<div id="mag1"><div id="mag2"><a href="#" class="tt" title="Depth for selected earthquake"><em id="depth">0</em><em id="depthunit">km</em></a><a href="#" class="tt" title="Magnitude value for selected earthquake"><em id="magnitude">0.0</em></a><div class="i4"></div><div class="i5"></div><div class="i6 isel"></div><div class="i7"></div></div></div>
 		<div id="tec1"><div id="tec2"><a href="#" class="tt" title="show/hide tectonic plates"><em id="tectonic">0FF</em></a></div></div>
 		<div id="vol1"><div id="vol2"><a href="#" class="tt disable" title="show/hide volcanoes"><em id="volcanoes">0FF</em></a></div></div>
-		<div id="tim1"><div id="tim2"><a href="#" class="tt" title="Date and time for selected earthquake"><em id="date">10.9.2010</em><em id="time">14:55</em></a></div></div>
+		<div id="tim1"><div id="tim2"><a href="#" class="tt" title="Date and UTC (Coordinated Universal Time) time for selected earthquake"><em id="date">01.01.2010</em><em id="time"><span id="utc">UTC</span>00:00</em></a></div></div>
 		<div id="loc1"><div id="loc2"><a href="#" class="tt" title="Location area &amp; Longitude/Latitude cordinates for selected earthquake"><em id="region">Area, Country</em><em id="latlon">90.0000&deg;&nbsp;&nbsp;-180.0000&deg;</em></a></div></div>
 		<div id="butr"></div><div id="buth"></div>
 	</div>

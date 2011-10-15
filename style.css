@@ -59,8 +59,9 @@ ul#navi li.selected {background:rgba(255,255,255,0.1);}
 #mainbar em#volcanoes {background:url('images/mainbar-icon-volc.png') no-repeat left 4px;}
 #mainbar em#depth			{font-size:18px;right:27px;top:29px; width:65px; color:#999;}
 #mainbar em#depthunit {font-size:12px;right:9px; top:35px; width:20px; color:#666;}
-#mainbar em#time			{font-size:21px;right:9px; top:25px;width:70px; color:#f0e079; background:url('images/mainbar-icon-time.gif') no-repeat left 8px;}
+#mainbar em#time			{font-size:21px;right:9px; top:25px;width:80px; color:#f0e079;/* background:url('images/mainbar-icon-time.gif') no-repeat left 8px;*/}
 #mainbar em#date			{font-size:15px;right:9px; top:6px; width:78px; color:#666;}
+#mainbar em span#utc  {font-size:10px; padding-right:4px; color:rgba(240,224,121,0.4);}
 #mainbar em#region		{font-size:15px;right:9px; top:6px; width:256px;}
 #mainbar em#latlon		{font-size:21px;right:9px; top:25px;width:256px;color:#333;}
 
