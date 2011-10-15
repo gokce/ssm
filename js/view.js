@@ -289,7 +289,7 @@ $(document).ready(function() {
 		// Store previous day
 		prev_day = ''
 		// For each earthquake in data
-		$.each(data, function(k, v) {
+		$.each(reverse(data), function(k, v) {
 			// v.day, v.depth, v.eqid, v.lat, v.lon, v.magnitude, v.region, v.src, v.time, v.timedate
 			// Check if current earthquake is in a new day
 			if (prev_day!='' && prev_day!=v.day){
@@ -433,4 +433,12 @@ $(document).ready(function() {
 		}
 		return bits.join('');
 	};
+	reverse = function(a) {
+	  var temp = [];
+    var len = a.length;
+    for (var i = (len - 1); i >= 0; i--) {
+        temp.push(a[i]);
+    }
+    return temp;
+  }
 });
