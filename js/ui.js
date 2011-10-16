@@ -2,8 +2,29 @@ $(document).ready(function() {
 	// hide in the beginnning
 	$('#eqrawdata').animate({width:'hide'}, 0);
 	$('#sidebar').animate({width:'hide'}, 0);
+	$('#mainbarinfo').animate({height:'hide'}, 0);
 	
 	if (typeof $.seismi === 'undefined') $.seismi = {};
+	
+	// bring mainbarinfo
+	$(".nst").mouseenter(function() {
+	  $('#mainbarinfo').html('NST actively shows the latest earthquake happened on a map.');
+	});
+	$(".map").mouseenter(function() {
+	  $('#mainbarinfo').html('MAP visualizes earthquakes on a worldmap. You can zoom in/out (+/-) and pan around');
+	});
+	$(".dpt").mouseenter(function() {
+	  $('#mainbarinfo').html('In DPT view earthquakes are visualized on a timeline where vertical height represents depth, size of circle the magnitude level.');
+	});	
+	$(".lst").mouseenter(function() {
+	  $('#mainbarinfo').html('LST visualizes earthquakes on time grid.');
+	});
+	$(".hlp").mouseenter(function() {
+	  $('#mainbarinfo').html('HLP gives you some tips about the user interface.');
+	});
+	$("#navi").mouseenter(function(){ $('#mainbarinfo').delay(200).animate({height:'show'}, 300); }); // hide when leaving menu
+	$("#navi").mouseleave(function(){ $('#mainbarinfo').delay(300).animate({height:'hide'}, 200); }); // hide when leaving menu
+	
 	
 	// toggle rawdata
 	$('#butr').click(function() {
