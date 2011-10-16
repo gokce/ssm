@@ -99,8 +99,8 @@ ul.ulmagnitude {padding-bottom:10px;}
 #sidebar em.type {visibility:hidden;}
 .siderbar .highlight {color:#e573ac;text-decoration: underline;}
 
-#bringsidebarhandle {position:absolute; right:0; top:50%; margin-top:-70px; background:url('images/icon-filter2.png') no-repeat left center; width:41px; height:100px; z-index:2000001;}
-#bringsidebarborder {position:absolute; right:0; top:0; height:100%; width:5px; background:#1f1f1f; border-left:1px solid #262626; z-index:2000000;}
+#bringsidebarhandle {position:absolute; right:0; top:50%; margin-top:-70px; background:url('images/icon-filter2.png') no-repeat left center; width:41px; height:100px; z-index:2099999;}
+#bringsidebarborder {position:absolute; right:0; top:0; height:100%; width:5px; background:#1f1f1f; border-left:1px solid #262626; z-index:2099998;}
 
 .circ_eq4, .circ_eq5, .circ_eq6, .circ_eq7 {color:#04c;float:left;}
 .circ_eq4 {margin:2px 10px 0 6px;font-size:8px;}
@@ -113,8 +113,8 @@ a{color:#666;text-decoration:none;border:none;}
 a:hover{color:#eee;}
 img{border:none;}
 
-#controlbuttons {position:absolute; width:44px; height:66px; right:-4px; top:6px; background:#1f1f1f; border:1px solid #262626;}
-#controlbuttons div {position:absolute; z-index:2000000; width:28px; height:28px; right:12px; top:4px;}
+#controlbuttons {position:absolute; z-index:2099000; width:44px; height:66px; right:-4px; top:6px; background:#1f1f1f; border:1px solid #262626;}
+#controlbuttons div {position:absolute; width:28px; height:28px; right:12px; top:4px;}
 #controlbuttons div#b-zoom-in  {background:url('images/button-zoom-in.png') no-repeat top; display:none;}
 #controlbuttons div#b-zoom-out {background:url('images/button-zoom-out.png') no-repeat top; top:34px; display:none;}
 #controlbuttons div#b-left  {background:url('images/button-arrow-left.png') no-repeat top;}
