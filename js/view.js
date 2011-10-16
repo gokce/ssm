@@ -54,9 +54,11 @@ $(document).ready(function() {
 	
 	$('.nst').click(function(){show('nst');});
 	$('.map').click(function(){show('map');});
-	//$('.tml').click(function(){show('tml');});
 	$('.dpt').click(function(){show('dpt');});
 	$('.lst').click(function(){show('lst');});
+	
+	$('#tectonic').click(function(){$("#tectonic span").toggle();});
+	$('#volcanoes').click(function(){$("#tectonic span").toggle();});
 	
 	$(document).keydown(function(e) {
 		var code = (e.keyCode ? e.keyCode : e.which);
@@ -438,7 +440,7 @@ $(document).ready(function() {
 		//data.day, data.depth, data.eqid, data.lat, data.lon, data.magnitude, data.region, data.src, data.time, data.timedate
 		$(holderMagnitude).html(data.magnitude);
 		$(holderDepth).html(Math.round(data.depth));
-		$(holderTime).html(data.time);
+		$(holderTime).html('<span id="utc">UTC</span>'+data.time);
 		$(holderDate).html(data.day);
 		$(holderRegion).html(truncate(data.region,35));
 		$(holderLatlon).html(data.lat+'&deg;&nbsp;&nbsp;'+data.lon+'&deg;');

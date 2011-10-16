@@ -59,6 +59,7 @@ ul#navi li.selected {background:rgba(255,255,255,0.1);}
 #mainbar em#magnitude{font-size:48px;right:67px; top:0;}
 #mainbar em#tectonic,em#volcanoes {font-size:14px;right:7px; top:6px; width:28px; padding-left:16px; color:#40a7a4; text-align:left; background:url('images/mainbar-icon-tect.gif') no-repeat left 3px;}
 #mainbar em#volcanoes {background:url('images/mainbar-icon-volc.png') no-repeat left 4px;}
+#mainbar em#tectonic span:last-child,#mainbar em#volcanoes span:last-child {display:none;}
 #mainbar em#depth			{font-size:18px;right:27px;top:29px; width:65px; color:#999;}
 #mainbar em#depthunit {font-size:12px;right:9px; top:35px; width:20px; color:#666;}
 #mainbar em#time			{font-size:21px;right:9px; top:25px;width:80px; color:#f0e079;/* background:url('images/mainbar-icon-time.gif') no-repeat left 8px;*/}
