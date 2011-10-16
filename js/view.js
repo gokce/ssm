@@ -58,7 +58,7 @@ $(document).ready(function() {
 	$('.lst').click(function(){show('lst');});
 	
 	$('#tectonic').click(function(){$("#tectonic span").toggle();});
-	$('#volcanoes').click(function(){$("#tectonic span").toggle();});
+	$('#volcanoes').click(function(){$("#volcanoes span").toggle();});
 	
 	$(document).keydown(function(e) {
 		var code = (e.keyCode ? e.keyCode : e.which);
