@@ -112,13 +112,14 @@ a{color:#666;text-decoration:none;border:none;}
 a:hover{color:#eee;}
 img{border:none;}
 
-#controlbuttons div {position:absolute; z-index:2000000; width:28px; height:28px; right:13px; top:8px;}
+#controlbuttons {position:absolute; width:44px; height:66px; right:-4px; top:6px; background:#1f1f1f; border:1px solid #262626;}
+#controlbuttons div {position:absolute; z-index:2000000; width:28px; height:28px; right:12px; top:4px;}
 #controlbuttons div#b-zoom-in  {background:url('images/button-zoom-in.png') no-repeat top; display:none;}
-#controlbuttons div#b-zoom-out {background:url('images/button-zoom-out.png') no-repeat top; top:40px; display:none;}
-#controlbuttons div#b-left  {background:url('images/button-arrow-left.png') no-repeat top; }
-#controlbuttons div#b-right {background:url('images/button-arrow-right.png') no-repeat top; top:40px;}
+#controlbuttons div#b-zoom-out {background:url('images/button-zoom-out.png') no-repeat top; top:34px; display:none;}
+#controlbuttons div#b-left  {background:url('images/button-arrow-left.png') no-repeat top;}
+#controlbuttons div#b-right {background:url('images/button-arrow-right.png') no-repeat top; top:34px;}
 #controlbuttons div#b-up   {background:url('images/button-arrow-up.png') no-repeat top; display:none;}
-#controlbuttons div#b-down {background:url('images/button-arrow-down.png') no-repeat top; top:40px; display:none;}
+#controlbuttons div#b-down {background:url('images/button-arrow-down.png') no-repeat top; top:34px; display:none;}
 #controlbuttons div:hover {cursor:pointer;}
 #controlbuttons div#b-zoom-in:hover {background:url('images/button-zoom-in.png') no-repeat bottom;}
 #controlbuttons div#b-zoom-out:hover {background:url('images/button-zoom-out.png') no-repeat bottom;}

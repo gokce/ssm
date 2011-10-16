@@ -71,7 +71,7 @@ $(document).ready(function() {
 		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-50); } // move right
 		if(code == 40 && e.shiftKey && current_view == 'lst') { move('up',100); } // move up
 		if(code == 38 && e.shiftKey && current_view == 'lst') { move('down',100); } // move down
-		if(code == 187 && e.shiftKey && current_view == 'map') { zoom(2) } // + = zoom in
+		if(code == 183 && e.shiftKey && current_view == 'map') { zoom(2) } // + = zoom in
 		if(code == 189 && e.shiftKey && current_view == 'map') { zoom(0) } // - = zoom out
 		if(code==37 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",40);
 		if(code==38 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",40);
