@@ -119,8 +119,12 @@ $(document).ready(function() {
 		});
 		if (view_name == 'map' || view_name == 'nst') {
 			$('#mapcontainer').fadeIn(400);
+			$('#tec2').find('.tt').removeClass('disable'); // enable tectonic controls
+  		$('#vol2').find('.tt').removeClass('disable'); // enable volcano controls
 		} else {
 			$('#mapcontainer').fadeOut(400);
+			$('#tec2').find('.tt').addClass('disable'); // disable tectonic controls
+			$('#vol2').find('.tt').addClass('disable'); // disable volcano controls
 		}
 		window['show_'+current_view]($.seismi.data.earthquakes);
 		$('#controlbuttons').children().hide();
