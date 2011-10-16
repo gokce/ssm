@@ -286,7 +286,7 @@ $(document).ready(function() {
 			  prev_day = v.day;
 			}
 			if (prev_day!=v.day || k==data.length-1){
-			  if (k==data.length-1) {newx-=50;barwidth+=1;}
+			  if (prev_day==v.day && k==data.length-1) {newx-=50;barwidth+=1;}
 				var daybox = new Path.Line(new Point(newx+48,posy-18), new Point(newx+2+(barwidth*50),posy-18));
 				daybox.strokeColor = 'white';
 				daybox.strokeWidth = 16;
