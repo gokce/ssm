@@ -53,7 +53,7 @@ $(document).ready(function() {
 	$("#b-down").click(function(){move('down',100)});
 	
 	$('.nst').click(function(){show('nst');});
-	$('.map').click(function(){show('map');});
+	$('.map').click(function(){$.seismi.currentzoom = 0; show('map');});
 	$('.dpt').click(function(){show('dpt');});
 	$('.lst').click(function(){show('lst');});
 	
@@ -241,6 +241,7 @@ $(document).ready(function() {
 	show_map = function(data) {
 		$.each(data, function(k, v) {
 			currentzoom = $.seismi.currentzoom;
+			mapcontainer.mapbox("zoomTo",currentzoom);
 			map_w = map_size[currentzoom].width;
 			map_h =map_size[currentzoom].height;
 			xoffset = (canvas.width-map_w)/2;
