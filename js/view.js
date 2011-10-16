@@ -224,8 +224,8 @@ $(document).ready(function() {
 	}
 	show_nst = function(data) {
     $.each(data, function(k, v) {
-			map_w = map_size[3].width;
-			map_h =map_size[3].height;
+			map_w = map_size['3'].width;
+			map_h =map_size['3'].height;
 			$("#mapcontainer").mapbox("zoomTo",3);
 			xoffset = (canvas.width-map_w)/2;
 			yoffset = (canvas.height-map_h)/2;
