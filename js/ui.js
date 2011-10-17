@@ -22,8 +22,8 @@ $(document).ready(function() {
 	$(".hlp").mouseenter(function() {
 	  $('#mainbarinfo').html('HLP gives you some tips about the user interface.');
 	});
-	$("#navi").mouseenter(function(){ $('#mainbarinfo').delay(200).animate({height:'show'}, 300); }); // hide when leaving menu
-	$("#navi").mouseleave(function(){ $('#mainbarinfo').delay(300).animate({height:'hide'}, 200); }); // hide when leaving menu
+	$("#navi").mouseenter(function(){ $('#mainbarinfo').delay(600).animate({height:'show'}, 300); }); // hide when leaving menu
+	$("#navi").mouseleave(function(){ $('#mainbarinfo').delay(400).animate({height:'hide'}, 200); }); // hide when leaving menu
 	
 	
 	// toggle rawdata
