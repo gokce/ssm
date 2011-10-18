@@ -72,6 +72,7 @@ $(document).ready(function() {
 		if(code == 48) { selectNewestEarthquake();  } // 0 = Select newest earthquake
 		if(code == 37) { selectNextEarthquake(); }    // left arrow = select next earthquake
 		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
+		if (typeof($.seismi.data.earthquakes) === 'undefined') { return; }
 		if ($.seismi.data.earthquakes[0]['move'] == false) {
   		if(code == 37 && e.shiftKey && current_view == 'dpt') { move('left',canvas.width-50); } // move left
   		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-50); } // move right
