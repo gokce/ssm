@@ -26,7 +26,7 @@
 			<div class="mapcontent"><!--map content goes here--></div>
 		</div>
 		<div id="map-16000">
-			<img src="images/map-4000.png" alt="" /> 
+			<img src="images/map-8000.png" alt="" /> 
 			<div class="mapcontent"><!--map content goes here--></div>
 		</div>
 	</div>
