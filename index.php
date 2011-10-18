@@ -9,7 +9,8 @@
   <meta name="author" content="Gokce Taskan, Niko Knappe">
 	<link href="styles.css" rel="stylesheet" type="text/css" media="all"/>
 	<link rel="shortcut icon" href="images/favicon.png"> 
-	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 </head>
 <body>
 	<img id="logo" src="images/seismi-logo.png" alt="Seismi" />
