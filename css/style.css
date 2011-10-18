@@ -187,8 +187,8 @@ body.lng h2{font:normal 16px/1.6 extravaganzza, Arial,Helvetica,sans-serif; colo
 #introduction h1 {padding:20px 60px;}
 #launch img{padding-bottom:10px;}
 
-#introduction{margin:50px auto 0 auto; width:715px; }
-#container{background:#171717;border-top:1px solid #1c1c1c;padding:30px 0 40px 0;margin-top:100px;}
+#introduction{margin:30px auto 40px auto; width:715px; }
+#container{background:#171717;border-top:1px solid #1c1c1c;padding:30px 0 40px 0;margin-top:80px;}
 #info, #documentation{width:920px;margin:0 auto;text-align:left;}
 	#i1, #i2, #i3{float:left;width:280px;border-bottom:1px solid #222;padding-bottom:10px;}
 	#i2{margin-left:40px;}
