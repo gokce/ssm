@@ -230,6 +230,7 @@ $(document).ready(function() {
 				
 				v['eq_visual'] = eq_visual;
 				v['move'] = false;
+				v['resize'] = false;
 				v['destination'] = -1;
 				v['size'] = initsize;
 				v['destination_size'] = initsize;
@@ -262,6 +263,7 @@ $(document).ready(function() {
 			var point = new Point(x,y);
 			v['destination'] = point;
 			v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 80);
+			v['resize'] = true;
 			v['move'] = true;
 		});
 		//project.activeLayer.translate(project.activeLayer.position - $.seismi.data.earthquakes[0].eq_visual.position);
@@ -282,6 +284,7 @@ $(document).ready(function() {
 			v['destination'] = point;
 			//console.log(v.lat);
 			v['destination_size'] = mapValues(v.magnitude, 4, 9, 2, 2);
+			v['resize'] = true;
 			v['move'] = true;
 		});
 	}
@@ -324,6 +327,7 @@ $(document).ready(function() {
 		  xoffset = mapValues(minutes, 0, 24*60, barwidth, 0);
 			v['destination'] = new Point(newx-xoffset,newy);
 			v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 100);
+			v['resize'] = true;
 			v['move'] = true;
 		});
 	}
@@ -339,6 +343,7 @@ $(document).ready(function() {
 			newy = posy+(Math.floor(v.depth)/1.2);
 			v['destination'] = new Point(newx,newy);
 			v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 180);
+			v['resize'] = true;
 			v['move'] = true;
 			
 			// add white depthlines
@@ -415,6 +420,7 @@ $(document).ready(function() {
 			}
 			v['destination'] = new Point(posx, posy);
 			v['destination_size'] = mapValues(v.magnitude, 4, 9, 2, 20);
+			v['resize'] = true;
 			v['move'] = true;
 			posx+=25;
 			prev_day=v.day;
@@ -443,7 +449,6 @@ $(document).ready(function() {
 				if (v['move']) {
 				  draggingAllowed = false;
 					var obj = v['eq_visual'];
-					//var vector = v['destination'] - obj.position;
 					var vd = vectorDiff(v['destination'], obj.position, speed);
 					obj.position = vd.new_pos;
 					if (vd.dist < 1) {
@@ -454,10 +459,15 @@ $(document).ready(function() {
     				  $.seismi.eqsmoving = false;
 						}
 					}
-					if (v['destination_size'] != v['size']) {
-						obj.scale(v['destination_size']/v['size']);
-						v['size'] = v['destination_size'];
-					}
+					if (v['resize']) {
+					  var diff_size = v['destination_size']-v['size'];
+					  var dest_size = v['size']+(diff_size/speed);
+					  obj.scale(dest_size/v['size']);
+					  v['size'] = dest_size;
+            if (Math.abs(diff_size) <= 0.3) {
+              v['resize'] = false;
+            }
+  			  }
 				}
 			});
 			if ($.seismi.moveview) {
