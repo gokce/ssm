@@ -50,10 +50,10 @@ $(document).ready(function() {
 	var mapcontainer = $("#mapcontainer");
 	$("#b-zoom-in").click(function(){zoom(2)});
 	$("#b-zoom-out").click(function(){zoom(0)});
-	$("#b-left").click(function(){move('left',100)});
-	$("#b-right").click(function(){move('right',100)});
-	$("#b-up").click(function(){move('up',100)});
-	$("#b-down").click(function(){move('down',100)});
+	$("#b-left").click(function(){move('right',canvas.width/2)});
+	$("#b-right").click(function(){move('left',canvas.width/2)});
+	$("#b-up").click(function(){move('up',canvas.width/2)});
+	$("#b-down").click(function(){move('down',canvas.width/2)});
 	
 	$('.nst').click(function(){show('nst');});
 	$('.map').click(function(){$.seismi.currentzoom = 0; show('map');});
@@ -77,10 +77,10 @@ $(document).ready(function() {
 		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
 		if ($.seismi.data_loaded == false) { return; }
 		if ($.seismi.eqsmoving) { return; }
-		if(code == 37 && e.shiftKey && current_view == 'dpt') { move('left',canvas.width-50); } // move left
-		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-50); } // move right
-		if(code == 37 && e.shiftKey && current_view == 'tml') { move('left',canvas.width-50); } // move left
-		if(code == 39 && e.shiftKey && current_view == 'tml') { move('right',canvas.width-50); } // move right
+		if(code == 37 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-100); } // move left
+		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('left',canvas.width-100); } // move right
+		if(code == 37 && e.shiftKey && current_view == 'tml') { move('right',canvas.width-100); } // move left
+		if(code == 39 && e.shiftKey && current_view == 'tml') { move('left',canvas.width-100); } // move right
 		if(code == 40 && e.shiftKey && current_view == 'lst') { move('up',100); } // move up
 		if(code == 38 && e.shiftKey && current_view == 'lst') { move('down',100); } // move down
 		if(code == 183 && e.shiftKey && current_view == 'map') { zoom(2) } // + = zoom in
@@ -104,18 +104,23 @@ $(document).ready(function() {
 	  if ($.seismi.eqsmoving) { return; }
 	  var x=0;
 	  var y=0;
+	  var bounds = project.activeLayer.bounds;
 	  switch(direction) {
     case 'left':
       x = amount;
+      if (bounds.x+bounds.width<=canvas.width+100) { x = 0; }
       break;
     case 'right':
       x = -amount;
+      if (bounds.x>=0) { x = 0; }
       break;
     case 'up':
       y = -amount;
+      if (bounds.y>=0) { y = 0; }
       break;
     case 'down':
       y = amount;
+      if (bounds.y+bounds.height<=100) { y = 0; }
       break;
     }
     $.seismi.moveview = true;
