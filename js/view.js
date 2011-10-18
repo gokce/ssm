@@ -72,18 +72,20 @@ $(document).ready(function() {
 		if(code == 48) { selectNewestEarthquake();  } // 0 = Select newest earthquake
 		if(code == 37) { selectNextEarthquake(); }    // left arrow = select next earthquake
 		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
-		if(code == 37 && e.shiftKey && current_view == 'dpt') { move('left',canvas.width-50); } // move left
-		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-50); } // move right
-		if(code == 37 && e.shiftKey && current_view == 'tml') { move('left',canvas.width-50); } // move left
-		if(code == 39 && e.shiftKey && current_view == 'tml') { move('right',canvas.width-50); } // move right
-		if(code == 40 && e.shiftKey && current_view == 'lst') { move('up',100); } // move up
-		if(code == 38 && e.shiftKey && current_view == 'lst') { move('down',100); } // move down
-		if(code == 183 && e.shiftKey && current_view == 'map') { zoom(2) } // + = zoom in
-		if(code == 189 && e.shiftKey && current_view == 'map') { zoom(0) } // - = zoom out
-		if(code==37 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",40);
-		if(code==38 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",40);
-		if(code==39 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",-40);
-		if(code==40 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",-40);
+		if ($.seismi.data.earthquakes[0]['move'] == false) {
+  		if(code == 37 && e.shiftKey && current_view == 'dpt') { move('left',canvas.width-50); } // move left
+  		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-50); } // move right
+  		if(code == 37 && e.shiftKey && current_view == 'tml') { move('left',canvas.width-50); } // move left
+  		if(code == 39 && e.shiftKey && current_view == 'tml') { move('right',canvas.width-50); } // move right
+  		if(code == 40 && e.shiftKey && current_view == 'lst') { move('up',100); } // move up
+  		if(code == 38 && e.shiftKey && current_view == 'lst') { move('down',100); } // move down
+  		if(code == 183 && e.shiftKey && current_view == 'map') { zoom(2) } // + = zoom in
+  		if(code == 189 && e.shiftKey && current_view == 'map') { zoom(0) } // - = zoom out
+  		if(code==37 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",40);
+  		if(code==38 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",40);
+  		if(code==39 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",-40);
+  		if(code==40 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",-40);
+		}
 	});
 	
 	zoom = function(level) {
