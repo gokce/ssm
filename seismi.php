@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>SEISMI - visualizing earthquakes</title>
 	<meta name="description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form.">
   <meta name="keywords" content="earthquake, visualization, data visualization, infographics, paperjs, paper.js, paperscript, open data, open source">
@@ -89,7 +90,6 @@
 				echo '<li>'.monthName($j).' '.$i.' <em class="count">0</em><em class="var">'.$i.'/'.$j.'</em><em class="type">time</em></li>';
 			}
 		}
-		
 		function monthName($month_int) {
 			$month_int = (int)$month_int;
 			$timestamp = mktime(0, 0, 0, $month_int);

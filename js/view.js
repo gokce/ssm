@@ -1,5 +1,5 @@
-paper.install(window);
 $(document).ready(function() {
+	paper.install(window);
 	$.data_loaded = false;
 	$.seismi.currentzoom = 0;
 	$.seismi.moveview = false;
