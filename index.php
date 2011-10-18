@@ -15,6 +15,7 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 </head>
 <body class="lng">
+	<img id="seismilogoicon" src="images/icon-main.gif" alt="" />
 	<img id="seismilogo" src="images/seismi-logo.png" alt="Seismi" />
 	<div id="introduction">
 		<h1>Seismi is an earthquake data visualization project which is using publicly available data provided by <a href="http://www.usgs.gov/" title="USGS - U.S. Geological Survey">USGS</a> and transforming it to a more informative, human readable and visually interesting form.</h1>
@@ -25,7 +26,8 @@
 		<div id="i1">
 			<h2>About Seismi</h2>
 			<p>Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form.</p>
-			<p>In order to use Seismi you need a modern browser &amp; to have javascript enabled</p>
+			<p>Seismi is proudly using <a href="http://www.paperjs.org/">Paper.js</a>!</p>
+			<p>In order to use Seismi you need a modern browser (for e.g. <a href="http://www.google.com/chrome/" title="Google Chrome">Chrome</a> or <a href="http://www.apple.com/safari/" title="Safari browser">Safari</a>) &amp; to have javascript enabled.</p>
 			<p>Take a look at the <a href="http://seismi.org/api/">API</a>.</p>
 			<p>Seismi is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported">Creative Commons BY-NC-SA 3.0 license</a>.</p>
 			<p>Contact us at: info [at] seismi [.] org</p>
