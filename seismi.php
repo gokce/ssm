@@ -12,11 +12,13 @@
   <!-- end CSS-->
 	<link rel="shortcut icon" href="images/favicon.png">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>  
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <!-- scripts concatenated and minified via ant build script-->
 	<script type="text/javascript" src="js/plugins.js"></script>
 	<script type="text/javascript" src="js/ui.js"></script>
 	<script type="text/javascript" src="js/eqs.js"></script>
 	<script type="text/javascript" src="js/view.js"></script>
+	<!-- end scripts-->
 </head>
 <body>
 <canvas id="viewcanvas" resize keepalive="true"></canvas>
