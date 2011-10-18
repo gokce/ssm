@@ -2,7 +2,6 @@ $(document).ready(function() {
 	// hide in the beginnning
 	$('#eqrawdata').animate({width:'hide'}, 0);
 	$('#sidebar').animate({width:'hide'}, 0);
-	$('#mainbarinfo').animate({height:'hide'}, 0);
 	
 	if (typeof $.seismi === 'undefined') $.seismi = {};
 	
@@ -40,8 +39,8 @@ $(document).ready(function() {
 		$('#help2').delay(150).fadeToggle(500);
 		$('#help3').delay(200).fadeToggle(500);
 		$('#help4').delay(250).fadeToggle(500);
-		$('#help5').delay(300).fadeToggle(500);
-		$('#help6').delay(350).fadeToggle(500);
+		//$('#help5').delay(300).fadeToggle(500);
+		//$('#help6').delay(350).fadeToggle(500);
 	});
 
 	// toggle sidebar from time info
@@ -70,7 +69,7 @@ $(document).ready(function() {
 		if(code == 82) { //82 = r = show raw data
 			$('#eqrawdata').animate({width:'toggle'}, 200);
 		}
-		if(code == 70) { //70 = f = fullscreen
+		if(code == 70) { //70 = f = show/hide mainbar
 			$('#sidebar').animate({width:'hide'}, 300);
 			$('#eqrawdata').animate({width:'hide'}, 300);
 			$('#mainbar').fadeToggle(300, "linear");

@@ -15,6 +15,11 @@ $(document).ready(function() {
       var holder_filters_magnitude = $('#sidebar').find('.ulmagnitude').find('li').next();
 		  holder_filters_magnitude.each(function(i){
 			  $(this).find('.count').addClass('loading');
+			  $('#intro').fadeIn(200);
+			  $('#mainbar #mainloading').fadeIn(200);
+				$('#mainbar #mainicon').fadeOut(200);
+				$('#mainbarinfo').html('Loading...');
+    	  $('#mainbarinfo').animate({height:'show'}, 300);
 			  $(this).find('.count').html('');
 		  });
 		}
@@ -22,11 +27,14 @@ $(document).ready(function() {
       var holder_filters_magnitude = $('#sidebar').find('.ultime').find('li').next();
 			holder_filters_magnitude.each(function(i){
 				$(this).find('.count').addClass('loading');
+				$('#intro').fadeIn(200);
+				$('#mainbar #mainloading').fadeIn(200);
+				$('#mainbar #mainicon').fadeOut(200);
+				$('#mainbarinfo').html('Loading...');
+    	  $('#mainbarinfo').animate({height:'show'}, 300);
 				$(this).find('.count').html('');
 			});
 	  }
-	  // $('.count').addClass('loading');
-    // $('.count').html('');
     
 	  resources = (typeof resources == 'undefined') ? '' : resources;
 		parameters = (typeof parameters == 'undefined') ? '' : parameters;
@@ -120,6 +128,10 @@ $(document).ready(function() {
 					min_mag = $(this).find('em.var').html();
 					count = counts[min_mag] ? counts[min_mag] : 0;
 					$(this).find('.count').removeClass('loading');
+					$('#intro').fadeOut(200);
+					$('#mainbar #mainloading').fadeOut(200);
+					$('#mainbar #mainicon').fadeIn(200);
+      	  $('#mainbarinfo').animate({height:'hide'}, 300);
 					$(this).find('.count').html(count);
 				});
 				
@@ -135,6 +147,10 @@ $(document).ready(function() {
 					//console.log(data);
 					count = data[time_str] ? data[time_str] : 0;
 					$(this).find('.count').removeClass('loading');
+					$('#intro').fadeOut(200);
+					$('#mainbar #mainloading').fadeOut(200);
+					$('#mainbar #mainicon').fadeIn(200);
+      	  $('#mainbarinfo').animate({height:'hide'}, 300);
 					$(this).find('.count').html(count);
 				});
 			});
@@ -153,6 +169,10 @@ $(document).ready(function() {
 	  refresh: function() {
 	    $.visualizations.refresh();
   	  $('#intro').fadeOut(400);
+  	  $('#intro-container #beginning-img').fadeOut(400);
+  	  $('#mainbar #mainloading').fadeOut(400);
+			$('#mainbar #mainicon').fadeIn(200);
+  	  $('#mainbarinfo').animate({height:'hide'}, 300);
     }
   }
 	

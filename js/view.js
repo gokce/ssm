@@ -119,6 +119,8 @@ $(document).ready(function() {
 				if (v[v2] != null) v[v2].disable();
 			});
 		});
+		
+		// Enable/Disable tectonic & volcanoes buttons and change their state
 		if (view_name == 'map' || view_name == 'nst') {
 			$('#mapcontainer').fadeIn(400);
 			$('#tec2').find('.tt').removeClass('disable'); // enable tectonic controls
@@ -469,7 +471,7 @@ $(document).ready(function() {
 	  var temp = [];
     var len = a.length;
     for (var i = (len - 1); i >= 0; i--) {
-        temp.push(a[i]);
+      temp.push(a[i]);
     }
     return temp;
   }

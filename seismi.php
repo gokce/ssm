@@ -31,6 +31,7 @@
 		</div>
 	</div>
 	<div id="mainbar">
+		<div id="mainicon"></div><div id="mainloading"></div>
 		<div id="logo"><a href="seismi.php" title="reload page"><img src="images/seismi-logo.png" alt="Seismi" /></a></div>
 		<ul id="navi">
 			<li class="nst" title="Nearest View">NST</li>
@@ -47,7 +48,7 @@
 		<div id="loc1"><div id="loc2"><a href="#" class="tt" title="Location area &amp; Longitude/Latitude cordinates for selected earthquake"><em id="region">Area, Country</em><em id="latlon">90.0000&deg;&nbsp;&nbsp;-180.0000&deg;</em></a></div></div>
 		<div id="butr"></div><div id="buth"></div>
 	</div>
-	<div id="mainbarinfo">In DPT view earthquakes are visualized on a timeline where vertical height represents depth, size of circle the magnitude level.</div>
+	<div id="mainbarinfo">Loading...</div>
 	
 	<div id="controlbuttons" class="rc">
 		<div id="b-zoom-in"></div><div id="b-zoom-out"></div>
@@ -97,6 +98,7 @@
 		</ul>
 	</div>
 	<div id="help"></div><div id="help1"></div><div id="help2"></div><div id="help3"></div><div id="help4"></div>
-	<div id="intro"><div id="intro-container"><img src="images/beginning.png" id="beginning-img" width="360" height="300" alt="beginning info" /><img src="images/loading-main.gif" id="loading" width="50" height="22" alt="loading..." /><a href="http://www.seismi.org/seismi.php"><img src="images/button-tryagain.png" id="tryagain" width="300" height="100" alt="problems loading, please try again" /></a></div></div>
+	<div id="intro"></div>
+	<div id="intro-container"><img src="images/beginning.png" id="beginning-img" width="360" height="300" alt="beginning info" /><a href="http://www.seismi.org/seismi.php"><img src="images/button-tryagain.png" id="tryagain" width="300" height="100" alt="problems loading, please try again" /></a></div>
 </body>
 </html>
