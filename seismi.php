@@ -100,5 +100,27 @@
 	<div id="help"></div><div id="help1"></div><div id="help2"></div><div id="help3"></div><div id="help4"></div>
 	<div id="intro"></div>
 	<div id="intro-container"><img src="images/beginning.png" id="beginning-img" width="360" height="300" alt="beginning info" /><a href="http://www.seismi.org/seismi.php"><img src="images/button-tryagain.png" id="tryagain" width="300" height="100" alt="problems loading, please try again" /></a></div>
+	<?php 
+	$ip = $_SERVER["SERVER_ADDR"];
+	if ($ip == '::1' || $ip == '127.0.0.1') {
+	  echo 'local';
+	} else { ?>
+	  <script>
+      window._gaq = [['_setAccount','UA8957719-1'],['_trackPageview'],['_trackPageLoadTime']];
+      Modernizr.load({
+        load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+      });
+    </script>
+    <script>
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.writebox.net/piwik/" : "http://www.writebox.net/piwik/");
+    document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script><script type="text/javascript">
+    try {
+    var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+    piwikTracker.trackPageView();
+    piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+    </script>
+<?php } ?>
 </body>
 </html>
