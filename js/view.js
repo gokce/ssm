@@ -293,7 +293,7 @@ $(document).ready(function() {
 	show_tml = function(data) {
 		barwidth=300;
 		posx=50;
-		posy=(canvas.height - 110);
+		posy=(canvas.height - 106);
 		prev_day = '';
 		$.each(data, function(k, v) {
 			// Check if current earthquake is in a new day
@@ -305,11 +305,11 @@ $(document).ready(function() {
 				// add box
 				var daybox = new Path.Line(new Point(newx,posy),new Point(newx-barwidth,posy));
 				daybox.strokeColor = 'white';
-				daybox.strokeWidth = 16;
+				daybox.strokeWidth = 4;
 				v['tml'].addChild(daybox);
 				
 				// add text
-				var text = new paper.PointText(new paper.Point(newx-64, posy+30));
+				var text = new paper.PointText(new paper.Point(newx-64, posy+26));
 				text.characterStyle = {
 					fontSize: 14,
 					fillColor: 'white',
