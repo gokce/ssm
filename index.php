@@ -31,7 +31,7 @@
 		</div>
 		<div id="i2">
 			<h2>Twitter</h2>
-			<?php include('news/seismi_twitter.php'); ?>
+			<?php @include 'news/seismi_twitter.php'; ?>
 		</div>
 		<div id="i3">
 			<h2>Disclaimer</h2>
