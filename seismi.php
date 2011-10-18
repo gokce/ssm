@@ -44,8 +44,8 @@
 			<li class="hlp" title="Help">?</li>
 		</ul>
 		<div id="mag1"><div id="mag2"><a href="#" class="tt" title="Depth for selected earthquake"><em id="depth">0</em><em id="depthunit">km</em></a><a href="#" class="tt" title="Magnitude value for selected earthquake"><em id="magnitude">0.0</em></a><div class="i4"></div><div class="i5"></div><div class="i6"></div><div class="i7"></div></div></div>
-		<div id="tec1"><div id="tec2"><a href="#" class="tt disable" title="show/hide tectonic plates"><em id="tectonic"><span>0FF</span><span>0N</span></em></a></div></div>
-		<div id="vol1"><div id="vol2"><a href="#" class="tt disable" title="show/hide volcanoes"><em id="volcanoes"><span>0FF</span><span>0N</span></em></a></div></div>
+		<!--<div id="tec1"><div id="tec2"><a href="#" class="tt disable" title="show/hide tectonic plates"><em id="tectonic"><span>0FF</span><span>0N</span></em></a></div></div>
+		<div id="vol1"><div id="vol2"><a href="#" class="tt disable" title="show/hide volcanoes"><em id="volcanoes"><span>0FF</span><span>0N</span></em></a></div></div>-->
 		<div id="tim1"><div id="tim2"><a href="#" class="tt" title="Date and UTC (Coordinated Universal Time) time for selected earthquake"><em id="date">01.01.2010</em><em id="time"><span id="utc">UTC</span>00:00</em></a></div></div>
 		<div id="loc1"><div id="loc2"><a href="#" class="tt" title="Location area &amp; Longitude/Latitude cordinates for selected earthquake"><em id="region">Area, Country</em><em id="latlon">90.0000&deg;&nbsp;&nbsp;-180.0000&deg;</em></a></div></div>
 		<div id="butr"></div><div id="buth"></div>
@@ -111,7 +111,7 @@
 			<li>"4" key to select list visualization view</li>
 			<li>"0" key to move to the newest earthquake happened</li>
 		</ul></div>
-		<div id="help1"></div><div id="help2"></div><div id="help3"></div><div id="help4"></div>
+		<div id="help1"></div><!--<div id="help2"></div>--><div id="help3"></div><div id="help4"></div>
 	</div>
 	<div id="intro"></div>
 	<div id="intro-container"><img src="images/beginning.png" id="beginning-img" width="360" height="300" alt="beginning info" /><a href="http://www.seismi.org/seismi.php" id="tryagain"><img src="images/button-tryagain.png" width="300" height="100" alt="problems loading, please try again" /></a></div>
