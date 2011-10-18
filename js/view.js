@@ -68,12 +68,14 @@ $(document).ready(function() {
 		if(code == 50 || code == 77) { show('map'); } // 2 or m = MAP
 		if(code == 51 || code == 68) { show('dpt'); } // 3 or d = DPT
 		if(code == 52 || code == 76) { show('lst'); } // 4 or l = LST
-		if(code == 53 || code == 84) { show('lst'); } // 5 or t = TML
+		if(code == 53 || code == 84) { show('tml'); } // 5 or t = TML
 		if(code == 48) { selectNewestEarthquake();  } // 0 = Select newest earthquake
 		if(code == 37) { selectNextEarthquake(); }    // left arrow = select next earthquake
 		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
 		if(code == 37 && e.shiftKey && current_view == 'dpt') { move('left',canvas.width-50); } // move left
 		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-50); } // move right
+		if(code == 37 && e.shiftKey && current_view == 'tml') { move('left',canvas.width-50); } // move left
+		if(code == 39 && e.shiftKey && current_view == 'tml') { move('right',canvas.width-50); } // move right
 		if(code == 40 && e.shiftKey && current_view == 'lst') { move('up',100); } // move up
 		if(code == 38 && e.shiftKey && current_view == 'lst') { move('down',100); } // move down
 		if(code == 183 && e.shiftKey && current_view == 'map') { zoom(2) } // + = zoom in
@@ -268,25 +270,16 @@ $(document).ready(function() {
 	// TIMELINE VIEW //
 	show_tml = function(data) {
 		barwidth=300;
-		posx=barwidth+50;
-		posy= (view.size.height - 110);
+		posx=50;
+		posy=(canvas.height - 110);
 		prev_day = '';
 		$.each(data, function(k, v) {
-			newx = canvas.width-posx;
-			newy = mapValues(v.magnitude, 4, 9, (posy-20), -50);
-			time = v.time;
-		  newtime = time.replace(":", ".");
-		  timex = mapValues(parseFloat(newtime), 0, 23.59, newx-barwidth, newx);
-			v['destination'] = new Point(timex+barwidth,newy);
-			v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 100);
-			v['move'] = true;
-			
 			// Check if current earthquake is in a new day
 			if (prev_day=='') {
 			  prev_day=v.day;
 			}
 			if (prev_day!=v.day || k==data.length-1){
-				
+			  if (prev_day==v.day && k==data.length-1) {posx+=-barwidth-20;}
 				// add box
 				var daybox = new Path.Line(new Point(newx,posy),new Point(newx-barwidth,posy));
 				daybox.strokeColor = 'white';
@@ -294,7 +287,7 @@ $(document).ready(function() {
 				v['tml'].addChild(daybox);
 				
 				// add text
-				var text = new paper.PointText(new paper.Point(newx-64+barwidth, posy+30));
+				var text = new paper.PointText(new paper.Point(newx-64, posy+30));
 				text.characterStyle = {
 					fontSize: 14,
 					fillColor: 'white',
@@ -302,11 +295,17 @@ $(document).ready(function() {
 				};
 				text.content=prev_day;
 				v['tml'].addChild(text);
-
   		  prev_day=v.day;
   		  // move barwidth + pixels left to new day
-  			posx = posx+barwidth+20;
+  			posx += barwidth+20;
 			}
+			newx = canvas.width-posx;
+			newy = mapValues(v.magnitude, 4, 9, (posy-20), -50);
+		  minutes = parseInt(v.time.split(":")[0]*60)+parseInt(v.time.split(":")[1])
+		  xoffset = mapValues(minutes, 0, 24*60, barwidth, 0);
+			v['destination'] = new Point(newx-xoffset,newy);
+			v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 100);
+			v['move'] = true;
 		});
 	}
 	
@@ -320,7 +319,7 @@ $(document).ready(function() {
 			newx = canvas.width-posx;
 			newy = posy+(Math.floor(v.depth)/1.2);
 			v['destination'] = new Point(newx,newy);
-			v['destination_size'] = v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 180);
+			v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 180);
 			v['move'] = true;
 			
 			// add white depthlines
