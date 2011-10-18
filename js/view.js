@@ -2,6 +2,8 @@ paper.install(window);
 $(document).ready(function() {
   $.data_loaded = false;
 	$.seismi.currentzoom = 0;
+	$.seismi.moveview = false;
+	$.seismi.eqsmoving = true;
 	
 	paper.setup('viewcanvas');
 	var tool = new Tool();
@@ -63,6 +65,7 @@ $(document).ready(function() {
 	$('#volcanoes').click(function(){$("#volcanoes span").toggle();});
 	
 	$(document).keydown(function(e) {
+	  if ($.seismi.moveview) { return; }
 		var code = (e.keyCode ? e.keyCode : e.which);
 		if(code == 49 || code == 78) { show('nst'); } // 1 or n = NST
 		if(code == 50 || code == 77) { show('map'); } // 2 or m = MAP
@@ -72,24 +75,24 @@ $(document).ready(function() {
 		if(code == 48) { selectNewestEarthquake();  } // 0 = Select newest earthquake
 		if(code == 37) { selectNextEarthquake(); }    // left arrow = select next earthquake
 		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
-		if (typeof($.seismi.data.earthquakes) === 'undefined') { return; }
-		if ($.seismi.data.earthquakes[0]['move'] == false) {
-  		if(code == 37 && e.shiftKey && current_view == 'dpt') { move('left',canvas.width-50); } // move left
-  		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-50); } // move right
-  		if(code == 37 && e.shiftKey && current_view == 'tml') { move('left',canvas.width-50); } // move left
-  		if(code == 39 && e.shiftKey && current_view == 'tml') { move('right',canvas.width-50); } // move right
-  		if(code == 40 && e.shiftKey && current_view == 'lst') { move('up',100); } // move up
-  		if(code == 38 && e.shiftKey && current_view == 'lst') { move('down',100); } // move down
-  		if(code == 183 && e.shiftKey && current_view == 'map') { zoom(2) } // + = zoom in
-  		if(code == 189 && e.shiftKey && current_view == 'map') { zoom(0) } // - = zoom out
-  		if(code==37 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",40);
-  		if(code==38 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",40);
-  		if(code==39 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",-40);
-  		if(code==40 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",-40);
-		}
+		if ($.seismi.data_loaded == false) { return; }
+		if ($.seismi.eqsmoving) { return; }
+		if(code == 37 && e.shiftKey && current_view == 'dpt') { move('left',canvas.width-50); } // move left
+		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-50); } // move right
+		if(code == 37 && e.shiftKey && current_view == 'tml') { move('left',canvas.width-50); } // move left
+		if(code == 39 && e.shiftKey && current_view == 'tml') { move('right',canvas.width-50); } // move right
+		if(code == 40 && e.shiftKey && current_view == 'lst') { move('up',100); } // move up
+		if(code == 38 && e.shiftKey && current_view == 'lst') { move('down',100); } // move down
+		if(code == 183 && e.shiftKey && current_view == 'map') { zoom(2) } // + = zoom in
+		if(code == 189 && e.shiftKey && current_view == 'map') { zoom(0) } // - = zoom out
+		if(code==37 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",40);
+		if(code==38 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",40);
+		if(code==39 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",-40);
+		if(code==40 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",-40);
 	});
 	
 	zoom = function(level) {
+	  if ($.seismi.eqsmoving) { return; }
 		speed = 1;
 		//mapcontainer.mapbox("right",300);
 		mapcontainer.mapbox("zoomTo",level);
@@ -98,6 +101,7 @@ $(document).ready(function() {
 	}
 	
 	move = function(direction, amount) {
+	  if ($.seismi.eqsmoving) { return; }
 	  var x=0;
 	  var y=0;
 	  switch(direction) {
@@ -114,10 +118,14 @@ $(document).ready(function() {
       y = amount;
       break;
     }
-    project.activeLayer.translate(new Point(x,y));
+    $.seismi.moveview = true;
+    $.seismi.destination = new Point(project.activeLayer.position.x-x,project.activeLayer.position.y-y)
+    //project.activeLayer.translate(new Point(x,y));
 	}
 	
 	show = function(view_name) {
+	  if ($.seismi.moveview) { return; }
+	  $.seismi.eqsmoving = true;
 		canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
 		$('#navi').find('.'+current_view).removeClass('selected');
 		$('#navi').find('.'+view_name).addClass('selected');
@@ -427,24 +435,31 @@ $(document).ready(function() {
 				if (v['move']) {
 				  draggingAllowed = false;
 					var obj = v['eq_visual'];
-					var vector = v['destination'] - obj.position;
+					//var vector = v['destination'] - obj.position;
 					var vd = vectorDiff(v['destination'], obj.position, speed);
 					obj.position = vd.new_pos;
 					if (vd.dist < 1) {
 						v['move'] = false;
-						v['cleanup'] = true;
+						if (k == eq_count-1) {
+						  draggingAllowed = true;
+    				  speed = defaultSpeed;
+    				  $.seismi.eqsmoving = false;
+						}
 					}
 					if (v['destination_size'] != v['size']) {
 						obj.scale(v['destination_size']/v['size']);
 						v['size'] = v['destination_size'];
 					}
 				}
-				if (v['cleanup']) {
-				  v['cleanup'] = false;
-				  draggingAllowed = true;
-				  speed = defaultSpeed;
-				}
 			});
+			if ($.seismi.moveview) {
+			  var pos = project.activeLayer.position;
+			  var view_vd = vectorDiff($.seismi.destination,pos,2);
+			  project.activeLayer.position = view_vd.new_pos;
+			  if (view_vd.dist < 1) {
+			    $.seismi.moveview = false; 
+			  }
+			}
 		}
 	}
 	//tool.distanceThreshold = 50;
@@ -462,19 +477,18 @@ $(document).ready(function() {
 		//$("#mapcontainer").mapbox("zoomTo",4);
 	}
 	tool.onMouseDrag = function(event) {
-	  if (draggingAllowed) {
-	    var vector = event.delta;
-	    var direction;
-	    if (vector.x != 0) {
-	      direction = 'left';
-	      if (vector.x < 0) { direction = 'right';}
-	      $("#mapcontainer").mapbox(direction,Math.abs(vector.x));
-	    }
-    	if (vector.y != 0) {
-    	  direction = 'up';
-    	  if (vector.y < 0) { direction = 'down'; }
-    	  $("#mapcontainer").mapbox(direction,Math.abs(vector.y)); 
-    	}
+	  if ($.seismi.eqsmoving) { return; }
+    var vector = event.delta;
+    var direction;
+    if (vector.x != 0) {
+      direction = 'left';
+      if (vector.x < 0) { direction = 'right';}
+      $("#mapcontainer").mapbox(direction,Math.abs(vector.x));
+    }
+  	if (vector.y != 0) {
+  	  direction = 'up';
+  	  if (vector.y < 0) { direction = 'down'; }
+  	  $("#mapcontainer").mapbox(direction,Math.abs(vector.y)); 
   	}
 	}
 	
