@@ -34,7 +34,6 @@
 		<div id="mainicon"></div><div id="mainloading"></div>
 		<div id="logo"><a href="seismi.php" title="reload page"><img src="images/seismi-logo.png" alt="Seismi" /></a></div>
 		<ul id="navi">
-			<li class="nst" title="Nearest View">NST</li>
 			<li class="map" title="Map View">MAP</li>
 			<li class="tml" title="Timeline View">TML</li>
 			<li class="dpt" title="Depth View">DPT</li>
@@ -97,7 +96,21 @@
 		?>
 		</ul>
 	</div>
-	<div id="help"><div id="helpbg"></div><div id="help1"></div><div id="help2"></div><div id="help3"></div><div id="help4"></div></div>
+	<div id="help">
+		<div id="helpbg"></div>
+		<div id="helptext"><ul>Handy shortcuts:
+			<li>"Arrow" keys (&larr; &amp; &rarr;) to select next/prev. earthquake</li>
+			<li>"Shift" + "arrow" keys to move the view.</li>
+			<li>"+" and "-" keys to zoom in/out. Only on map view.</li>
+			<!--<li>"1" key to select newest earthquake visualization view</li>-->
+			<li>"1" key to select map visualization view</li>
+			<li>"2" key to select timeline visualization view</li>
+			<li>"3" key to select depth visualization view</li>
+			<li>"4" key to select list visualization view</li>
+			<li>"0" key to move to the newest earthquake happened</li>
+		</ul></div>
+		<div id="help1"></div><div id="help2"></div><div id="help3"></div><div id="help4"></div>
+	</div>
 	<div id="intro"></div>
 	<div id="intro-container"><img src="images/beginning.png" id="beginning-img" width="360" height="300" alt="beginning info" /><a href="http://www.seismi.org/seismi.php" id="tryagain"><img src="images/button-tryagain.png" width="300" height="100" alt="problems loading, please try again" /></a></div>
 	<?php 
