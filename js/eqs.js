@@ -155,6 +155,7 @@ $(document).ready(function() {
       	  $('#mainbarinfo').animate({height:'hide'}, 300);
 					$(this).find('.count').html(count);
 				});
+				$('.latest .count').html('');
 			});
 		}
 		$.seismi.modified = '';
