@@ -129,6 +129,9 @@ $(document).ready(function() {
 		canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
 		$('#navi').find('.'+current_view).removeClass('selected');
 		$('#navi').find('.'+view_name).addClass('selected');
+		if (current_view != 'hlp'){ // remove help overlay, if entering some other view
+		  $('#help').delay(100).fadeOut(500);
+		} 
 		current_view = view_name;
 		$.each($.seismi.data.earthquakes, function(k, v) {
 			$.each(views, function(k2, v2) {
@@ -187,7 +190,7 @@ $(document).ready(function() {
 
 				// Selection Stroke
 				var eq_stroke = new Path.Circle(new Point(initx, inity), initsize);
-				eq_stroke.strokeWidth = 2;
+				eq_stroke.strokeWidth = 3;
 				//eq_stroke.originalColor = colors[Math.floor(v.magnitude)-4];
 				eq_stroke.originalColor = '#ffffff';
 				eq_stroke.strokeColor = null;

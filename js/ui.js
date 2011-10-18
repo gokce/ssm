@@ -10,7 +10,7 @@ $(document).ready(function() {
 	  $('#mainbarinfo').html('NST actively shows the latest earthquake happened on a map.');
 	});
 	$(".map").mouseenter(function() {
-	  $('#mainbarinfo').html('MAP visualizes earthquakes on a worldmap. You can zoom in/out (+/-) and pan around');
+	  $('#mainbarinfo').html('MAP visualizes earthquakes on a worldmap. You can zoom in/out (+/-) and pan around with mouse dragging');
 	});
 	$(".tml").mouseenter(function() {
 	  $('#mainbarinfo').html('In TML view you see earthquakes distributed horizontally on a even timeline, where vertical axis represents magnitude.');
@@ -19,10 +19,10 @@ $(document).ready(function() {
 	  $('#mainbarinfo').html('In DPT view earthquakes are visualized on a timeline where vertical height represents depth, size of circle the magnitude level.');
 	});
 	$(".lst").mouseenter(function() {
-	  $('#mainbarinfo').html('LST visualizes earthquakes on time grid.');
+	  $('#mainbarinfo').html('LST lays all the filtered earthquakes on achronologically ordered grid.');
 	});
 	$(".hlp").mouseenter(function() {
-	  $('#mainbarinfo').html('HLP gives you some tips about the user interface.');
+	  $('#mainbarinfo').html('This gives you some tips about the user interface elements. btw. use arrow keys to move within next/prev. selected earthquake.');
 	});
 	$("#navi").mouseenter(function(){ $('#mainbarinfo').delay(600).animate({height:'show'}, 300); }); // hide when leaving menu
 	$("#navi").mouseleave(function(){ $('#mainbarinfo').delay(400).animate({height:'hide'}, 200); }); // hide when leaving menu
@@ -37,13 +37,7 @@ $(document).ready(function() {
 	
 	// toggle help view
 	$('.hlp').click(function() {
-		$('#help').delay(100).fadeToggle(750);
-		$('#help1').delay(100).fadeToggle(500);
-		$('#help2').delay(150).fadeToggle(500);
-		$('#help3').delay(200).fadeToggle(500);
-		$('#help4').delay(250).fadeToggle(500);
-		//$('#help5').delay(300).fadeToggle(500);
-		//$('#help6').delay(350).fadeToggle(500);
+		$('#help').delay(100).fadeToggle(500);
 	});
 
 	// toggle sidebar from time info
