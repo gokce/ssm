@@ -102,7 +102,7 @@
 		<div id="helpbg"></div>
 		<div id="helptext"><ul>Handy shortcuts:
 			<li>"Arrow" keys (&larr; &amp; &rarr;) to select next/prev. earthquake</li>
-			<li>"Shift" + "arrow" keys to move the view.</li>
+			<li>"Alt" + "Arrow" keys to move the view.</li>
 			<li>"+" and "-" keys to zoom in/out. Only on map view.</li>
 			<!--<li>"1" key to select newest earthquake visualization view</li>-->
 			<li>"1" key to select map visualization view</li>

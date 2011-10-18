@@ -1,6 +1,6 @@
 paper.install(window);
 $(document).ready(function() {
-  $.data_loaded = false;
+	$.data_loaded = false;
 	$.seismi.currentzoom = 0;
 	$.seismi.moveview = false;
 	$.seismi.eqsmoving = true;
@@ -77,18 +77,18 @@ $(document).ready(function() {
 		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
 		if ($.seismi.data_loaded == false) { return; }
 		if ($.seismi.eqsmoving) { return; }
-		if(code == 37 && e.shiftKey && current_view == 'dpt') { move('right',canvas.width-100); } // move left
-		if(code == 39 && e.shiftKey && current_view == 'dpt') { move('left',canvas.width-100); } // move right
-		if(code == 37 && e.shiftKey && current_view == 'tml') { move('right',canvas.width-100); } // move left
-		if(code == 39 && e.shiftKey && current_view == 'tml') { move('left',canvas.width-100); } // move right
-		if(code == 40 && e.shiftKey && current_view == 'lst') { move('up',100); } // move up
-		if(code == 38 && e.shiftKey && current_view == 'lst') { move('down',100); } // move down
-		if(code == 183 && e.shiftKey && current_view == 'map') { zoom(2) } // + = zoom in
-		if(code == 189 && e.shiftKey && current_view == 'map') { zoom(0) } // - = zoom out
-		if(code==37 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",40);
-		if(code==38 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",40);
-		if(code==39 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("left",-40);
-		if(code==40 && e.shiftKey && current_view == 'map') $("#mapcontainer").mapbox("up",-40);
+		if(code == 37 && e.altKey && current_view == 'dpt') { move('right',canvas.width-100); } // move left
+		if(code == 39 && e.altKey && current_view == 'dpt') { move('left',canvas.width-100); } // move right
+		if(code == 37 && e.altKey && current_view == 'tml') { move('right',canvas.width-100); } // move left
+		if(code == 39 && e.altKey && current_view == 'tml') { move('left',canvas.width-100); } // move right
+		if(code == 40 && e.altKey && current_view == 'lst') { move('up',100); } // move up
+		if(code == 38 && e.altKey && current_view == 'lst') { move('down',100); } // move down
+		if(code == 183 && e.altKey && current_view == 'map') { zoom(2) } // + = zoom in
+		if(code == 189 && e.altKey && current_view == 'map') { zoom(0) } // - = zoom out
+		if(code==37 && e.altKey && current_view == 'map') $("#mapcontainer").mapbox("left",40);
+		if(code==38 && e.altKey && current_view == 'map') $("#mapcontainer").mapbox("up",40);
+		if(code==39 && e.altKey && current_view == 'map') $("#mapcontainer").mapbox("left",-40);
+		if(code==40 && e.altKey && current_view == 'map') $("#mapcontainer").mapbox("up",-40);
 	});
 	
 	zoom = function(level) {
@@ -147,8 +147,8 @@ $(document).ready(function() {
 		// Enable/Disable tectonic & volcanoes buttons and change their state
 		if (view_name == 'map' || view_name == 'nst') {
 			$('#mapcontainer').fadeIn(400);
-		//	$('#tec2').find('.tt').removeClass('disable'); // enable tectonic controls
-  	//	$('#vol2').find('.tt').removeClass('disable'); // enable volcano controls
+		  // $('#tec2').find('.tt').removeClass('disable'); // enable tectonic controls
+  	  // $('#vol2').find('.tt').removeClass('disable'); // enable volcano controls
 		} else {
 		$('#mapcontainer').fadeOut(400);
 			$('#tec2').find('.tt').addClass('disable'); // disable tectonic controls
@@ -293,7 +293,7 @@ $(document).ready(function() {
 	show_tml = function(data) {
 		barwidth=300;
 		posx=50;
-		posy=(canvas.height - 106);
+		posy=(canvas.height - 1067);
 		prev_day = '';
 		$.each(data, function(k, v) {
 			// Check if current earthquake is in a new day
