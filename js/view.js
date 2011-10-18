@@ -294,7 +294,7 @@ $(document).ready(function() {
 	show_tml = function(data) {
 		barwidth=300;
 		posx=50;
-		posy=(canvas.height - 1067);
+		posy=(canvas.height - 106);
 		prev_day = '';
 		$.each(data, function(k, v) {
 			// Check if current earthquake is in a new day
