@@ -35,7 +35,7 @@ font-weight: normal; font-style: normal;
 #map-16000 img {width:16000px;height:8056px;}
 
 /* === MAINBAR === */
-#mainbar {background:#000 url('images/mainbar-bg.png') repeat-x top; width:100%; height:60px; min-width:1150px; display:inline; opacity:0.94; border-top:1px solid #000;border-bottom:1px solid #000; position:absolute; bottom:0; left:0; z-index:4000000;}
+#mainbar {background:#000 url('images/mainbar-bg.png') repeat-x top; width:100%; height:60px; min-width:115 0px; display:inline; opacity:0.94; border-top:1px solid #000;border-bottom:1px solid #000; position:absolute; bottom:0; left:0; z-index:4000000;}
 #mainbar div{position:absolute;}
 
 #mainbar #logo {left:34px; bottom:-3px;}
@@ -47,7 +47,7 @@ ul#navi {margin:22px 0 0 142px; font-family:'extravaganzzaBold'; font-size:16px;
 ul#navi li{display:inline;margin:0 0 0 8px;padding:6px 10px;text-align:center;display:inline;list-style-type:none;text-decoration:none;}
 ul#navi li:hover{text-shadow:#ddd 0px 0px 4px; background:rgba(255,255,255,0.1); cursor:pointer;}
 ul#navi li.selected {background:rgba(255,255,255,0.1);}
-#mainbarinfo {background:rgba(0,0,0,0.6); width:100%; height:auto; padding:14px; position:absolute; bottom:60px; left:0; z-index:3990000;}
+#mainbarinfo {background:rgba(0,0,0,0.8); width:100%; height:auto; padding:14px; position:absolute; bottom:60px; left:0; z-index:3990000;}
 
 #mag1	{right:387px;top:3px; width:170px;height:54px;background:url('images/mainbar-bg-big.png') no-repeat top left;}
 #mag2	{right:-10px;top:0px; width:170px;height:54px;background:url('images/mainbar-bg-big.png') no-repeat top right;}
