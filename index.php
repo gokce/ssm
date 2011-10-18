@@ -2,6 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<title>Seismi - Earthquake visualization</title>
+	<meta name="description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form.">
+  <meta name="keywords" content="earthquake, visualization, data visualization, infographics, paperjs, paper.js, paperscript, open data, open source">
+  <meta name="author" content="Gokce Taskan, Niko Knappe">
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<link href="styles.css" rel="stylesheet" type="text/css" media="all"/>
 	<link rel="shortcut icon" href="images/favicon.png"> 
