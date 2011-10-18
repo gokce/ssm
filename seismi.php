@@ -36,7 +36,7 @@
 		<ul id="navi">
 			<li class="nst" title="Nearest View">NST</li>
 			<li class="map" title="Map View">MAP</li>
-			<!--<li class="tml" title="Timeline View">TML</li>-->
+			<li class="tml" title="Timeline View">TML</li>
 			<li class="dpt" title="Depth View">DPT</li>
 			<li class="lst" title="List View">LST</li>
 			<li class="hlp" title="Help">?</li>

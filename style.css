@@ -47,7 +47,7 @@ ul#navi {margin:22px 0 0 142px; font-family:'extravaganzzaBold'; font-size:16px;
 ul#navi li{display:inline;margin:0 0 0 8px;padding:6px 10px;text-align:center;display:inline;list-style-type:none;text-decoration:none;}
 ul#navi li:hover{text-shadow:#ddd 0px 0px 4px; background:rgba(255,255,255,0.1); cursor:pointer;}
 ul#navi li.selected {background:rgba(255,255,255,0.1);}
-#mainbarinfo {background:rgba(0,0,0,0.6); width:100%; height:auto; padding:14px 10px; position:absolute; bottom:60px; left:0; z-index:3990000;}
+#mainbarinfo {background:rgba(0,0,0,0.6); width:100%; height:auto; padding:14px; position:absolute; bottom:60px; left:0; z-index:3990000;}
 
 #mag1	{right:387px;top:3px; width:170px;height:54px;background:url('images/mainbar-bg-big.png') no-repeat top left;}
 #mag2	{right:-10px;top:0px; width:170px;height:54px;background:url('images/mainbar-bg-big.png') no-repeat top right;}

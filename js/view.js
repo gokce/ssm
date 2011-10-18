@@ -15,7 +15,7 @@ $(document).ready(function() {
 	
 	var views = ['nst','map','tml','dpt','lst'];
 	
-	var current_view = 'dpt';
+	var current_view = 'tml';
 	var canvas;
 	$('#navi').find('.'+current_view).addClass('selected');
 	var current_selection;
@@ -37,6 +37,7 @@ $(document).ready(function() {
 	
 	var controlbuttons = {};
 	controlbuttons['dpt'] = ['b-left','b-right'];
+	controlbuttons['tml'] = ['b-left','b-right'];
 	controlbuttons['lst'] = ['b-up','b-down'];
 	controlbuttons['map'] = ['b-zoom-in','b-zoom-out'];
 	controlbuttons['nst'] = [];
@@ -56,6 +57,7 @@ $(document).ready(function() {
 	$('.map').click(function(){$.seismi.currentzoom = 0; show('map');});
 	$('.dpt').click(function(){show('dpt');});
 	$('.lst').click(function(){show('lst');});
+	$('.tml').click(function(){show('tml');});
 	
 	$('#tectonic').click(function(){$("#tectonic span").toggle();});
 	$('#volcanoes').click(function(){$("#volcanoes span").toggle();});
@@ -66,6 +68,7 @@ $(document).ready(function() {
 		if(code == 50 || code == 77) { show('map'); } // 2 or m = MAP
 		if(code == 51 || code == 68) { show('dpt'); } // 3 or d = DPT
 		if(code == 52 || code == 76) { show('lst'); } // 4 or l = LST
+		if(code == 53 || code == 84) { show('lst'); } // 5 or t = TML
 		if(code == 48) { selectNewestEarthquake();  } // 0 = Select newest earthquake
 		if(code == 37) { selectNextEarthquake(); }    // left arrow = select next earthquake
 		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
@@ -224,6 +227,8 @@ $(document).ready(function() {
 		extra_group['data'] = function() {}
 		return extra_group;
 	}
+	
+	// NEWEST VIEW //
 	show_nst = function(data) {
     $.each(data, function(k, v) {
 			map_w = map_size['3'].width;
@@ -235,11 +240,13 @@ $(document).ready(function() {
 			y = mapValues(v.lat, 90, -90, yoffset, yoffset+map_h);
 			var point = new Point(x,y);
 			v['destination'] = point;
-			v['destination_size'] = 10;
+			v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 80);
 			v['move'] = true;
 		});
 		//project.activeLayer.translate(project.activeLayer.position - $.seismi.data.earthquakes[0].eq_visual.position);
 	}
+	
+	// MAP VIEW //
 	show_map = function(data) {
 		$.each(data, function(k, v) {
 			currentzoom = $.seismi.currentzoom;
@@ -253,17 +260,57 @@ $(document).ready(function() {
 			var point = new Point(x,y);
 			v['destination'] = point;
 			//console.log(v.lat);
-			v['destination_size'] = 2;
+			v['destination_size'] = mapValues(v.magnitude, 4, 9, 2, 2);
 			v['move'] = true;
 		});
 	}
 	
+	// TIMELINE VIEW //
 	show_tml = function(data) {
+		barwidth=300;
+		posx=barwidth+50;
+		posy= (view.size.height - 110);
+		prev_day = '';
 		$.each(data, function(k, v) {
-			v['eq_visual'].position = randomPoint();
+			newx = canvas.width-posx;
+			newy = mapValues(v.magnitude, 4, 9, (posy-20), -50);
+			time = v.time;
+		  newtime = time.replace(":", ".");
+		  timex = mapValues(parseFloat(newtime), 0, 23.59, newx-barwidth, newx);
+			v['destination'] = new Point(timex+barwidth,newy);
+			v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 100);
+			v['move'] = true;
+			
+			// Check if current earthquake is in a new day
+			if (prev_day=='') {
+			  prev_day=v.day;
+			}
+			if (prev_day!=v.day || k==data.length-1){
+				
+				// add box
+				var daybox = new Path.Line(new Point(newx,posy),new Point(newx-barwidth,posy));
+				daybox.strokeColor = 'white';
+				daybox.strokeWidth = 16;
+				v['tml'].addChild(daybox);
+				
+				// add text
+				var text = new paper.PointText(new paper.Point(newx-64+barwidth, posy+30));
+				text.characterStyle = {
+					fontSize: 14,
+					fillColor: 'white',
+					font: 'extravaganzzaBold',
+				};
+				text.content=prev_day;
+				v['tml'].addChild(text);
+
+  		  prev_day=v.day;
+  		  // move barwidth + pixels left to new day
+  			posx = posx+barwidth+20;
+			}
 		});
 	}
 	
+	// DEPTH VIEW //
 	show_dpt = function(data) {
 		posx=100;
 		barwidth=0;
@@ -273,7 +320,7 @@ $(document).ready(function() {
 			newx = canvas.width-posx;
 			newy = posy+(Math.floor(v.depth)/1.2);
 			v['destination'] = new Point(newx,newy);
-			v['destination_size'] = ((v.magnitude*20)-70);
+			v['destination_size'] = v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 180);
 			v['move'] = true;
 			
 			// add white depthlines
@@ -289,6 +336,7 @@ $(document).ready(function() {
 			}
 			if (prev_day!=v.day || k==data.length-1){
 			  if (prev_day==v.day && k==data.length-1) {newx-=50;barwidth+=1;}
+				// add daybox
 				var daybox = new Path.Line(new Point(newx+48,posy-18), new Point(newx+2+(barwidth*50),posy-18));
 				daybox.strokeColor = 'white';
 				daybox.strokeWidth = 16;
@@ -303,7 +351,7 @@ $(document).ready(function() {
   					font: 'extravaganzzaBold',
   				};
   				text.content=prev_day;
-  				v['lst'].addChild(text);
+  				v['dpt'].addChild(text);
 				}
 				
 				barwidth=0;
@@ -316,6 +364,7 @@ $(document).ready(function() {
 		});
 	}
 	
+	// LIST VIEW //
 	show_lst = function(data) {
 		posx=20;
 		posy=20;
@@ -347,7 +396,7 @@ $(document).ready(function() {
 				posy+=30;
 			}
 			v['destination'] = new Point(posx, posy);
-			v['destination_size'] = ((v.magnitude * 2.5) - 5);
+			v['destination_size'] = mapValues(v.magnitude, 4, 9, 2, 20);
 			v['move'] = true;
 			posx+=25;
 			prev_day=v.day;
