@@ -104,10 +104,13 @@
 	</div>
 	<div id="help">
 		<div id="helpbg"></div>
-		<div id="helptext"><ul>Handy shortcuts:
+		<div id="helptext">
+			<p>Seismi is an earthquake data visualization project which is using publicly available data provided by <a href="http://www.usgs.gov/" title="USGS - U.S. Geological Survey">USGS</a> and transforming it to a more informative, human readable and visually interesting form.</p>
+			<ul>Handy shortcuts:
 			<li>"Arrow" keys (&larr; &amp; &rarr;) to select next/prev. earthquake</li>
 			<li>"Alt" + "Arrow" keys to move the view.</li>
 			<li>"+" and "-" keys to zoom in/out. Only on map view.</li>
+			<li>"R" key to toggle raw-view</li>
 			<!--<li>"1" key to select newest earthquake visualization view</li>-->
 			<li>"1" key to select map visualization view</li>
 			<li>"2" key to select timeline visualization view</li>
