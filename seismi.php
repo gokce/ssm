@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>SEISMI - visualizing earthquakes</title>
 	<meta name="description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form.">
-  <meta name="keywords" content="earthquake, visualization, data visualization, infographics, paperjs, paper.js, paperscript, open data, open source">
+  <meta name="keywords" content="earthquake, earthquakes, visualization, data visualization, infographics, paperjs, paper.js, paperscript, open data, open source">
   <meta name="author" content="Gokce Taskan, Niko Knappe">
-	<link type="text/css" href="style.css" rel="stylesheet" />
+	<link href="styles.css" rel="stylesheet" type="text/css" media="all" />
 	<link rel="shortcut icon" href="images/favicon.png">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery-1.6.2.min.js"><\/script>')</script>  

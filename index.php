@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>SEISMI - Earthquake visualization</title>
 	<meta name="description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form.">
-  <meta name="keywords" content="earthquake, visualization, data visualization, infographics, paperjs, paper.js, paperscript, open data, open source">
+  <meta name="keywords" content="earthquake, earthquakes, visualization, data visualization, infographics, paperjs, paper.js, paperscript, open data, open source">
   <meta name="author" content="Gokce Taskan, Niko Knappe">
-	<link href="styles.css" rel="stylesheet" type="text/css" media="all"/>
+	<link href="styles.css" rel="stylesheet" type="text/css" media="all" />
 	<link rel="shortcut icon" href="images/favicon.png"> 
 	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
 </head>
-<body>
-	<img id="logo" src="images/seismi-logo.png" alt="Seismi" />
-	<div id="intro">
+<body class="lng">
+	<img id="seismilogo" src="images/seismi-logo.png" alt="Seismi" />
+	<div id="introduction">
 		<h1>Seismi is an earthquake data visualization project which is using publicly available data provided by <a href="http://www.usgs.gov/" title="USGS - U.S. Geological Survey">USGS</a> and transforming it to a more informative, human readable and visually interesting form.</h1>
 		<a href="seismi.php" onclick="loading(1);" title="Launch Seismi" id="launch"><img src="images/button_launch.png" alt="Launch Seismi" /></a>
 	</div>
