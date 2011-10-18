@@ -121,6 +121,9 @@ $(document).ready(function() {
 		canvas = {'width':view._viewSize._width, 'height':view._viewSize._height};
 		$('#navi').find('.'+current_view).removeClass('selected');
 		$('#navi').find('.'+view_name).addClass('selected');
+		if (current_view != 'hlp'){
+		  $('#help').delay(100).fadeOut(500);
+		} 
 		current_view = view_name;
 		$.each($.seismi.data.earthquakes, function(k, v) {
 			$.each(views, function(k2, v2) {

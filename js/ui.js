@@ -22,7 +22,7 @@ $(document).ready(function() {
 	  $('#mainbarinfo').html('LST visualizes earthquakes on time grid.');
 	});
 	$(".hlp").mouseenter(function() {
-	  $('#mainbarinfo').html('HLP gives you some tips about the user interface.');
+	  $('#mainbarinfo').html('? gives you some tips about the user interface elements.');
 	});
 	$("#navi").mouseenter(function(){ $('#mainbarinfo').delay(600).animate({height:'show'}, 300); }); // hide when leaving menu
 	$("#navi").mouseleave(function(){ $('#mainbarinfo').delay(400).animate({height:'hide'}, 200); }); // hide when leaving menu
@@ -37,13 +37,7 @@ $(document).ready(function() {
 	
 	// toggle help view
 	$('.hlp').click(function() {
-		$('#help').delay(100).fadeToggle(750);
-		$('#help1').delay(100).fadeToggle(500);
-		$('#help2').delay(150).fadeToggle(500);
-		$('#help3').delay(200).fadeToggle(500);
-		$('#help4').delay(250).fadeToggle(500);
-		//$('#help5').delay(300).fadeToggle(500);
-		//$('#help6').delay(350).fadeToggle(500);
+		$('#help').delay(100).fadeToggle(500);
 	});
 
 	// toggle sidebar from time info
