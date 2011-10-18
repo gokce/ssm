@@ -73,7 +73,7 @@
 		</ul>
 		<ul class="ultime">
 			<li>FILTER BY: TIME</li>
-			<li class="latest selected"> 400 LATEST <em class="count">400</em><em class="var"></em><em class="type">time</em></li>
+			<li class="latest selected"> MOST RECENT <em class="count"></em><em class="var"></em><em class="type">time</em></li>
 		<?php
 		$curYear = date('Y');
 		$curMonth = date('m');
