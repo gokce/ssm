@@ -69,9 +69,9 @@ $(document).ready(function() {
 		var code = (e.keyCode ? e.keyCode : e.which);
 		if(code == 49 || code == 78) { show('nst'); } // 1 or n = NST
 		if(code == 50 || code == 77) { show('map'); } // 2 or m = MAP
-		if(code == 51 || code == 68) { show('dpt'); } // 3 or d = DPT
-		if(code == 52 || code == 76) { show('lst'); } // 4 or l = LST
-		if(code == 53 || code == 84) { show('tml'); } // 5 or t = TML
+		if(code == 51 || code == 84) { show('tml'); } // 3 or t = TML
+		if(code == 52 || code == 68) { show('dpt'); } // 4 or d = DPT
+		if(code == 53 || code == 76) { show('lst'); } // 5 or l = LST
 		if(code == 48) { selectNewestEarthquake();  } // 0 = Select newest earthquake
 		if(code == 37) { selectNextEarthquake(); }    // left arrow = select next earthquake
 		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
@@ -500,7 +500,10 @@ $(document).ready(function() {
   	}
 	}
 	
-	selectNewestEarthquake = function() {$.selectEarthquake(0);}
+	selectNewestEarthquake = function() {
+	  $.selectEarthquake(0);
+	  show(current_view);
+	}
 	selectNextEarthquake = function() {$.selectEarthquake(current_selection+1);}
 	selectPreviousEarthquake = function() {$.selectEarthquake(current_selection-1);}
 	
