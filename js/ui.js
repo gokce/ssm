@@ -12,9 +12,12 @@ $(document).ready(function() {
 	$(".map").mouseenter(function() {
 	  $('#mainbarinfo').html('MAP visualizes earthquakes on a worldmap. You can zoom in/out (+/-) and pan around');
 	});
+	$(".tml").mouseenter(function() {
+	  $('#mainbarinfo').html('In TML view you see earthquakes distributed horizontally on a even timeline, where vertical axis represents magnitude.');
+	});
 	$(".dpt").mouseenter(function() {
 	  $('#mainbarinfo').html('In DPT view earthquakes are visualized on a timeline where vertical height represents depth, size of circle the magnitude level.');
-	});	
+	});
 	$(".lst").mouseenter(function() {
 	  $('#mainbarinfo').html('LST visualizes earthquakes on time grid.');
 	});
