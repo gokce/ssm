@@ -50,6 +50,8 @@ $(document).ready(function() {
 			refreshData($.seismi.data);
 		},
 		function(){
+		  $('#beginning-img').fadeOut(200); // hide beginning again button
+		  $('#tryagain').fadeIn(200); // show try again button
 		  console.log("Connection to API failed");
 		  makeAjaxCall('js/test_data.json', 
 		  function(data) {

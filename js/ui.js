@@ -10,7 +10,7 @@ $(document).ready(function() {
 	  $('#mainbarinfo').html('NST actively shows the latest earthquake happened on a map.');
 	});
 	$(".map").mouseenter(function() {
-	  $('#mainbarinfo').html('MAP visualizes earthquakes on a worldmap. You can zoom in/out (+/-) and pan around');
+	  $('#mainbarinfo').html('MAP visualizes earthquakes on a worldmap. You can zoom in/out (+/-) and pan around with mouse dragging');
 	});
 	$(".tml").mouseenter(function() {
 	  $('#mainbarinfo').html('In TML view you see earthquakes distributed horizontally on a even timeline, where vertical axis represents magnitude.');
@@ -19,10 +19,10 @@ $(document).ready(function() {
 	  $('#mainbarinfo').html('In DPT view earthquakes are visualized on a timeline where vertical height represents depth, size of circle the magnitude level.');
 	});
 	$(".lst").mouseenter(function() {
-	  $('#mainbarinfo').html('LST visualizes earthquakes on time grid.');
+	  $('#mainbarinfo').html('LST lays all the filtered earthquakes on achronologically ordered grid.');
 	});
 	$(".hlp").mouseenter(function() {
-	  $('#mainbarinfo').html('? gives you some tips about the user interface elements.');
+	  $('#mainbarinfo').html('This gives you some tips about the user interface elements. btw. use arrow keys to move within next/prev. selected earthquake.');
 	});
 	$("#navi").mouseenter(function(){ $('#mainbarinfo').delay(600).animate({height:'show'}, 300); }); // hide when leaving menu
 	$("#navi").mouseleave(function(){ $('#mainbarinfo').delay(400).animate({height:'hide'}, 200); }); // hide when leaving menu
