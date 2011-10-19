@@ -122,7 +122,7 @@
 		<div id="help1"></div><!--<div id="help2"></div>--><div id="help3"></div><div id="help4"></div>
 	</div>
 	<div id="intro"></div>
-	<div id="intro-container"><img src="images/beginning.png" id="beginning-img" width="360" height="300" alt="beginning info" /><a href="http://www.seismi.org/seismi.php" id="tryagain"><img src="images/button-tryagain.png" width="300" height="100" alt="problems loading, please try again" /></a></div>
+	<div id="intro-container"><img src="images/beginning.png" id="beginning-img" width="360" height="300" alt="beginning info" /><a href="seismi.php" id="tryagain"><img src="images/button-tryagain.png" width="300" height="100" alt="problems loading, please try again" /></a></div>
 	<?php 
 	$ip = $_SERVER["SERVER_ADDR"];
 	if ($ip == '::1' || $ip == '127.0.0.1') {
