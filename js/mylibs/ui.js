@@ -39,6 +39,9 @@ $(document).ready(function() {
 	$('.hlp').click(function() {
 		$('#help').delay(100).fadeToggle(500);
 	});
+	$('#help').click(function() {
+		$('#help').delay(100).fadeOut(500);
+	});
 
 	// toggle sidebar from time info
 	$('#tim1').click(function() {
@@ -59,18 +62,6 @@ $(document).ready(function() {
 	$("#viewcanvas").click(function(){
 		$('#sidebar').delay(300).animate({width:'hide'}, 300);
 		$('#bringsidebarhandle').delay(300).animate({width:'show'}, 300);
-	});
-	
-	$(document).keydown(function(e) {
-		var code = (e.keyCode ? e.keyCode : e.which);
-		if(code == 82) { //82 = r = show raw data
-			$('#eqrawdata').animate({width:'toggle'}, 200);
-		}
-		if(code == 70) { //70 = f = show/hide mainbar
-			$('#sidebar').animate({width:'hide'}, 300);
-			$('#eqrawdata').animate({width:'hide'}, 300);
-			$('#mainbar').fadeToggle(300, "linear");
-		}
 	});
 	
 	// Tooltip

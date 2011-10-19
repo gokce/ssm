@@ -5,6 +5,7 @@ $(document).ready(function() {
 	$.seismi.currentzoom = 0;
 	$.seismi.moveview = false;
 	$.seismi.eqsmoving = true;
+	$.seismi.altkey = false;
 	
 	paper.setup('viewcanvas');
 	var tool = new Tool();
@@ -65,33 +66,41 @@ $(document).ready(function() {
 	$('#tectonic').click(function(){$("#tectonic span").toggle();});
 	$('#volcanoes').click(function(){$("#volcanoes span").toggle();});
 	
+	// Shortcuts
 	$(document).keydown(function(e) {
 	  if ($.seismi.moveview) { return; }
 		var code = (e.keyCode ? e.keyCode : e.which);
+		if (e.altKey) { $.seismi.altkey = true;} 
 		//if(code == 49 || code == 78) { show('nst'); } // 1 or n = NST
-		if(code == 49 || code == 77) { show('map'); } // 1 or m = MAP
-		if(code == 50 || code == 84) { show('tml'); } // 2 or t = TML
-		if(code == 51 || code == 68) { show('dpt'); } // 3 or d = DPT
-		if(code == 52 || code == 76) { show('lst'); } // 4 or l = LST
-		if(code == 48) { selectNewestEarthquake();  } // 0 = Select newest earthquake
-		if(code == 37) { selectNextEarthquake(); }    // left arrow = select next earthquake
-		if(code == 39) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
+		if(code == 49 || code == 97  || code == 77) { show('map'); } // 1 or m = MAP
+		if(code == 50 || code == 98  || code == 84) { show('tml'); } // 2 or t = TML
+		if(code == 51 || code == 99  || code == 68) { show('dpt'); } // 3 or d = DPT
+		if(code == 52 || code == 100 || code == 76) { show('lst'); } // 4 or l = LST
+		if(code == 48 || code == 96) { selectNewestEarthquake();  } // 0 or 0numba = Select newest earthquake
+		if(code == 37 && $.seismi.altkey == false) { selectNextEarthquake(); }    // left arrow = select next earthquake
+		if(code == 39 && $.seismi.altkey == false) { selectPreviousEarthquake(); }// right arrow = select prev earthquake
 		if ($.seismi.data_loaded == false) { return; }
 		if ($.seismi.eqsmoving) { return; }
-		if(code == 37 && e.altKey && current_view == 'dpt') { move('right',canvas.width-100); } // move left
-		if(code == 39 && e.altKey && current_view == 'dpt') { move('left',canvas.width-100); } // move right
-		if(code == 37 && e.altKey && current_view == 'tml') { move('right',canvas.width-100); } // move left
-		if(code == 39 && e.altKey && current_view == 'tml') { move('left',canvas.width-100); } // move right
+		if(code == 37 && e.altKey && (current_view == 'dpt' || current_view == 'tml')) { move('right',canvas.width-100); } // move left
+		if(code == 39 && e.altKey && (current_view == 'dpt' || current_view == 'tml')) { move('left',canvas.width-100); } // move right
 		if(code == 40 && e.altKey && current_view == 'lst') { move('up',100); } // move up
 		if(code == 38 && e.altKey && current_view == 'lst') { move('down',100); } // move down
-		if(code == 183 && e.altKey && current_view == 'map') { zoom(2) } // + = zoom in
-		if(code == 189 && e.altKey && current_view == 'map') { zoom(0) } // - = zoom out
-		if(code==37 && e.altKey && current_view == 'map') $("#mapcontainer").mapbox("left",40);
-		if(code==38 && e.altKey && current_view == 'map') $("#mapcontainer").mapbox("up",40);
-		if(code==39 && e.altKey && current_view == 'map') $("#mapcontainer").mapbox("left",-40);
-		if(code==40 && e.altKey && current_view == 'map') $("#mapcontainer").mapbox("up",-40);
+		if((code == 107 || code == 61 || code == 187 ) && current_view == 'map') { zoom(2) } // + = zoom in
+		if((code == 109 || code == 189) && current_view == 'map') { zoom(0) } // - = zoom out
+		if(code == 37 && e.altKey && current_view == 'map') { $("#mapcontainer").mapbox("left",40); }
+		if(code == 38 && e.altKey && current_view == 'map') { $("#mapcontainer").mapbox("up",40); }
+		if(code == 39 && e.altKey && current_view == 'map') { $("#mapcontainer").mapbox("left",-40); }
+		if(code == 40 && e.altKey && current_view == 'map') { $("#mapcontainer").mapbox("up",-40); }
+		if(code == 82) { $('#eqrawdata').animate({width:'toggle'}, 200); } // 82 = r = show raw data
+		if(code == 70) { //70 = f = show/hide mainbar
+			$('#sidebar').animate({width:'hide'}, 300);
+			$('#eqrawdata').animate({width:'hide'}, 300);
+			$('#mainbar').fadeToggle(300, "linear");
+		}
 	});
-	
+	$(document).keyup(function(e) {
+	  if (e.altKey) { $.seismi.altkey = false;} // make alt state false
+	});
 	zoom = function(level) {
 	  if ($.seismi.eqsmoving) { return; }
 		speed = 1;
@@ -137,7 +146,7 @@ $(document).ready(function() {
 		$('#navi').find('.'+view_name).addClass('selected');
 		if (current_view != 'hlp'){ // remove help overlay, if entering some other view
 		  $('#help').delay(100).fadeOut(500);
-		} 
+		}
 		current_view = view_name;
 		$.each($.seismi.data.earthquakes, function(k, v) {
 			$.each(views, function(k2, v2) {
