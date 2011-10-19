@@ -53,6 +53,7 @@ $(document).ready(function() {
 		  $('#beginning-img').fadeOut(200); // hide beginning again button
 		  $('#tryagain').fadeIn(200); // show try again button
 		  console.log("Connection to API failed");
+		  /* Test Data
 		  makeAjaxCall('js/test_data.json', 
 		  function(data) {
 		    console.log("Using local test data /js/test_data.json");
@@ -62,6 +63,7 @@ $(document).ready(function() {
 	    function() {
 	      console.log("There is no js/test_data.json file, place one to launch with test data");
 	    });
+	    */
 		});
 	}
 	
