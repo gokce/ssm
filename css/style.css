@@ -117,8 +117,9 @@ ul.ulmagnitude {padding-bottom:10px;}
 .circ_eq7 {margin:-10px 10px 0 0;font-size:32px;}
 
 /* ==== TEXT + OTHER ==== */
-a{color:#666;text-decoration:none;border:none;}
-a:hover{color:#eee;}
+a{color:#B9AD4E;text-decoration:none;border:none;}
+a:hover{color:#fe6;}
+a:active{border:none;}
 img{border:none;}
 
 
@@ -154,7 +155,7 @@ img{border:none;}
 #help {display:none;}
 #help div {position:absolute; z-index:3090000;}
   #helptext {top:15px; left:25px; width:500px; height:500px; font:normal 15px/1.4 'extravaganzza', serif;}
-  #helptext li {color:rgba(255,255,255,0.6); list-style-position:inside;}
+  #helptext li {color:rgba(255,255,255,0.6); list-style:none outside;}
   #helpbg {width:100%; height:100%; background:#000; opacity:0.9;}
   #help1 {bottom:75px; left:195px;  width:404px; height:53px;  background:url('../images/help-1.png') no-repeat bottom left;}
   #help2 {bottom:75px; right:450px; width:272px; height:60px; background:url('../images/help-2.png') no-repeat bottom right;}
@@ -181,7 +182,7 @@ background:#111 url('../images/map_bg.png') no-repeat top center; overflow:visib
 #seismilogoicon {position:absolute;top:89px;left:50%;margin-left:-96px;}
 #documentation #logo{margin-left:-9px;}
 
-body.lng p{font:normal 13px/1.3 Arial,Helvetica,sans-serif;margin:10px 0;}
+body.lng p{font:normal 13px/1.4 Arial,Helvetica,sans-serif; margin:10px 0;}
 body.lng h1{font:normal 21px/1.6 extravaganzza, Arial,Helvetica,sans-serif; color:#ccc; margin:0;}
 body.lng h2{font:normal 16px/1.6 extravaganzza, Arial,Helvetica,sans-serif; color:#fff; border-bottom:1px solid #333; margin-bottom:15px; padding-bottom:10px;}
 #documentation h1{font:normal 24px/1.6 extravaganzzaBold, Arial,Helvetica,sans-serif; color:#205080;}
@@ -189,11 +190,11 @@ body.lng h2{font:normal 16px/1.6 extravaganzza, Arial,Helvetica,sans-serif; colo
 #launch img{padding-bottom:10px;}
 
 #introduction{margin:30px auto 40px auto; width:715px; }
-#container{background:#171717;border-top:1px solid #1c1c1c;padding:30px 0 40px 0;margin-top:80px;}
+#container{background:#171717;border-top:1px solid #1c1c1c;padding:30px 0 40px 0;margin-top:70px;}
 #info, #documentation{width:920px;margin:0 auto;text-align:left;}
 	#i1, #i2, #i3{float:left;width:280px;border-bottom:1px solid #222;padding-bottom:10px;}
 	#i2{margin-left:40px;}
-	#i2 p {color:#fe3;}
+	#i2 p {color:#fe6;}
 	#i3{float:none;margin-left:640px;}
 #copy{padding:20px; background:#171717; color:#333; font-size:12px;}
 #copy a{color:#444;}
@@ -201,8 +202,3 @@ body.lng h2{font:normal 16px/1.6 extravaganzza, Arial,Helvetica,sans-serif; colo
 #documentation {padding:30px; background:rgba(0,0,0,0.7); margin:10px auto 50px auto; }
 
 .date{color:#444;font-size:11px;font-style:italic;padding-top:100px;}
-
-/* ===== Headings, text ===== */
-body.lng a{color:#ccc;text-decoration:none;border:none;}
-body a:hover{text-decoration:none;color:#04c;}
-body a:active{border:none;}

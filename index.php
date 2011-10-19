@@ -26,11 +26,11 @@
 		<div id="i1">
 			<h2>About Seismi</h2>
 			<p>Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form.</p>
+			<p>Seismi is developed by:<br /> <a href="http://www.gokcetaskan.com">Gokce Taskan</a> and <a href="http://www.nikoknappe.com">Niko Knappe</a>.<br />Contact us at: info@seismi.org</p>
 			<p>Seismi is proudly using <a href="http://www.paperjs.org/">Paper.js</a>!</p>
 			<p>In order to use Seismi you need a modern browser (for e.g. <a href="http://www.google.com/chrome/" title="Google Chrome">Chrome</a> or <a href="http://www.apple.com/safari/" title="Safari browser">Safari</a>) &amp; to have javascript enabled.</p>
 			<p>Take a look at the <a href="http://seismi.org/api/">API</a>.</p>
 			<p>Seismi is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported">Creative Commons BY-NC-SA 3.0 license</a>.</p>
-			<p>Contact us at: info [at] seismi [.] org</p>
 		</div>
 		<div id="i2">
 			<h2>Twitter</h2>

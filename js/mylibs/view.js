@@ -19,7 +19,7 @@ $(document).ready(function() {
 	
 	var views = ['nst','map','tml','dpt','lst'];
 	
-	var current_view = 'tml';
+	var current_view = 'dpt';
 	var canvas;
 	$('#navi').find('.'+current_view).addClass('selected');
 	var current_selection;

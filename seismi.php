@@ -106,6 +106,7 @@
 		<div id="helpbg"></div>
 		<div id="helptext">
 			<p>Seismi is an earthquake data visualization project which is using publicly available data provided by <a href="http://www.usgs.gov/" title="USGS - U.S. Geological Survey">USGS</a> and transforming it to a more informative, human readable and visually interesting form.</p>
+			<p>Seismi is developed by: <a href="http://www.gokcetaskan.com">Gokce Taskan</a> and <a href="http://www.nikoknappe.com">Niko Knappe</a>.<br />Contact us at: info@seismi.org</p>
 			<ul>Handy shortcuts:
 			<li>"Arrow" keys (&larr; &amp; &rarr;) to select next/prev. earthquake</li>
 			<li>"Alt" + "Arrow" keys to move the view.</li>
