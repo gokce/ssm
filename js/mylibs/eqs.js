@@ -50,7 +50,8 @@ $(document).ready(function() {
 			refreshData($.seismi.data);
 		},
 		function(){
-		  $('#beginning-img').fadeOut(200); // hide beginning again button
+		  $('#beginning-corner').fadeOut(200); // hide beginning again button
+		  $('#beginning-middle').fadeOut(200); // hide beginning again button
 		  $('#tryagain').fadeIn(200); // show try again button
 		  console.log("Connection to API failed");
 		  /* Test Data
@@ -174,7 +175,9 @@ $(document).ready(function() {
 	  refresh: function() {
 	    $.visualizations.refresh();
   	  $('#intro').fadeOut(400);
-  	  $('#intro-container #beginning-img').fadeOut(400);
+  	  //$('#intro-container #beginning-img').fadeOut(400);
+  	  $('#beginning-corner').fadeOut(400); // hide beginning again button
+		  $('#beginning-middle').fadeOut(400); // hide beginning again button
   	  $('#mainbar #mainloading').fadeOut(400);
 			$('#mainbar #mainicon').fadeIn(200);
   	  $('#mainbarinfo').animate({height:'hide'}, 300);
