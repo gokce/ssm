@@ -196,7 +196,7 @@ body.lng h2{font:normal 16px/1.6 extravaganzza, Arial,Helvetica,sans-serif; colo
 	#i1, #i2, #i3{float:left;width:280px;border-bottom:1px solid #222;padding-bottom:10px;}
 	#i2{margin-left:40px;}
 	#i2 p {color:#fe6;}
-	#i3{float:none;margin-left:640px;}
+	#i3{float:none;margin-left:640px;padding-top:1px}
 #copy{padding:20px; background:#171717; color:#333; font-size:12px;}
 #copy a{color:#444;}
 #copy a:hover{color:#666;}
