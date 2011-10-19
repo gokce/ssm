@@ -32,10 +32,7 @@
 			<p>Take a look at the <a href="http://seismi.org/api/">API</a>.</p>
 			<p>Seismi is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported">Creative Commons BY-NC-SA 3.0 license</a>.</p>
 		</div>
-		<div id="i2">
-			<h2>Twitter</h2>
-			<?php @include 'news/seismi_twitter.php'; ?>
-		</div>
+		<div id="i2"><h2>Twitter</h2><?php @include 'news/seismi_twitter.php'; ?></div>
 		<div id="i3">
 			<h2>Disclaimer</h2>
 			<p>This is a data visualization software set with the informations provided from the web sources.</p>
