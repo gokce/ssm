@@ -188,9 +188,10 @@ $(document).ready(function() {
 				
 				// Circle
 				var eq_circle = new Path.Circle(new Point(initx, inity), initsize);
-				//colors = ['#A3CC29','#FFE24D','#CC671F','#B30000'] //with eq-colors
-				colors = ['#0044cc','#0044cc','#0044cc','#0044cc'] // only blue
-				eq_circle.fillColor = colors[Math.floor(v.magnitude)-4];
+				colors = ['#A3CC29','#FFE24D','#CC671F','#B30000','#B30000'] //with eq-colors
+				//colors = ['#0044cc','#0044cc','#0044cc','#0044cc'] // only blue
+				//eq_circle.fillColor = colors[Math.floor(v.magnitude)-4];
+				eq_circle.fillColor = '#0044cc';
 				eq_circle.opacity = ((v.magnitude / 15) + 0.3);
 				eq_circle.name = 'fill';
 

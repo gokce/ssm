@@ -15,9 +15,9 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
   <!-- scripts concatenated and minified via ant build script-->
 	<script type="text/javascript" src="js/plugins.js"></script>
-	<script type="text/javascript" src="js/ui.js"></script>
-	<script type="text/javascript" src="js/eqs.js"></script>
-	<script type="text/javascript" src="js/view.js"></script>
+	<script type="text/javascript" src="js/mylibs/ui.js"></script>
+	<script type="text/javascript" src="js/mylibs/eqs.js"></script>
+	<script type="text/javascript" src="js/mylibs/view.js"></script>
 	<!-- end scripts-->
 </head>
 <body>
