@@ -3,4 +3,5 @@
 
 User-agent: *
 Disallow: /seismi.php
+Disallow: /beta/
 Allow: /
