@@ -351,7 +351,8 @@ $(document).ready(function() {
 		prev_day = '';
 		$.each(data, function(k, v) {
 			newx = canvas.width-posx;
-			newy = posy+(Math.floor(v.depth)/1.2);
+			//newy = posy+(Math.floor(v.depth)/1.2);
+			newy = posy+mapValues(Math.floor(v.depth),0,600,0,canvas.height-170);
 			v['destination'] = new Point(newx,newy);
 			v['destination_size'] = mapValues(v.magnitude, 4, 9, 10, 180);
 			v['resize'] = true;
