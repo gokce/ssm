@@ -148,7 +148,8 @@ img{border:none;}
 
 /* ===== INTRO ==== */
 #intro {width:100%; height:100%; background:rgba(0,0,0,0.4); top:0; left:0; position:absolute; z-index:3300000;}
-	#intro-container img#beginning-img {position:absolute; z-index:5000000; bottom:75px; right:250px;}
+	#intro-container img#beginning-middle {position:absolute; z-index:5000000; top:50%; left:50%; margin:-145px 0 0 -130px;}
+	#intro-container img#beginning-corner {position:absolute; z-index:5000000; bottom:80px; right:250px;}
 	#intro-container #tryagain {position:absolute; z-index:5000000; top:50%; left:50%; margin:0 0 0 -150px; display:none; }
 
 /* ===== HELP ==== */
