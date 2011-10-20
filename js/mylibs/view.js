@@ -184,6 +184,8 @@ $(document).ready(function() {
 	holderIndicator['5'] = $('#mag2').find('.i5');
 	holderIndicator['6'] = $('#mag2').find('.i6');
 	holderIndicator['7'] = $('#mag2').find('.i7');
+	holderIndicator['8'] = $('#mag2').find('.i7');
+	holderIndicator['9'] = $('#mag2').find('.i7');
 	
 	$.visualizations = {
 		refresh: function() {
