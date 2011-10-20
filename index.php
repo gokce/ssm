@@ -36,26 +36,28 @@
 	<div id="introduction">
 		<h1>Seismi is an earthquake data visualization project which is using publicly available data provided by <a href="http://www.usgs.gov/" title="USGS - U.S. Geological Survey">USGS</a> and transforming it to a more informative, human readable and visually interesting form.</h1>
 		<a href="seismi.php" onclick="loading(1);" title="Launch Seismi" id="launch"><img src="images/button_launch.png" alt="Launch Seismi" /></a>
-	<div id="share-buttons">
-		<div style="float:left; margin-right:12px;">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="Seismi">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-		</div>
-		<div style="float:left; margin-right:8px;">
-			<div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-			<div class="fb-like" data-href="http://www.seismi.org" data-send="false" data-layout="box_count" data-show-faces="false"></div>
-		</div>
-		<div style="float:left; padding-top:2px;">
-			<div class="g-plusone" data-size="tall"></div>
-		</div>
 	</div>
-	</div>
+	<div id="share-container">
+  	<div id="share-buttons">
+  		<div style="float:left; margin-right:12px;">
+  			<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="Seismi">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  		</div>
+  		<div style="float:left; margin-right:8px;">
+  			<div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+  			<div class="fb-like" data-href="http://www.seismi.org" data-send="false" data-layout="box_count" data-show-faces="false"></div>
+  		</div>
+  		<div style="float:left; padding-top:2px;">
+  			<div class="g-plusone" data-size="tall"></div>
+  		</div>
+  	</div>
+  </div>
 <div id="container">
 	<div id="info">
 		<div id="i1">

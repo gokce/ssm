@@ -190,10 +190,11 @@ body.lng h2{font:normal 16px/1.6 extravaganzza, Arial,Helvetica,sans-serif; colo
 #introduction h1 {margin:200px 60px 20px 60px;}
 #launch img{padding-bottom:10px;}
 
-#share-buttons {position:relative; margin:0 auto;margin-top:20px;width:180px;height:70px;overflow:hidden;}
+#share-container {margin:0 auto; width:920px;text-align:right;height:70px;margin-bottom:20px}
+#share-buttons {float:right;width:180px;height:70px;overflow:hidden;}
 #share-buttons:after {clear:both;}
 
-#introduction{margin:30px auto 40px auto; width:715px; }
+#introduction{margin:30px auto 40px auto; width:715px;}
 #container{background:#171717;border-top:1px solid #1c1c1c;padding:30px 0 40px 0;margin-top:0;}
 #info, #documentation{width:920px;margin:0 auto;text-align:left;}
 	#i1, #i2, #i3{float:left;width:280px;border-bottom:1px solid #222;padding-bottom:10px;}
