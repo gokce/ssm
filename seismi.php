@@ -15,6 +15,7 @@
 	<meta property="fb:admins" content="574510857,619437333"/>
 	<meta property="og:site_name" content="SEISMI"/>
 	<meta property="og:description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form."/>
+	<link rel="image_src" href="http://www.seismi.org/images/seismi-logo-90x90.png" />
 	<!-- CSS concatenated and minified via ant build script-->
   <link rel="stylesheet" href="css/style.css">
   <!-- end CSS-->
