@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	// hide in the beginnning
-	$('#eqrawdata').animate({width:'hide'}, 0);
-	$('#sidebar').animate({width:'hide'}, 0);
+	$('#eqrawdata, #sidebar').animate({width:'hide'}, 0);
 	
 	if (typeof $.seismi === 'undefined') $.seismi = {};
 	
@@ -22,24 +21,16 @@ $(document).ready(function() {
 	  $('#mainbarinfo').html('LST lays all the filtered earthquakes on achronologically ordered grid.');
 	});
 	$(".hlp").mouseenter(function() {
-	  $('#mainbarinfo').html('This gives you some tips about the user interface elements. btw. use arrow keys to move within next/prev. selected earthquake.');
+	  $('#mainbarinfo').html('Enables help view with some tips about the user interface elements and keyboard shortcuts.');
 	});
-	$("#navi").mouseenter(function(){ $('#mainbarinfo').delay(600).animate({height:'show'}, 300); }); // hide when leaving menu
+	$("#navi").mouseenter(function(){ $('#mainbarinfo').delay(600).animate({height:'show'}, 300); }); // show when entering menu
 	$("#navi").mouseleave(function(){ $('#mainbarinfo').delay(400).animate({height:'hide'}, 200); }); // hide when leaving menu
-	
-	
-	// toggle rawdata
-	$('#butr').click(function() {
-		$('#sidebar').animate({width:'hide'}, 200, function() {
-			$('#eqrawdata').animate({width:'toggle'}, 200);
-		});
-	});
 	
 	// toggle help view
 	$('.hlp').click(function() {
 		$('#help').delay(100).fadeToggle(500);
 	});
-	$('#help').click(function() {
+	$('#help').click(function() { // Hide if clicks screen
 		$('#help').delay(100).fadeOut(500);
 	});
 
