@@ -80,9 +80,9 @@ function onFrame(event) {
 			var text1 = new PointText(390, 150);
 			var text2 = new PointText(510, 334);
 			var text3 = new PointText(390, 430);
-			text1.characterStyle = {fontSize:9, fillColor:'white'};
-			text2.characterStyle = {fontSize:9, fillColor:'white'};
-			text3.characterStyle = {fontSize:9, fillColor:'white'};
+			text1.characterStyle = {font:'extravaganzza', fontSize:9, fillColor:'white'};
+			text2.characterStyle = {font:'extravaganzza', fontSize:9, fillColor:'white'};
+			text3.characterStyle = {font:'extravaganzza', fontSize:9, fillColor:'white'};
 			text1.content = 'DEPTH';
 			text2.content = 'EPIC CENTER';
 			text3.content = 'MAGNITUDE';

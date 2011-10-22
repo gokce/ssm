@@ -198,7 +198,7 @@ table.api_quide td {opacity:0.6; }
 body.lng{font:normal 13px/1.5 "Lucida Grande", Arial,Helvetica,sans-serif; color:#999; overflow:visible; width:auto; height:auto;}
 body.lng #seismilogo {margin-top:80px;}
 body.lng p{margin:10px 0;}
-body.lng h1{font:bold 18px/1.5 extravaganzza, Arial,Helvetica,sans-serif; color:#ccc; margin:0;}
+body.lng h1{font:bold 18px/1.5 extravaganzza, Arial,Helvetica,sans-serif; color:#ccc; margin:0; letter-spacing:1.1;}
 body.lng h2{font:normal 16px/1.5 extravaganzza, Arial,Helvetica,sans-serif; color:#fff;}
 #launch img{margin:25px 0 10px 0;}
 body.lng .disclaimer {margin-top:40px; font-size:12px;}
