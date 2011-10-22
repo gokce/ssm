@@ -28,6 +28,24 @@ src: url('../extravaganzza/extravaganzza-webfont.eot?#iefix') format('embedded-o
 font-weight: normal; font-style: normal;
 }
 
+/* INDEX 1140css framework */
+.container {padding-left:20px; padding-right:20px;}
+.row {width:100%; max-width:1140px; min-width:755px; margin:0 auto; overflow:hidden;}
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol { margin-right:3.8%; float:left; min-height:1px;}
+.row .onecol {width:4.85%;}
+.row .twocol {width:13.45%;}
+.row .threecol {width:22.05%;}
+.row .fourcol {width:30.75%;}
+.row .fivecol {width:39.45%;}
+.row .sixcol {width:48%;}
+.row .sevencol {width:56.75%;}
+.row .eightcol {width:65.4%;}
+.row .ninecol {width:74.05%;}
+.row .tencol {width:82.7%;}
+.row .elevencol {width:91.35%;}
+.row .twelvecol {width:100%; float:left;}
+.last {margin-right: 0px;}
+
 /* === MAP CONTAINER === */
 #mapcontainer {width:100%;height:100%;cursor:move;margin:0 auto;overflow:hidden;position:relative;z-index:100000;display:none;}
 #map-1000 {background:url('../images/map-1000.png') no-repeat center center;width:100%;height:100%;}
@@ -176,34 +194,24 @@ table.api_quide td:first-child {width:250px;}
 table.api_quide td {opacity:0.6; }
 
 /* ===== INDEX PAGE ==== */
-body.lng{font:normal 13px/1.6 Arial,Helvetica,sans-serif; color:#999; text-align:center;
-background:#111 url('../images/map_bg.png') no-repeat top center; overflow:visible; width:auto; height:auto;}
+body.lng{font:normal 13px/1.5 "Lucida Grande", Arial,Helvetica,sans-serif; color:#999; overflow:visible; width:auto; height:auto;}
+body.lng #seismilogo {margin-top:80px;}
+body.lng p{margin:10px 0;}
+body.lng h1{font:bold 18px/1.5 extravaganzza, Arial,Helvetica,sans-serif; color:#ccc; margin:0;}
+body.lng h2{font:normal 16px/1.5 extravaganzza, Arial,Helvetica,sans-serif; color:#fff;}
+#launch img{margin:25px 0 10px 0;}
+body.lng .disclaimer {margin-top:40px; font-size:12px;}
+body.lng .date{color:#444;font-size:11px;font-style:italic;padding-top:100px;}
 
-#seismilogo {position:absolute;top:70px;left:50%;margin-left:-70px;}
-#seismilogoicon {position:absolute;top:89px;left:50%;margin-left:-96px;}
-#documentation #logo{margin-left:-9px;}
+.buildwith {margin-top:20px;}
+.paperjslogo {margin-top:10px;}
+.share-buttons {overflow:hidden;margin-top:10px;}
+.share-buttons:after {clear:both;}
 
-body.lng p{font:normal 13px/1.4 Arial,Helvetica,sans-serif; margin:10px 0;}
-body.lng h1{font:normal 21px/1.6 extravaganzza, Arial,Helvetica,sans-serif; color:#ccc; margin:0;}
-body.lng h2{font:normal 16px/1.6 extravaganzza, Arial,Helvetica,sans-serif; color:#fff; border-bottom:1px solid #333; margin-bottom:15px; padding-bottom:10px;}
+.footer{text-align:center; padding:60px 0 20px 0; color:#333; font-size:12px;}
+.footer a{color:#444;}
+.footer a:hover{color:#666;}
+
 #documentation h1{font:normal 24px/1.6 extravaganzzaBold, Arial,Helvetica,sans-serif; color:#205080;}
-#introduction h1 {margin:200px 60px 20px 60px;}
-#launch img{padding-bottom:10px;}
-
-#share-container {margin:0 auto; width:920px;text-align:right;height:70px;margin-bottom:20px}
-#share-buttons {float:right;width:180px;height:70px;overflow:hidden;}
-#share-buttons:after {clear:both;}
-
-#introduction{margin:30px auto 40px auto; width:715px;}
-#container{background:#171717;border-top:1px solid #1c1c1c;padding:30px 0 40px 0;margin-top:0;}
-#info, #documentation{width:920px;margin:0 auto;text-align:left;}
-	#i1, #i2, #i3{float:left;width:280px;border-bottom:1px solid #222;padding-bottom:10px;}
-	#i2{margin-left:40px;}
-	#i2 p {color:#fe6;}
-	#i3{float:none;margin-left:640px;padding-top:1px}
-#copy{padding:20px; background:#171717; color:#333; font-size:12px;}
-#copy a{color:#444;}
-#copy a:hover{color:#666;}
 #documentation {padding:30px; background:rgba(0,0,0,0.7); margin:10px auto 50px auto; }
 
-.date{color:#444;font-size:11px;font-style:italic;padding-top:100px;}

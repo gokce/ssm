@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<title>SEISMI - visualizing earthquakes</title>
-	<meta name="description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form.">
-  <meta name="keywords" content="earthquake, earthquakes, visualization, data visualization, infographics, paperjs, paper.js, paperscript, open data, open source">
-  <meta name="author" content="Gokce Taskan, Niko Knappe">
+	<meta name="description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form."/>
+  <meta name="keywords" content="earthquake, earthquakes, visualization, data visualization, infographics, paperjs, paper.js, paperscript, open data, open source"/>
+  <meta name="author" content="Gokce Taskan, Niko Knappe"/>
   <!-- Open graph -->
 	<meta property="og:title" content="SEISMI - Earthquake visualization"/>
 	<meta property="og:type" content="website"/>
@@ -17,13 +17,13 @@
 	<meta property="og:description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form."/>
 	<link rel="image_src" href="http://www.seismi.org/images/seismi-logo-90x90.png" />
 	<!-- Google Plus -->
-	<meta itemprop="name" content="SEISMI - Earthquake visualization">
-  <meta itemprop="description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form.">
-  <meta itemprop="image" content="http://www.seismi.org/images/seismi-logo-90x90.png">
+	<meta itemprop="name" content="SEISMI - Earthquake visualization"/>
+  <meta itemprop="description" content="Seismi is an earthquake data visualization project which is using publicly available data provided by USGS and transforming it to a more informative, human readable and visually interesting form."/>
+  <meta itemprop="image" content="http://www.seismi.org/images/seismi-logo-90x90.png"/>
 	<!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css"/>
   <!-- end CSS-->
-	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.png"/>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
   <!-- scripts concatenated and minified via ant build script-->
