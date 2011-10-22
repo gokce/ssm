@@ -34,36 +34,41 @@
     })();
   </script>
 <script type="text/javascript" src="js/plugins.js"></script>
-<script type="text/paperscript" canvas="viewcanvas">
+<script type="text/paperscript" canvas="frontcanvas">
+animating = true;
+var screenwidth = $(document).width();
 var speed1 = 5; var speed2 = 20; var speed3 = 30;
 var size1 = 0.1; var size2 = 0.1; var size3 = 0.1; var size0 = 1;
-var circle1 = new Path.Circle(new Point(350, 350), size1);
-var circle2 = new Path.Circle(new Point(350, 350), size2);
-var circle3 = new Path.Circle(new Point(350, 350), size3);
-var depthline = new Path.Line(new Point(350,0),new Point(350,size0));
-depthline.strokeColor = 'white'; depthline.strokeWidth = 4;
+var circle1 = new Path.Circle(new Point(350, 330), size1);
+var circle2 = new Path.Circle(new Point(350, 330), size2);
+var circle3 = new Path.Circle(new Point(350, 330), size3);
+var depthline = new Path.Line(new Point(350, 0),new Point(350,size0));
+depthline.strokeColor = 'white'; depthline.strokeWidth = 6;
 circle1.fillColor = '#0044cc'; circle2.fillColor = '#0044cc'; circle3.fillColor = '#0044cc';
 circle1.opacity = 0.5; circle2.opacity = 0.3; circle3.opacity = 0.4;
-var dsize1 = 50; var dsize2 = 110; var dsize3 = 180; var dsize0 = 350;
+var dsize1 = 50; var dsize2 = 110; var dsize3 = 180; var dsize0 = 330;
 
 function onFrame(event) {
-	var diff_size0 = dsize0-size0; var dest_size0 = size0+(diff_size0/speed1);
-	var diff_size1 = dsize1-size1; var dest_size1 = size1+(diff_size1/speed1);
-	var diff_size2 = dsize2-size2; var dest_size2 = size2+(diff_size2/speed2);
-	var diff_size3 = dsize3-size3; var dest_size3 = size3+(diff_size3/speed3);
-	if (Math.abs(diff_size0) >= 0.3) {
-		depthline.scale(dest_size0/size0, new Point(350, 0)); size0 = dest_size0;
-	}
-	if (Math.abs(diff_size0) <= 0.3 && Math.abs(diff_size3) >= 0.3) {
-		circle1.scale(dest_size1/size1); size1 = dest_size1;
-		circle2.scale(dest_size2/size2); size2 = dest_size2;
-		circle3.scale(dest_size3/size3); size3 = dest_size3;
+	if (animating == true) {
+		var diff_size0 = dsize0-size0; var dest_size0 = size0+(diff_size0/speed1);
+		var diff_size1 = dsize1-size1; var dest_size1 = size1+(diff_size1/speed1);
+		var diff_size2 = dsize2-size2; var dest_size2 = size2+(diff_size2/speed2);
+		var diff_size3 = dsize3-size3; var dest_size3 = size3+(diff_size3/speed3);
+		if (Math.abs(diff_size0) >= 0.3) {
+			depthline.scale(dest_size0/size0, new Point(350, 0)); size0 = dest_size0;
+		}
+		if (Math.abs(diff_size0) <= 0.3 && Math.abs(diff_size3) >= 0.3) {
+			circle1.scale(dest_size1/size1); size1 = dest_size1;
+			circle2.scale(dest_size2/size2); size2 = dest_size2;
+			circle3.scale(dest_size3/size3); size3 = dest_size3;
+		}
+		if (Math.abs(diff_size3) <= 0.3){ animating = false; }
 	}
 }
 </script>
 </head>
 <body class="lng">
-<canvas id="viewcanvas" resize keepalive="true"></canvas>
+<canvas id="frontcanvas" resize keepalive="true"></canvas>
 <div class="container">
 	<div class="row">
 		<div class="sixcol"></div>
@@ -78,7 +83,7 @@ function onFrame(event) {
 	</div>
 	<div class="row buildwith">
 		<div class="sixcol"></div>
-		<div class="twocol"><p>Build with:</p><p><a href="http://www.paperjs.org"><img src="images/logo-paperjs.png" class="paperjslogo" alt="Paper.js" /></a></p></div>
+		<div class="twocol"><p>Built with:</p><p><a href="http://www.paperjs.org"><img src="images/logo-paperjs.png" class="paperjslogo" alt="Paper.js" /></a></p></div>
 		<div class="threecol last share-buttons">
   		<div style="float:left; margin-right:12px;">
   			<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="Seismi">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
