@@ -202,7 +202,7 @@ body.lng h1{font:bold 18px/1.5 extravaganzza, Arial,Helvetica,sans-serif; color:
 body.lng h2{font:normal 16px/1.5 extravaganzza, Arial,Helvetica,sans-serif; color:#fff;}
 #launch img{margin:25px 0 10px 0;}
 body.lng .disclaimer {margin-top:40px; font-size:12px;}
-body.lng .date{color:#444;font-size:11px;font-style:italic;padding-top:100px;}
+body.lng .date{color:#444;font-size:11px;font-style:italic;}
 
 .buildwith {margin-top:20px;}
 .paperjslogo {margin-top:10px;}

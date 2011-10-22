@@ -37,15 +37,18 @@
 <script type="text/paperscript" canvas="frontcanvas">
 animating = true;
 var screenwidth = $(document).width();
-var speed1 = 5; var speed2 = 20; var speed3 = 30;
+var speed1 = 4; var speed2 = 8; var speed3 = 16;
 var size1 = 0.1; var size2 = 0.1; var size3 = 0.1; var size0 = 1;
 var circle1 = new Path.Circle(new Point(350, 330), size1);
 var circle2 = new Path.Circle(new Point(350, 330), size2);
 var circle3 = new Path.Circle(new Point(350, 330), size3);
+var circles = new Group( [circle1,circle2,circle3] );
+circles.fillColor = '#0044cc';
+circle1.opacity = 0.3; circle2.opacity = 0.4; circle3.opacity = 0.4;
 var depthline = new Path.Line(new Point(350, 0),new Point(350,size0));
-depthline.strokeColor = 'white'; depthline.strokeWidth = 6;
-circle1.fillColor = '#0044cc'; circle2.fillColor = '#0044cc'; circle3.fillColor = '#0044cc';
-circle1.opacity = 0.5; circle2.opacity = 0.3; circle3.opacity = 0.4;
+depthline.strokeColor = 'white';
+depthline.strokeWidth = 6;
+
 var dsize1 = 50; var dsize2 = 110; var dsize3 = 180; var dsize0 = 330;
 
 function onFrame(event) {
@@ -62,7 +65,30 @@ function onFrame(event) {
 			circle2.scale(dest_size2/size2); size2 = dest_size2;
 			circle3.scale(dest_size3/size3); size3 = dest_size3;
 		}
-		if (Math.abs(diff_size3) <= 0.3){ animating = false; }
+		if (Math.abs(diff_size3) <= 0.3){
+			var hline1 = new Path.Line(new Point(379, 0),new Point(379,325));
+			var hline2 = new Path.Line(new Point(380, 325),new Point(370,325));
+			var hline3 = new Path.Line(new Point(370, 335),new Point(380,335));
+			var hline4 = new Path.Line(new Point(379, 335),new Point(379,510));
+			var hline5 = new Path.Line(new Point(380, 510),new Point(370,510));
+			var hline6 = new Path.Line(new Point(370, 330),new Point(500,330));
+			var lines = new Group( [hline1,hline2,hline3,hline4,hline5,hline6] );
+			lines.strokeColor = 'white';
+			lines.opacity = 0.4;
+			lines.strokeWidth = 2;
+			
+			var text1 = new PointText(390, 150);
+			var text2 = new PointText(510, 334);
+			var text3 = new PointText(390, 430);
+			text1.characterStyle = {fontSize:9, fillColor:'white'};
+			text2.characterStyle = {fontSize:9, fillColor:'white'};
+			text3.characterStyle = {fontSize:9, fillColor:'white'};
+			text1.content = 'DEPTH';
+			text2.content = 'EPIC CENTER';
+			text3.content = 'MAGNITUDE';
+			
+			animating = false;
+		}
 	}
 }
 </script>
@@ -122,9 +148,9 @@ function onFrame(event) {
 		<div class="fourcol">
 			<p>The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, reality or accuracy for a particular purpose and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.</p>
 			<p>By clicking "LAUNCH SEISMI" button you accept these terms and conditions.</p>
-		</div>
-		<div class="threecol last">
-			<?php @include 'news/seismi_twitter.php'; ?>
+			<div class="threecol last">
+				<?php @include 'news/seismi_twitter.php'; ?>
+			</div>
 		</div>
 	</div>
 	<div class="row footer">
