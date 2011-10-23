@@ -6,8 +6,8 @@ $(document).ready(function() {
 	$.seismi.moveview = false;
 	$.seismi.eqsmoving = true;
 	$.seismi.altkey = false;
-	
-	paper.setup('viewcanvas');
+	var canvas = document.getElementById('viewanvas');
+	paper.setup(viewcanvas);
 	var tool = new Tool();
 	
 	var hitOptions = {
