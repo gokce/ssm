@@ -150,9 +150,9 @@ function onFrame(event) {
 		<div class="fourcol">
 			<p>The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, reality or accuracy for a particular purpose and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.</p>
 			<p>By clicking "LAUNCH SEISMI" button you accept these terms and conditions.</p>
-			<div class="threecol last">
-				<?php @include 'news/seismi_twitter.php'; ?>
-			</div>
+		</div>
+		<div class="threecol last">
+			<?php @include 'news/seismi_twitter.php'; ?>
 		</div>
 	</div>
 	<div class="row footer">
