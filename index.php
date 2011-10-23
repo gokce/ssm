@@ -39,13 +39,13 @@ animating = true;
 var screenwidth = $(document).width();
 var speed1 = 4; var speed2 = 8; var speed3 = 16;
 var size1 = 0.1; var size2 = 0.1; var size3 = 0.1; var size0 = 1;
-var circle1 = new Path.Circle(new Point(350, 330), size1);
-var circle2 = new Path.Circle(new Point(350, 330), size2);
-var circle3 = new Path.Circle(new Point(350, 330), size3);
+var circle1 = new Path.Circle(new Point(200, 330), size1);
+var circle2 = new Path.Circle(new Point(200, 330), size2);
+var circle3 = new Path.Circle(new Point(200, 330), size3);
 var circles = new Group( [circle1,circle2,circle3] );
 circles.fillColor = '#0044cc';
 circle1.opacity = 0.3; circle2.opacity = 0.4; circle3.opacity = 0.4;
-var depthline = new Path.Line(new Point(350, 0),new Point(350,size0));
+var depthline = new Path.Line(new Point(200, 0),new Point(200,size0));
 depthline.strokeColor = 'white';
 depthline.strokeWidth = 6;
 
@@ -58,7 +58,7 @@ function onFrame(event) {
 		var diff_size2 = dsize2-size2; var dest_size2 = size2+(diff_size2/speed2);
 		var diff_size3 = dsize3-size3; var dest_size3 = size3+(diff_size3/speed3);
 		if (Math.abs(diff_size0) >= 0.3) {
-			depthline.scale(dest_size0/size0, new Point(350, 0)); size0 = dest_size0;
+			depthline.scale(dest_size0/size0, new Point(200, 0)); size0 = dest_size0;
 		}
 		if (Math.abs(diff_size0) <= 0.3 && Math.abs(diff_size3) >= 0.3) {
 			circle1.scale(dest_size1/size1); size1 = dest_size1;
@@ -66,20 +66,21 @@ function onFrame(event) {
 			circle3.scale(dest_size3/size3); size3 = dest_size3;
 		}
 		if (Math.abs(diff_size3) <= 0.3){
-			var hline1 = new Path.Line(new Point(379, 0),new Point(379,325));
-			var hline2 = new Path.Line(new Point(380, 325),new Point(370,325));
-			var hline3 = new Path.Line(new Point(370, 335),new Point(380,335));
-			var hline4 = new Path.Line(new Point(379, 335),new Point(379,510));
-			var hline5 = new Path.Line(new Point(380, 510),new Point(370,510));
-			var hline6 = new Path.Line(new Point(370, 330),new Point(500,330));
-			var lines = new Group( [hline1,hline2,hline3,hline4,hline5,hline6] );
+			var hline0 = new Path.Line(new Point(220, 4),new Point(230,4));
+			var hline1 = new Path.Line(new Point(229, 4),new Point(229,325));
+			var hline2 = new Path.Line(new Point(230, 325),new Point(220,325));
+			var hline3 = new Path.Line(new Point(220, 335),new Point(230,335));
+			var hline4 = new Path.Line(new Point(229, 335),new Point(229,510));
+			var hline5 = new Path.Line(new Point(230, 510),new Point(220,510));
+			var hline6 = new Path.Line(new Point(220, 330),new Point(350,330));
+			var lines = new Group( [hline0,hline1,hline2,hline3,hline4,hline5,hline6] );
 			lines.strokeColor = 'white';
-			lines.opacity = 0.4;
+			lines.opacity = 0.35;
 			lines.strokeWidth = 2;
 			
-			var text1 = new PointText(390, 150);
-			var text2 = new PointText(510, 334);
-			var text3 = new PointText(390, 430);
+			var text1 = new PointText(240, 160);
+			var text2 = new PointText(360, 334);
+			var text3 = new PointText(240, 430);
 			text1.characterStyle = {font:'extravaganzza', fontSize:9, fillColor:'white'};
 			text2.characterStyle = {font:'extravaganzza', fontSize:9, fillColor:'white'};
 			text3.characterStyle = {font:'extravaganzza', fontSize:9, fillColor:'white'};
@@ -97,7 +98,8 @@ function onFrame(event) {
 <canvas id="frontcanvas" resize keepalive="true"></canvas>
 <div class="container">
 	<div class="row">
-		<div class="sixcol"></div>
+		<div class="sixcol">
+		</div>
 		<div class="fivecol last">
 			<img id="seismilogo" src="images/seismi-logo.png" alt="Seismi" />
 			<h1>Seismi is an earthquake data visualization project which is using publicly available data provided by <a href="http://www.usgs.gov/" title="USGS - U.S. Geological Survey">USGS</a> and transforming it to a more informative, human readable and visually interesting form.</h1>
