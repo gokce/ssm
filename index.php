@@ -26,6 +26,9 @@
 	<link rel="shortcut icon" href="images/favicon.png"/>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  <!-- scripts concatenated and minified via ant build script-->
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<!-- end scripts-->
   <script type="text/javascript">
     (function() {
       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -33,7 +36,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
     })();
   </script>
-<script type="text/javascript" src="js/plugins.js"></script>
 <script type="text/paperscript" canvas="frontcanvas">
 animating = true;
 var screenwidth = $(document).width();
