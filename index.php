@@ -24,6 +24,16 @@
   <link rel="stylesheet" href="css/style.css"/>
   <!-- end CSS-->
 	<link rel="shortcut icon" href="images/favicon.png"/>
+	<!--[if lt IE 9]>
+		<style type="text/css">
+			body {padding-top: 35px !important;}
+			#browser-bar {background-repeat:repeat-x;background-image:url(http://www.finerbrowsing.com/images/framework/warning-bar.jpg);width:100%;top:0;height:35px;position:fixed;box-shadow:0px 0px 5px #4c4438;z-index:100000;opacity:0.85;}
+			#browser-bar #wrapper{display:block;width:500px;text-align:center;margin-left:auto;margin-right:auto;margin-top:3px;padding:5px;color:white;background-color:black;border-radius:50px;opacity:0.85;}
+			#browser-bar #wrapper a{color:inherit;text-decoration:none;}
+			#browser-bar #wrapper a span{padding:2px 10px;background-color:white;color:black;border-radius:15px;margin-left:10px;}
+		</style>
+		<div id="browser-bar"><div id="wrapper"><a href="http://www.finerbrowsing.com/">Hey! It looks like you are using an outdated browser for this website. <span>Upgrade Now!</span></a></div></div>
+	<![endif]-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
   <!-- scripts concatenated and minified via ant build script-->
