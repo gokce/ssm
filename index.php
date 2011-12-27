@@ -164,14 +164,16 @@ function onFrame(event) {
 <?php 
 $ip = $_SERVER["SERVER_ADDR"];
 if ($ip == '::1' || $ip == '127.0.0.1') {
-  echo 'local';
+    echo 'local';
 } else { ?>
-  <script>
-    window._gaq = [['_setAccount','UA8957719-1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-  </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-8957719-1']);_gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   <script>
   var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.writebox.net/piwik/" : "http://www.writebox.net/piwik/");
   document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
