@@ -11,32 +11,34 @@ $(document).ready(function() {
 	callAPI();
 	
 	function callAPI(resources,parameters) {
-	  if ($.seismi.modified != 'magnitude') {
-      var holder_filters_magnitude = $('#sidebar').find('.ulmagnitude').find('li').next();
-		  holder_filters_magnitude.each(function(i){
-			  $(this).find('.count').addClass('loading');
-			  $('#intro').fadeIn(200);
-			  $('#mainbar #mainloading').fadeIn(200);
-				$('#mainbar #mainicon').fadeOut(200);
+		if ($.seismi.modified != 'magnitude') {
+		var holder_filters_magnitude = $('#sidebar').find('.ulmagnitude').find('li').next();
+			holder_filters_magnitude.each(function(i){
+				$(this).find('.count').addClass('loading');
+				$('#intro').fadeIn(200);
+				//$('#mainbar #mainloading').fadeIn(200);
+				$('#mainloadingicon').activity();
+				//$('#mainbar #mainicon').fadeOut(200);
 				$('#mainbarinfo').html('Loading...');
-    	  $('#mainbarinfo').animate({height:'show'}, 300);
-			  $(this).find('.count').html('');
-		  });
+				$('#mainbarinfo').animate({height:'show'}, 300);
+				$(this).find('.count').html('');
+			});
 		}
 	  if ($.seismi.modified != 'time') {
       var holder_filters_magnitude = $('#sidebar').find('.ultime').find('li').next();
 			holder_filters_magnitude.each(function(i){
 				$(this).find('.count').addClass('loading');
 				$('#intro').fadeIn(200);
-				$('#mainbar #mainloading').fadeIn(200);
-				$('#mainbar #mainicon').fadeOut(200);
+				//$('#mainbar #mainloading').fadeIn(200);
+				$('#mainloadingicon').activity();
+				//$('#mainbar #mainicon').fadeOut(200);
 				$('#mainbarinfo').html('Loading...');
-    	  $('#mainbarinfo').animate({height:'show'}, 300);
+				$('#mainbarinfo').animate({height:'show'}, 300);
 				$(this).find('.count').html('');
 			});
 	  }
     
-	  resources = (typeof resources == 'undefined') ? '' : resources;
+		resources = (typeof resources == 'undefined') ? '' : resources;
 		parameters = (typeof parameters == 'undefined') ? '' : parameters;
 		// Call API
 		/*
@@ -50,8 +52,8 @@ $(document).ready(function() {
 			refreshData($.seismi.data);
 		},
 		function(){
-		  $('#beginning-corner').fadeOut(200); // hide beginning again button
-		  $('#beginning-middle').fadeOut(200); // hide beginning again button
+		  //$('#beginning-corner').fadeOut(200); // hide beginning again button
+		  //$('#beginning-middle').fadeOut(200); // hide beginning again button
 		  $('#tryagain').fadeIn(200); // show try again button
 		  console.log("Connection to API failed");
 		  /* Test Data
@@ -134,8 +136,9 @@ $(document).ready(function() {
 					count = counts[min_mag] ? counts[min_mag] : 0;
 					$(this).find('.count').removeClass('loading');
 					$('#intro').fadeOut(200);
-					$('#mainbar #mainloading').fadeOut(200);
-					$('#mainbar #mainicon').fadeIn(200);
+					//$('#mainbar #mainloading').fadeOut(200);
+					$('#mainloadingicon').activity(false);
+					//$('#mainbar #mainicon').fadeIn(200);
       	  $('#mainbarinfo').animate({height:'hide'}, 300);
 					$(this).find('.count').html(count);
 				});
@@ -153,9 +156,10 @@ $(document).ready(function() {
 					count = data[time_str] ? data[time_str] : 0;
 					$(this).find('.count').removeClass('loading');
 					$('#intro').fadeOut(200);
-					$('#mainbar #mainloading').fadeOut(200);
-					$('#mainbar #mainicon').fadeIn(200);
-      	  $('#mainbarinfo').animate({height:'hide'}, 300);
+					//$('#mainbar #mainloading').fadeOut(200);
+					$('#mainloadingicon').activity(false);
+					//$('#mainbar #mainicon').fadeIn(200);
+					$('#mainbarinfo').animate({height:'hide'}, 300);
 					$(this).find('.count').html(count);
 				});
 				$('.latest .count').html('');
@@ -172,17 +176,17 @@ $(document).ready(function() {
 		}
 	}
 	$.init_vis = {
-	  refresh: function() {
-	    $.visualizations.refresh();
-  	  $('#intro').fadeOut(400);
-  	  //$('#intro-container #beginning-img').fadeOut(400);
-  	  $('#beginning-corner').fadeOut(400); // hide beginning again button
-		  $('#beginning-middle').fadeOut(400); // hide beginning again button
-  	  $('#mainbar #mainloading').fadeOut(400);
-			$('#mainbar #mainicon').fadeIn(200);
-  	  $('#mainbarinfo').animate({height:'hide'}, 300);
-    }
-  }
+		refresh: function() {
+			$.visualizations.refresh();
+			$('#intro').fadeOut(400);
+			//$('#beginning-corner').fadeOut(400); // hide beginning again button
+			//$('#beginning-middle').fadeOut(400); // hide beginning again button
+			//$('#mainbar #mainloading').fadeOut(400);
+			$('#mainloadingicon').activity(false);
+			//$('#mainbar #mainicon').fadeIn(200);
+			$('#mainbarinfo').animate({height:'hide'}, 300);
+		}
+	}
 	
 	// Filters
 	setFilterButtons('.ulmagnitude');

@@ -569,10 +569,10 @@ $(document).ready(function() {
 	};
 	reverse = function(a) {
 	  var temp = [];
-    var len = a.length;
-    for (var i = (len - 1); i >= 0; i--) {
-      temp.push(a[i]);
+      var len = a.length;
+      for (var i = (len - 1); i >= 0; i--) {
+          temp.push(a[i]);
+      }
+      return temp;
     }
-    return temp;
-  }
 });

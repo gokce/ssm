@@ -61,6 +61,7 @@ font-weight: normal; font-style: normal;
 #mainbar #logo {left:34px; bottom:-3px;}
 #mainbar #mainicon    {width:22px; height:22px; bottom:19px; left:12px; background:url('../images/icon-main.gif');}
 #mainbar #mainloading {width:22px; height:22px; bottom:19px; left:12px; background:url('../images/icon-main-loading.gif');}
+#mainloadingicon {height:97%;}
 
 #mainbar em {position:absolute;font-style:normal;text-align:right;color:#fff;}
 #mainbar em#magnitude{font-size:48px;right:66px; top:4px;}
@@ -87,7 +88,7 @@ ul#navi {margin:22px 0 0 142px; width:320px; font-family:'extravaganzzaBold'; fo
 ul#navi li{display:inline;margin:0 0 0 8px;padding:6px 10px;text-align:center;display:inline;list-style-type:none;text-decoration:none;}
 ul#navi li:hover{text-shadow:#ddd 0px 0px 4px; background:rgba(255,255,255,0.1); cursor:pointer;}
 ul#navi li.selected {background:rgba(255,255,255,0.1);}
-#mainbarinfo {background:rgba(0,68,204,0.1); width:100%; height:auto; padding:14px; position:absolute; bottom:60px; left:0; z-index:3800000; font-size:14px;}
+#mainbarinfo {background:rgba(0,0,0,0.5); width:100%; height:auto; padding:14px; position:absolute; bottom:60px; left:0; z-index:3800000; font-size:14px;}
 
 #mag1	{right:387px;top:3px; width:170px;height:54px;background:url('../images/mainbar-bg-big.png') no-repeat top left;}
 #mag2	{right:-10px;top:0px; width:170px;height:54px;background:url('../images/mainbar-bg-big.png') no-repeat top right;}
