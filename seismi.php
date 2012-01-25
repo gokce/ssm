@@ -79,7 +79,7 @@
 		<div id="loc1"><div id="loc2"><a href="#" class="tt" title="Location area &amp; Longitude/Latitude cordinates for selected earthquake"><em id="region">Area, Country</em><em id="latlon">90.0000&deg;&nbsp;&nbsp;-180.0000&deg;</em></a></div></div>
 		<div id="butr"></div><div id="buth"></div>
 	</div>
-	<div id="mainbarinfo">Loading...</div>
+	<div id="mainbarinfo">Loading earthquakes...</div>
 	
 	<div id="controlbuttons" class="rc">
 		<div id="b-zoom-in"></div><div id="b-zoom-out"></div>
