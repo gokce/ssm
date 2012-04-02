@@ -35,8 +35,9 @@
 		<div id="browser-bar"><div id="wrapper"><a href="http://www.finerbrowsing.com/">Hey! It looks like you are using an outdated browser for this website. <span>Upgrade Now!</span></a></div></div>
 	<![endif]-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-  <!-- scripts concatenated and minified via ant build script-->
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+	<!-- scripts concatenated and minified via ant build script-->
+	<script type="text/javascript" src="js/libs/jquery.activity-indicator-1.0.0.min"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
 	<script type="text/javascript" src="js/mylibs/ui.js"></script>
 	<script type="text/javascript" src="js/mylibs/eqs.js"></script>
@@ -60,8 +61,9 @@
 			<div class="mapcontent"><!--map content goes here--></div>
 		</div>
 	</div>
+	<div id="mainloadingicon"></div>
 	<div id="mainbar">
-		<div id="mainicon"></div><div id="mainloading"></div>
+		<div id="mainicon"></div>
 		<div id="logo"><a href="seismi.php" title="reload page"><img src="images/seismi-logo.png" alt="Seismi" /></a></div>
 		<ul id="navi">
 			<li class="map" title="Map View">MAP</li>
@@ -77,7 +79,7 @@
 		<div id="loc1"><div id="loc2"><a href="#" class="tt" title="Location area &amp; Longitude/Latitude cordinates for selected earthquake"><em id="region">Area, Country</em><em id="latlon">90.0000&deg;&nbsp;&nbsp;-180.0000&deg;</em></a></div></div>
 		<div id="butr"></div><div id="buth"></div>
 	</div>
-	<div id="mainbarinfo">Loading...</div>
+	<div id="mainbarinfo">Loading earthquakes...</div>
 	
 	<div id="controlbuttons" class="rc">
 		<div id="b-zoom-in"></div><div id="b-zoom-out"></div>
@@ -145,7 +147,7 @@
 		<div id="help1"></div><!--<div id="help2"></div>--><div id="help3"></div><div id="help4"></div>
 	</div>
 	<div id="intro"></div>
-	<div id="intro-container"><img src="images/beginning.png" id="beginning-middle" width="260" height="290" alt="beginning info" /><img src="images/beginning-corner.png" id="beginning-corner" width="200" height="135" alt="beginning info" /><a href="seismi.php" id="tryagain"><img src="images/button-tryagain.png" width="300" height="100" alt="problems loading, please try again" /></a></div>
+	<div id="intro-container"><!--<img src="images/beginning.png" id="beginning-middle" width="260" height="290" alt="beginning info" /><img src="images/beginning-corner.png" id="beginning-corner" width="200" height="135" alt="beginning info" />--><a href="seismi.php" id="tryagain"><img src="images/button-tryagain.png" width="300" height="100" alt="problems loading, please try again" /></a></div>
 	<?php 
 	$ip = $_SERVER["SERVER_ADDR"];
 	if ($ip == '::1' || $ip == '127.0.0.1') {
