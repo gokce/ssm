@@ -184,7 +184,7 @@
 		wsc.src = document.location.protocol+'//static.woopra.com/js/woopra.js';
 		wsc.type = 'text/javascript';
 		wsc.async = true;
-		var ssc = document.getElementByTagName('script')[0];
+		var ssc = document.getElementsByTagName('script')[0];
 		ssc.parentNode.insertBefore(wsc, ssc);
 	})();
 	</script>
