@@ -194,6 +194,24 @@ if ($ip == '::1' || $ip == '127.0.0.1') {
   piwikTracker.enableLinkTracking();
   } catch( err ) {}
   </script>
+	<!-- Start of Woopra Code -->
+	<script type="text/javascript">
+	function woopraReady(tracker) {
+		tracker.setDomain('seismi.org');
+		tracker.setIdleTimeout(300000);
+		tracker.track();
+		return false;
+	}
+	(function() {
+		var wsc = document.createElement('script');
+		wsc.src = document.location.protocol+'//static.woopra.com/js/woopra.js';
+		wsc.type = 'text/javascript';
+		wsc.async = true;
+		var ssc = document.getElementByTagName('script')[0];
+		ssc.parentNode.insertBefore(wsc, ssc);
+	})();
+	</script>
+  <!-- End of Woopra Code -->
 <?php } ?>
 </body>
 </html>
